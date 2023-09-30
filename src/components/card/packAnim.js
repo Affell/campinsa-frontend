@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./packAnim.scss";
 import Card from "./card";
 import video from "../../assets/images/pack/anim.mp4";
@@ -6,6 +6,7 @@ import video from "../../assets/images/pack/anim.mp4";
 
 function PackAnim({ id, firstname, lastname, surname, score, image, poste, pays }) {
 
+  const htmlVideo = useRef(null);
   const [showCountry, setShowCountry] = useState(false);
   const [animCountry, setAnimCountry] = useState(false);
   const [showPoste, setShowPoste] = useState(false);
@@ -14,8 +15,12 @@ function PackAnim({ id, firstname, lastname, surname, score, image, poste, pays 
   const [animCard, setAnimCard] = useState(false);
 
   useEffect(() => {
-    //document.documentElement.style.setProperty('--delay', animCard ? '10s' : '0s');
-  }, [animCard]);
+    if (htmlVideo && htmlVideo.current) {
+      htmlVideo.current.addEventListener('suspend', () => {
+        window.location.href = "/";
+      });
+    }
+  }, [htmlVideo]);
 
   useEffect(() => {
 
@@ -35,11 +40,11 @@ function PackAnim({ id, firstname, lastname, surname, score, image, poste, pays 
   return <>
 
     <div className="pack-wrapper">
-      <video autoPlay muted className="pack-video">
+      <video className="pack-video" autoPlay muted playsInline ref={htmlVideo}>
         <source src={video} type="video/mp4" />
       </video>
 
-      {showCountry && <img className={"reveal-country" + (animCountry ? " active" : "")} src={pays} />}
+      {showCountry && <img alt="country" className={"reveal-country" + (animCountry ? " active" : "")} src={pays} />}
       {showPoste && <h1 className={"reveal-poste" + (animPoste ? " active" : "")}>{poste}</h1>}
       <Card id={id} firstname={firstname} lastname={lastname} surname={surname} score={score} image={image} poste={poste} pays={pays} show={showCard} active={animCard} />
     </div>

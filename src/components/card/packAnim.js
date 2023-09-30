@@ -16,7 +16,7 @@ function PackAnim({ id, firstname, lastname, surname, score, image, poste, pays 
 
   useEffect(() => {
     if (htmlVideo && htmlVideo.current) {
-      htmlVideo.current.addEventListener('suspend', () => {
+      htmlVideo.current.play().catch(() => {
         window.location.href = "/";
       });
     }

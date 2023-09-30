@@ -1,0 +1,42 @@
+.pack-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+
+.pack-video {
+  position: absolute;
+  width: 100vw;
+  z-index: -1;
+}
+
+.reveal-country,
+.reveal-poste {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
+  }
+}
+
+.reveal-poste {
+  color: #725b16;
+  font-size: 7rem;
+  font-weight: 900;
+}
+
+
+
+@media screen and (max-width: 960px) {
+  .pack-video {
+    width: auto;
+    height: 100dvh;
+  }
+}

@@ -1,0 +1,38 @@
+.shotgun-list>h2 {
+  margin: 25px 0;
+  padding-left: 30px;
+}
+
+.shotgun-grid {
+  margin-top: 20px;
+  padding: 0 7vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.shotgun-card {
+  overflow: hidden;
+  padding: 20px;
+  width: 25vw;
+  aspect-ratio: 1.5;
+  border: 1px black solid;
+}
+
+.shotgun-img {
+  width: 100%;
+  aspect-ratio: 16 / 6;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 960px) {
+
+  .shotgun-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shotgun-card {
+    width: 100%;
+  }
+}

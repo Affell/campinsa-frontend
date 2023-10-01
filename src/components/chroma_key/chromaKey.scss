@@ -1,0 +1,11 @@
+.chromakey {
+  position: absolute;
+  width: 50vw;
+  left: 50%;
+}
+
+video.chromakey {
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}

@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import "./packAnim.scss";
 import Card from "./card";
+import ChromaKey from "../chroma_key/chromaKey";
 import video from "../../assets/images/pack/anim.mp4";
+import green from "../../assets/images/pack/green_test.mp4";
+
 
 
 function PackAnim({ id, firstname, lastname, surname, score, image, poste, pays }) {
@@ -13,6 +16,7 @@ function PackAnim({ id, firstname, lastname, surname, score, image, poste, pays 
   const [animPoste, setAnimPoste] = useState(false);
   const [showCard, setShowCard] = useState(false);
   const [animCard, setAnimCard] = useState(false);
+  const [greenScreen, setGreenScreen] = useState(false);
 
   useEffect(() => {
     if (htmlVideo && htmlVideo.current) {
@@ -35,6 +39,8 @@ function PackAnim({ id, firstname, lastname, surname, score, image, poste, pays 
     setTimeout(() => setShowCard(true), 7400);
     setTimeout(() => setAnimCard(true), 7500);
 
+    setTimeout(() => setGreenScreen(true), 10000);
+
   }, []);
 
   return <>
@@ -47,6 +53,7 @@ function PackAnim({ id, firstname, lastname, surname, score, image, poste, pays 
       {showCountry && <img alt="country" className={"reveal-country" + (animCountry ? " active" : "")} src={pays} />}
       {showPoste && <h1 className={"reveal-poste" + (animPoste ? " active" : "")}>{poste}</h1>}
       <Card id={id} firstname={firstname} lastname={lastname} surname={surname} score={score} image={image} poste={poste} pays={pays} show={showCard} active={animCard} />
+      {greenScreen && <ChromaKey video={green} />}
     </div>
   </>;
 

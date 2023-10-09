@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import "./packAnim.scss";
 import Card from "./card";
-import ChromaKey from "../chroma_key/chromaKey";
 import video from "../../assets/images/pack/anim.mp4";
-import green from "../../assets/images/pack/green_test.mp4";
+import green from "../../assets/images/pack/neymar.webm";
 
 
 
@@ -53,7 +52,7 @@ function PackAnim({ id, firstname, lastname, surname, score, image, poste, pays 
       {showCountry && <img alt="country" className={"reveal-country" + (animCountry ? " active" : "")} src={pays} />}
       {showPoste && <h1 className={"reveal-poste" + (animPoste ? " active" : "")}>{poste}</h1>}
       <Card id={id} firstname={firstname} lastname={lastname} surname={surname} score={score} image={image} poste={poste} pays={pays} show={showCard} active={animCard} />
-      {greenScreen && <ChromaKey video={green} />}
+      {greenScreen && <video className="anim-video" src={green} muted autoPlay />}
     </div>
   </>;
 

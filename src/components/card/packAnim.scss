@@ -32,7 +32,10 @@
   font-weight: 900;
 }
 
-
+.anim-video {
+  position: absolute;
+  width: 75vw;
+}
 
 @media screen and (max-width: 960px) {
   .pack-video {

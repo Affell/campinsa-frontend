@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import "./packAnim.scss";
 import Card from "./card";
-import video from "../../assets/images/pack/anim.mp4";
-import green from "../../assets/images/pack/neymar.webm";
+import video from "../../assets/images/pack/anim.webm";
+import green from "../../assets/images/pack/steve.webm";
 
 
 

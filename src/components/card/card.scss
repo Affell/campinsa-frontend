@@ -12,7 +12,7 @@ $color3: #725b16;
   height: 430px;
   background: white;
   clip-path: url("#svgPath");
-  opacity: 0;
+  // opacity: 0;
   transition: .6s all cubic-bezier(0.075, 0.82, 0.165, 1);
   transform: rotateY(-180deg);
   transition-delay: calc(var(--delay) + .1s);

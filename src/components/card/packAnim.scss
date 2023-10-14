@@ -15,21 +15,52 @@
 
 .reveal-country,
 .reveal-poste {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s linear 300ms, opacity 300ms;
+  position: absolute;
+}
 
-  &.active {
-    visibility: visible;
+@keyframes country {
+  0% {
+    opacity: 0;
+    width: 255px;
+    margin-top: 150px;
+  }
+
+  10% {
     opacity: 1;
-    transition: visibility 0s linear 0s, opacity 300ms;
+  }
+
+  100% {
+    width: 560px;
+    margin-top: 200px;
+  }
+}
+
+.reveal-country {
+  animation: country 1.8s linear;
+}
+
+@keyframes poste {
+  from {
+    opacity: 0;
+    margin-top: 160px;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  to {
+    margin-top: 190px;
   }
 }
 
 .reveal-poste {
-  color: #725b16;
+  color: #393321;
+  background-color: #d8ad48;
+  padding: 20px 50px;
   font-size: 7rem;
   font-weight: 900;
+  animation: poste 2s linear;
 }
 
 .anim-video {
@@ -37,9 +68,19 @@
   width: 75vw;
 }
 
+.mini {
+  transform: scale(0.6) !important;
+  margin-right: 20vw;
+}
+
 @media screen and (max-width: 960px) {
   .pack-video {
     width: auto;
     height: 100dvh;
+  }
+
+  .anim-video {
+    height: 50dvh;
+    width: auto;
   }
 }

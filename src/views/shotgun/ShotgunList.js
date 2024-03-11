@@ -10,7 +10,7 @@ const ShotgunList = () => {
   const [isLoading, setIsloading] = useState(true);
 
   const refreshData = () => {
-    getFetch("/shotgun/list", setData, setIsloading, { debug: true });
+    getFetch("shotgun/list", setData, setIsloading, { debug: true });
   }
 
   useEffect(() => {

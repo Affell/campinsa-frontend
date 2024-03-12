@@ -1,11 +1,10 @@
 import './App.css'
 import NavBar from './components/nav/Navbar'
+import Home from './views/Home'
 
 function App() {
 
-  return (
-    <NavBar/>
-  )
+  return (<Home/>  )
 }
 
 export default App

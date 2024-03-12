@@ -1,12 +1,16 @@
 /* Import police Inter-Regular */
-@font-face{
+@font-face {
     font-family: "Grafton";
     src: url('src\\assets\\fonts\\ZTGrafton-Regular.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
-.navbar{
+.navbar {
     font-family: Grafton, sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0 !important;
 }

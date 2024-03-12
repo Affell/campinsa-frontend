@@ -8,9 +8,9 @@ const NavBar = () => {
     return (
         <Navbar expand="lg" className="navbar bg-body-tertiary fixed-top">
             <Container>
-                <Navbar.Brand href="/">
+                <Link className="navbar-brand" to="/">
                     <img src="src\assets\images\logo.png" width="70" height="70" className="d-inline-block align-top" alt="Logo Camp'INSA" />
-                </Navbar.Brand>
+                </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">

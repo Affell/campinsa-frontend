@@ -1,7 +1,9 @@
+import NavBar from "../../components/nav/Navbar";
 import "./Home.css";
 
 const Home = () => {
-  return (
+  return <>
+    <NavBar />
     <div className="home-container">
       <div className="first-container">
         <div className="text-on-image principal">
@@ -10,7 +12,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-  );
+  </>
 };
 
 export default Home;

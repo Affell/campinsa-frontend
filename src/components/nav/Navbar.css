@@ -1,0 +1,12 @@
+/* Import police Inter-Regular */
+@font-face{
+    font-family: "Inter";
+    src: url('src\\assets\\fonts\\Inter-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.navbar{
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+}

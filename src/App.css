@@ -21,9 +21,14 @@
 }
 
 /* Fix Navbar width */
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 html,
 .navbar {
-  width: 100dvw !important;
+  width: 100vw !important;
 }
 
 .fullscreen-container {

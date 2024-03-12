@@ -1,21 +1,20 @@
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
-import Image from 'react-bootstrap/Image'
+import Image from "react-bootstrap/Image";
 
-
-interface Props{
-    imagePath: string;
-    to: string;
+interface Props {
+  imagePath: string;
+  to: string;
 }
 
-const LinkCard = ({imagePath, to}:Props) => {
+const LinkCard = ({ imagePath, to }: Props) => {
   return (
     <Container>
-        <Link className="nav-link" to={to}>
-            <Image src={imagePath} fluid/>
-        </Link>
+      <Link className="nav-link" to={to}>
+        <Image src={imagePath} rounded fluid />
+      </Link>
     </Container>
-  )
-}
+  );
+};
 
 export default LinkCard;

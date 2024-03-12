@@ -38,14 +38,16 @@ const items = [
 
 const Carousel = () => {
   return (
-    <AliceCarousel
-      mouseTracking
-      items={items}
-      responsive={responsive}
-      controlsStrategy="default"
-      disableButtonsControls={true}
-      paddingLeft={50}
-    />
+    <div className="text-center">
+      <AliceCarousel
+        mouseTracking
+        items={items}
+        responsive={responsive}
+        controlsStrategy="default"
+        disableButtonsControls={true}
+        paddingLeft={50}
+      />
+    </div>
   );
 };
 

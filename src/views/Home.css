@@ -20,7 +20,7 @@
   font-style: normal;
 }
 
-.background-image {
+.first-container {
   background-image: url("src\\assets\\images\\homePagePC.jpg");
   height: 100vh;
   background-position: center;
@@ -43,14 +43,14 @@
   font-size: 3rem;
 }
 
-.text-on-image.secondary{
-    font-size: 1.5rem;
-    padding-top: 10rem;
+.text-on-image.secondary {
+  font-size: 1.5rem;
+  padding-top: 10rem;
 }
 
-.second-container{
-    height: 100vh;
-    background-color: white;
+.second-container {
+  height: 100vh;
+  background-color: white;
 }
 
 @media only screen and (max-width: 768px) {

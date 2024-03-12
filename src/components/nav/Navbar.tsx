@@ -14,11 +14,11 @@ const NavBar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Link to="/">Accueil</Link>
-                        <Link to="/planning">Programme</Link>
-                        <Link to="/shotgun">Shotgun</Link>
-                        <Link to="/teams">Teams</Link>
-                        <Link to="/caritaxi">Cari Taxi</Link>
+                        <Link className="nav-link" to="/">Accueil</Link>
+                        <Link className="nav-link" to="/planning">Programme</Link>
+                        <Link className="nav-link" to="/shotgun">Shotgun</Link>
+                        <Link className="nav-link" to="/teams">Teams</Link>
+                        <Link className="nav-link" to="/caritaxi">Cari Taxi</Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

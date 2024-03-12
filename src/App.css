@@ -1,8 +1,29 @@
+/* Import polices */
+@font-face {
+  font-family: "Inter";
+  src: url("src\\assets\\fonts\\Inter-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Genty";
+  src: url("src\\assets\\fonts\\GentyDemo-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @font-face {
   font-family: "Grafton";
   src: url("src\\assets\\fonts\\ZTGrafton-Regular.ttf");
   font-weight: normal;
   font-style: normal;
+}
+
+/* Fix Navbar width */
+html,
+.navbar {
+  width: 100dvw !important;
 }
 
 .fullscreen-container {

@@ -1,65 +1,58 @@
 /* Import polices */
-@font-face{
-    font-family: 'Inter';
-    src: url('src\\assets\\fonts\\Inter-Regular.ttf');
-    font-weight: normal;
-    font-style: normal;
+@font-face {
+  font-family: "Inter";
+  src: url("src\\assets\\fonts\\Inter-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
-@font-face{
-    font-family: 'Genty';
-    src: url('src\\assets\\fonts\\GentyDemo-Regular.ttf');
-    font-weight: normal;
-    font-style: normal;
+@font-face {
+  font-family: "Genty";
+  src: url("src\\assets\\fonts\\GentyDemo-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
-@font-face{
-    font-family: 'Grafton';
-    src: url('src\\assets\\fonts\\ZTGrafton-Regular.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-.home-container {
-    margin-top: 50px;
+@font-face {
+  font-family: "Grafton";
+  src: url("src\\assets\\fonts\\ZTGrafton-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
 .background-image {
-    background-image: url('src\\assets\\images\\homePagePC.jpg');
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-image: url("src\\assets\\images\\homePagePC.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-on-image {
-    font-family: Grafton, sans-serif;
-    font-feature-settings: 'liga' 1, 'calt' 1;
-    color: white; 
-    text-align: center;
+  font-family: Grafton, sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1;
+  color: white;
+  text-align: center;
 }
 
-.text-on-image.principal{
-    font-size: 3rem;
+.text-on-image.principal {
+  font-size: 3rem;
 }
 
-.text-on-image.secondary{
-    font-size: 1.5rem;
+.text-on-image.secondary {
+  font-size: 1.5rem;
 }
 
 @media only screen and (max-width: 768px) {
-    .text-on-image.principal{
-        font-size: 2rem;
-    }
+  .text-on-image.principal {
+    font-size: 2rem;
+  }
 
-    .text-on-image.secondary{
-        font-size: 1rem;
-    }
+  .text-on-image.secondary {
+    font-size: 1rem;
+  }
 }
-
-
-  

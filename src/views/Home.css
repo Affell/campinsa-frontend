@@ -20,12 +20,8 @@
     font-style: normal;
 }
 
-.home-container {
-    margin-top: 50px;
-}
-
-.background-image {
-    background-image: url('src\\assets\\images\\homePagePC.jpg');
+.first-container {
+    background-image: url('src\\assets\\images\\homePage.jpg');
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -45,10 +41,17 @@
 
 .text-on-image.principal{
     font-size: 3rem;
+    padding-top: 10rem;
 }
 
 .text-on-image.secondary{
     font-size: 1.5rem;
+    padding-top: 10rem;
+}
+
+.second-container{
+    height: 100vh;
+    background-color: white;
 }
 
 @media only screen and (max-width: 768px) {

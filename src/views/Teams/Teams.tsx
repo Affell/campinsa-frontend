@@ -14,7 +14,7 @@ import "./Teams.css";
 
 export default function Teams() {
   return (
-    <Container className="teams-card">
+    <Container className="fullscreen-container teams-card">
       <NavBar />
       <h2 className="display-5 mb-4 mb-md-5 text-center">Nos Teams</h2>
       <hr className="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
@@ -25,7 +25,7 @@ export default function Teams() {
             <LinkCard
               imagePath="src\assets\images\teams\teamBDS.png"
               text="La Team BDS"
-              to="/teamBDS"
+              to="/teams/bds"
             />
           </Col>
           <Col className="col-12 col-lg-4">
@@ -39,7 +39,7 @@ export default function Teams() {
             <LinkCard
               imagePath="src\assets\images\teams\teamAlumnis.png"
               text="La Team Alumnis"
-              to="/teamAlumnis"
+              to="/teams/alumnis"
             />
           </Col>
         </Row>
@@ -48,21 +48,21 @@ export default function Teams() {
             <LinkCard
               imagePath="src\assets\images\teams\teamBDA.png"
               text="La Team BDA"
-              to="/teamBDA"
+              to="/teams/bda"
             />
           </Col>
           <Col className="col-12 col-lg-4">
             <LinkCard
               imagePath="src\assets\images\teams\teamCom.png"
               text="La Team Com"
-              to="/teamCom"
+              to="/teams/com"
             />
           </Col>
           <Col className="col-12 col-lg-4">
             <LinkCard
               imagePath="src\assets\images\teams\teamPartenariat.png"
               text="La Team Partenariat"
-              to="/teamPartenariat"
+              to="/teams/partenariat"
             />
           </Col>
         </Row>
@@ -71,14 +71,14 @@ export default function Teams() {
             <LinkCard
               imagePath="src\assets\images\teams\teamAsso.png"
               text="La Team Assos"
-              to="/teamAssos"
+              to="/teams/assos"
             />
           </Col>
           <Col className="col-12 col-lg-4">
             <LinkCard
               imagePath="src\assets\images\teams\teamSoiree.png"
               text="La Team Soiree"
-              to="/teamSoiree"
+              to="/teams/soiree"
             />
           </Col>
         </Row>

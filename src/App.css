@@ -32,7 +32,7 @@ html,
 }
 
 .fullscreen-container {
-  height: 100dvh;
+  min-height: 100dvh;
   font-family: Grafton, sans-serif;
   font-feature-settings: "liga" 1, "calt" 1;
 }

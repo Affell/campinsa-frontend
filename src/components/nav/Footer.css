@@ -1,14 +1,14 @@
-.footer-container{
+.footer-container {
   font-family: Grafton, sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1;
+  font-feature-settings: "liga" 1, "calt" 1;
 }
 
-.text-center .text-footer{
+.text-center .text-footer {
   padding-top: 1rem;
-  font-size: .6rem;
+  font-size: 0.6rem;
 }
 
-.socials{
+.socials {
   padding-top: 1rem;
 }
 
@@ -16,41 +16,40 @@
   margin: 5px; /* Ceci ajoutera une marge tout autour des images */
 }
 
-.legals{
+.legals {
   padding-top: 1rem;
-  font-size: .6rem;
+  font-size: 0.6rem;
 }
 
-.footer-container .footer-copyrigth{
+.footer-container .footer-copyrigth {
   padding-top: 1rem;
   font-size: 1rem;
 }
 
-@media (max-width: 767.98px){
-
-  .socials .tik-tok-logo{
+@media (max-width: 767.98px) {
+  .socials .tik-tok-logo {
     height: 30px;
     width: 30px;
   }
 
-  .socials .instagram-logo{
+  .socials .instagram-logo {
     height: 30px;
     width: 30px;
   }
 
-  .title-text{
+  .title-text {
     font-size: 0.7rem;
   }
 
-  .text-center .text-footer{
-    font-size: .4rem;
+  .text-center .text-footer {
+    font-size: 0.4rem;
   }
 
-  .legals{
-    font-size: .4rem;
+  .legals {
+    font-size: 0.4rem;
   }
 
-  .footer-container .footer-copyrigth{
-    font-size: .5rem;
+  .footer-container .footer-copyrigth {
+    font-size: 0.5rem;
   }
 }

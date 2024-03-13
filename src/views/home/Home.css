@@ -36,6 +36,11 @@
   font-size: 2rem;
 }
 
+.video-container{
+  font-family: Grafton, 'sans-serif';
+  font-size: 2rem;
+  padding-top: 2rem;
+}
 @media only screen and (max-width: 768px) {
   .text-on-image.principal {
     font-size: 2rem;
@@ -43,5 +48,9 @@
 
   .text-on-image.secondary {
     font-size: 1rem;
+  }
+
+  .video-container .video-player{
+    padding-top: 3rem;
   }
 }

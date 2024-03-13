@@ -12,6 +12,10 @@
   padding-top: 1rem;
 }
 
+.socials img {
+  margin: 5px; /* Ceci ajoutera une marge tout autour des images */
+}
+
 .legals{
   padding-top: 1rem;
   font-size: .6rem;
@@ -20,4 +24,33 @@
 .footer-container .footer-copyrigth{
   padding-top: 1rem;
   font-size: 1rem;
+}
+
+@media (max-width: 767.98px){
+
+  .socials .tik-tok-logo{
+    height: 30px;
+    width: 30px;
+  }
+
+  .socials .instagram-logo{
+    height: 30px;
+    width: 30px;
+  }
+
+  .title-text{
+    font-size: 0.7rem;
+  }
+
+  .text-center .text-footer{
+    font-size: .4rem;
+  }
+
+  .legals{
+    font-size: .4rem;
+  }
+
+  .footer-container .footer-copyrigth{
+    font-size: .5rem;
+  }
 }

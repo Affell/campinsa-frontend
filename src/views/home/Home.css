@@ -18,11 +18,12 @@
 
 .text-on-image.principal {
   font-size: 3rem;
+  padding-top: 10rem;
 }
 
 .text-on-image.secondary {
   font-size: 1.5rem;
-  padding-top: 10rem;
+  padding-top: 7rem;
 }
 
 .second-container {

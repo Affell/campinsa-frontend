@@ -38,7 +38,8 @@ const items = [
 
 const Carousel = () => {
   return (
-    <div className="text-center">
+    <>
+    <div className="d-none d-md-flex text-center">
       <AliceCarousel
         mouseTracking
         items={items}
@@ -48,6 +49,17 @@ const Carousel = () => {
         paddingLeft={50}
       />
     </div>
+    <div className="d-md-none">
+    <AliceCarousel
+      mouseTracking
+      items={items}
+      responsive={responsive}
+      controlsStrategy="default"
+      disableButtonsControls={true}
+      paddingLeft={50}
+    />
+    </div>
+    </>
   );
 };
 

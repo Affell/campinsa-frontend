@@ -21,7 +21,7 @@ const CarouselItem = ({ imagePath, primaryText, secondaryText }: Props) => {
         width={250}
         height={250}
       />
-      <p className="text">{primaryText}</p>
+      <p className="text-carousel">{primaryText}</p>
       <p className="text-secondary">{secondaryText}</p>
     </Container>
   );

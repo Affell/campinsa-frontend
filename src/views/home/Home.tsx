@@ -1,6 +1,7 @@
 import NavBar from "../../components/nav/Navbar";
 import "./Home.css";
 import Carousel from "../../components/Carousel/Carousel";
+import Footer from "../../components/nav/Footer";
 
 export default function Home() {
   return <>
@@ -17,6 +18,7 @@ export default function Home() {
         <Carousel />
       </div>
     </div>
+    <Footer/>
   </>
     ;
 };

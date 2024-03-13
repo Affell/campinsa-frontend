@@ -1,0 +1,23 @@
+.footer-container{
+  font-family: Grafton, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+.text-center .text-footer{
+  padding-top: 1rem;
+  font-size: .6rem;
+}
+
+.socials{
+  padding-top: 1rem;
+}
+
+.legals{
+  padding-top: 1rem;
+  font-size: .6rem;
+}
+
+.footer-container .footer-copyrigth{
+  padding-top: 1rem;
+  font-size: 1rem;
+}

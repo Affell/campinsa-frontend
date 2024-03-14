@@ -27,9 +27,8 @@ const LinkCard = ({ imagePath, text, to }: Props) => {
             <div className="entry-header mb-3">
               <h2 className="card-title entry-title h4 m-0">
                 <Link className="text-decoration-none" to={to}>
-                  <p className="link-dark">{text}</p>
+                  <p className="link-dark text-center">{text}</p>
                 </Link>
-                <hr className="w-50 border-dark-subtle" />
               </h2>
             </div>
           </div>

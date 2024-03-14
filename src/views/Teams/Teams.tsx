@@ -66,7 +66,7 @@ export default function Teams() {
             />
           </Col>
         </Row>
-        <Row className="row gy-4 gy-md-5 gx-xl-6 gy-xl-6 gx-xxl-9 gy-xxl-9">
+        <Row className="row gy-4 gy-md-5 gx-xl-6 gy-xl-6 gx-xxl-9 gy-xxl-9 justify-content-center">
           <Col className="col-12 col-lg-4">
             <LinkCard
               imagePath="src\assets\images\teams\teamAsso.png"

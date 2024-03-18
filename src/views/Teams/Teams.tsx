@@ -2,6 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import NavBar from "../../components/nav/Navbar";
 import LinkCard from "../../components/LinkCard/LinkCard";
 import "./Teams.css";
+import Footer from "../../components/nav/Footer";
 
 <link
   rel="stylesheet"
@@ -83,6 +84,7 @@ export default function Teams() {
           </Col>
         </Row>
       </div>
+      <Footer/>
     </Container>
   );
 }

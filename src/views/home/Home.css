@@ -10,19 +10,19 @@
 }
 
 .text-on-image {
-  font-family: Grafton, sans-serif;
+  font-family: Accid, sans-serif;
   font-feature-settings: "liga" 1, "calt" 1;
   color: white;
   text-align: center;
 }
 
 .text-on-image.principal {
-  font-size: 3rem;
+  font-size: 4rem;
   padding-top: 10rem;
 }
 
 .text-on-image.secondary {
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding-top: 7rem;
 }
 
@@ -32,15 +32,17 @@
 }
 
 .sponsors {
+  font-family: Accid, 'sans-serif';
   padding: 2rem;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .video-container{
-  font-family: Grafton, 'sans-serif';
-  font-size: 2rem;
+  font-family: Accid, 'sans-serif';
+  font-size: 3rem;
   padding-top: 2rem;
 }
+
 @media only screen and (max-width: 768px) {
   .text-on-image.principal {
     font-size: 2rem;

@@ -1,21 +1,7 @@
 /* Import polices */
 @font-face {
-  font-family: "Inter";
-  src: url("src\\assets\\fonts\\Inter-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Genty";
-  src: url("src\\assets\\fonts\\GentyDemo-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Grafton";
-  src: url("src\\assets\\fonts\\ZTGrafton-Regular.ttf");
+  font-family: "Accid";
+  src: url("src\\assets\\fonts\\accid___.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -33,6 +19,6 @@ html,
 
 .fullscreen-container {
   min-height: 100dvh;
-  font-family: Grafton, sans-serif;
+  font-family: Accid, sans-serif;
   font-feature-settings: "liga" 1, "calt" 1;
 }

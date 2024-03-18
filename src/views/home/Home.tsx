@@ -10,7 +10,7 @@ export default function Home() {
       <NavBar />
       <div className="first-container fullscreen-container">
         <div className="text-on-image principal">
-          Bienvenue a Camp'INSA
+          Bienvenue à Camp'INSA
           <div className="text-on-image secondary">En savoir plus</div>
         </div>
       </div>

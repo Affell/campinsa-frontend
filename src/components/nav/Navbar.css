@@ -1,14 +1,15 @@
 /* Import police Grafton */
 @font-face {
-    font-family: "Grafton";
-    src: url('src\\assets\\fonts\\ZTGrafton-Regular.ttf');
+    font-family: "Accid";
+    src: url('src\\assets\\fonts\\accid___.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 .navbar {
-    font-family: Grafton, sans-serif;
+    font-family: Accid, sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1;
+    font-size: 1.5rem;
 }
 
 .navbar-toggler:focus {

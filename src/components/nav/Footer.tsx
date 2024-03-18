@@ -19,7 +19,7 @@ function Footer() {
           </div>
         </Col>
         <Col>
-          <h6 className="title-text">Nos reseaux</h6>
+          <h6 className="title-text">Nos réseaux</h6>
           <div className="socials">
             <Link to={"https://www.tiktok.com/@bdeinsahdf?_t=8kdiqYroQHQ&_r=1"}>
               <Image

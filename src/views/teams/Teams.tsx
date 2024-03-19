@@ -84,7 +84,7 @@ export default function Teams() {
           </Col>
         </Row>
       </div>
-      <Footer/>
+      <Footer />
     </Container>
   );
 }

@@ -5,6 +5,8 @@ import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
 import NavBarToogler from "./NavBarToggler";
 import { useCycle } from "framer-motion";
+import { Image } from "react-bootstrap";
+import logo from "../../assets/images/logo.svg";
 // import { useEffect, useState } from "react";
 
 export default function NavBar() {
@@ -28,12 +30,12 @@ export default function NavBar() {
       expanded={isOpen}
       expand="lg"
       className="navbar bg-body-tertiary fixed-top"
-      // style={{ opacity }}
+    // style={{ opacity }}
     >
       <Container>
         <Link className="navbar-brand" to="/">
-          <img
-            src="src\assets\images\logo.png"
+          <Image
+            src={logo}
             width="70"
             height="70"
             className="d-inline-block align-top"

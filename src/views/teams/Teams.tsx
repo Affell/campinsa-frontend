@@ -24,8 +24,8 @@ import teamSoiree from "../../assets/images/teams/teamSoiree.png";
 export default function Teams() {
   return (
     <>
+      <NavBar />
       <Container className="fullscreen-container teams-card">
-        <NavBar />
         <h2 className="display-5 mb-4 mb-md-5 text-center">Nos Teams</h2>
         <hr className="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
 

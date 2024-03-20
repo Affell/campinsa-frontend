@@ -19,7 +19,6 @@ export default function CariTaxi() {
         setSocket(undefined);
       });
       socket.on("updateTaxiLocation", (data) => {
-        console.log(data);
         setTaxiLocations(data);
       });
       socket.emit("updateTaxiLocation", {});

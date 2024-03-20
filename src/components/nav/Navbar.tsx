@@ -25,12 +25,12 @@ export default function NavBar() {
   //   return () => window.removeEventListener("scroll", handleScroll);
   // }, []);
 
-  return (
+  return <>
     <Navbar
       expanded={isOpen}
       expand="lg"
       className="navbar bg-body-tertiary fixed-top"
-      // style={{ opacity }}
+    // style={{ opacity }}
     >
       <Container>
         <Link className="navbar-brand" to="/">
@@ -64,5 +64,5 @@ export default function NavBar() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  );
+  </>
 }

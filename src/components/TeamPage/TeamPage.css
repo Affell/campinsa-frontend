@@ -1,5 +1,8 @@
 .text-container {
-  padding-top: 8rem;
+  padding: 8rem 2rem 0 0;
+  /* padding-top: 8rem; */
+  width: 40dvw !important;
+  text-align: right;
 }
 
 .team-name {
@@ -12,12 +15,19 @@
   font-size: 1.5rem;
 }
 
-.team-members {
-  padding-top: 5rem;
+.team-role {
+  display: flex;
+  align-content: center;
+  height: 10rem;
+  margin-bottom: 10px;
 }
 
-.team-role {
-  display: inline-block;
-  transform: rotate(-90deg);
+.team-role>.badge {
   width: 10rem;
+  height: 1.5rem;
+  transform: rotate(-90deg);
+}
+
+.card-member {
+  width: 10rem !important;
 }

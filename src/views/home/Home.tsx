@@ -22,13 +22,15 @@ export default function Home() {
         </div>
         <hr className="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle"></hr>
       </div>
-      <div className="second-container fullscreen-container">
+      <div className="second-container">
         <div className="sponsors">Nos partenaires</div>
         <div className="carousel">
           <Carousel />
         </div>
       </div>
-      <Footer />
+      <div className="footer-container">
+        <Footer />
+      </div>
     </>
   );
 }

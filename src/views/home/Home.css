@@ -1,5 +1,5 @@
 .first-container {
-  background-image: url("src\\assets\\images\\homePage.jpg");
+  background-image: url("src/assets/images/homePage.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -24,6 +24,11 @@
   padding-top: 7rem;
 }
 
+.video-container {
+  font-size: 3rem;
+  padding-top: 2rem;
+}
+
 .sponsors {
   padding: 2rem;
   font-size: 3rem;
@@ -33,11 +38,13 @@
   padding-top: 8rem;
 }
 
-.video-container {
-  font-size: 3rem;
-  padding-top: 2rem;
+.second-container {
+  padding-top: 0rem;
 }
 
+.footer-container {
+  padding-top: 8rem;
+}
 @media only screen and (max-width: 768px) {
   .text-on-image.principal {
     font-size: 2rem;
@@ -47,7 +54,17 @@
     font-size: 1rem;
   }
 
-  .video-container .video-player {
-    padding-top: 3rem;
+  .video-container {
+    font-size: 2.2rem;
+    padding-top: 2rem;
+  }
+
+  .sponsors {
+    padding: 1rem;
+    font-size: 2.2rem;
+  }
+
+  .carousel {
+    padding-top: 5rem;
   }
 }

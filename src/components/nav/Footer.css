@@ -3,6 +3,10 @@
   font-size: 0.8rem;
 }
 
+.title-text {
+  font-weight: bold;
+}
+
 .socials {
   padding-top: 1rem;
 }
@@ -33,6 +37,7 @@
   }
 
   .title-text {
+    font-weight: bold;
     font-size: 0.7rem;
   }
 

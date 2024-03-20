@@ -22,11 +22,25 @@
 .text-on-image.secondary {
   font-size: 2rem;
   padding-top: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.arrow-down {
+  width: 5rem;
 }
 
 .video-container {
   font-size: 3rem;
   padding-top: 2rem;
+}
+
+.video-player {
+  width: 75dvw;
+  margin: auto;
 }
 
 .sponsors {
@@ -45,6 +59,7 @@
 .footer-container {
   padding-top: 8rem;
 }
+
 @media only screen and (max-width: 768px) {
   .text-on-image.principal {
     font-size: 2rem;
@@ -55,13 +70,17 @@
   }
 
   .video-container {
-    font-size: 2.2rem;
+    font-size: 1.7rem;
     padding-top: 2rem;
+  }
+
+  .video-player {
+    width: 100dvw;
   }
 
   .sponsors {
     padding: 1rem;
-    font-size: 2.2rem;
+    font-size: 1.7rem;
   }
 
   .carousel {

@@ -14,6 +14,7 @@ body {
 
 /* Fix Navbar width */
 html {
+  scroll-behavior: smooth;
   overflow-x: hidden;
   overflow-y: scroll;
 }

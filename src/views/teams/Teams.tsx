@@ -41,7 +41,7 @@ export default function Teams() {
               <LinkCard
                 imagePath="src\assets\images\teams\teamAlumnis.png"
                 text="La Team Alumnis"
-                to="/teams/alumnis"
+                to="/teams/alumni"
               />
             </Col>
           </Row>

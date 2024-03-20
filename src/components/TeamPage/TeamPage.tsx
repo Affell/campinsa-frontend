@@ -128,6 +128,193 @@ function getTeamDetails(teamId: string): TeamDetails {
         },
       ],
     },
+    alumni: {
+      teamName: "Team Alumni",
+      teamDetail:
+        "L'équipe Alumni garde le contact avec les anciens membres et organise des événements pour maintenir le réseau actif.",
+      members: [
+        {
+          image: teamBDS,
+          name: "Valentin Naegely",
+          role: "Président",
+        },
+      ],
+    },
+    assos: {
+      teamName: "Team Association",
+      teamDetail:
+        "L'équipe Association soutient et coordonne les activités des différentes associations étudiantes.",
+      members: [
+        {
+          image: teamBDS,
+          name: "Axel Lenroué",
+          role: "Président",
+        },
+        {
+          image: teamBDS,
+          name: "Leo Waetcher",
+          role: "Vice-Président",
+        },
+      ],
+    },
+    partenariat: {
+      teamName: "Team Partnariat",
+      teamDetail:
+        "La team partenariat s'occupe des relations avec les entreprises aifn de régaler les étudiants.",
+      members: [
+        {
+          image: teamBDS,
+          name: "Lucas Dervichian",
+          role: "Président",
+        },
+        {
+          image: teamBDS,
+          name: "Ruben Vieira",
+          role: "Vice-Président",
+        },
+        {
+          image: teamBDS,
+          name: "Nathan Chartel",
+          role: "Vice-Président",
+        },
+        {
+          image: teamBDS,
+          name: "Léo Emanuel Diouf",
+          role: "Membre Actif",
+        },
+        {
+          image: teamBDS,
+          name: "Arthur Dumas",
+          role: "Membre Actif",
+        },
+        {
+          image: teamBDS,
+          name: "Momar Gueye",
+          role: "Membre Actif",
+        },
+      ],
+    },
+    soiree: {
+      teamName: "Team Soirée",
+      teamDetail:
+        "La Team Soirée organise les événements festifs, garantissant des moments mémorables pour tous.",
+      members: [
+        {
+          image: teamBDS,
+          name: "Quentin Berthelot",
+          role: "Président",
+        },
+        {
+          image: teamBDS,
+          name: "Fabien Saint-Pe",
+          role: "Vice-Président",
+        },
+        {
+          image: teamBDS,
+          name: "Rémi Berthelet",
+          role: "Membre Actif",
+        },
+        {
+          image: teamBDS,
+          name: "Clara Gory",
+          role: "Membre Actif",
+        },
+        {
+          image: teamBDS,
+          name: "Clémence Malterre",
+          role: "Membre Actif",
+        },
+        {
+          image: teamBDS,
+          name: "Théo Durand",
+          role: "Membre Actif",
+        },
+        {
+          image: teamBDS,
+          name: "Lucas Villegas",
+          role: "Membre Actif",
+        },
+        {
+          image: teamBDS,
+          name: "Bartomeo Alemany-Varin",
+          role: "Membre Actif",
+        },
+        {
+          image: teamBDS,
+          name: "Victor Piaget",
+          role: "Membre Actif",
+        },
+        {
+          image: teamBDS,
+          name: "Charbel Ziade",
+          role: "Membre Actif",
+        },
+      ],
+    },
+    com: {
+      teamName: "Team Communication",
+      teamDetail:
+        "La Team Communication promeut les événements et maintient une image positive de l'organisation à travers différents médias.",
+      members: [
+        {
+          image: teamBDS,
+          name: "Manon Delforge",
+          role: "Présidente",
+        },
+        {
+          image: teamBDS,
+          name: "Axel Messaoudi",
+          role: "Vice-Président",
+        },
+        {
+          image: teamBDS,
+          name: "Mathieu Caffier",
+          role: "Membre",
+        },
+        {
+          image: teamBDS,
+          name: "Robin Carpentier",
+          role: "Membre",
+        },
+        {
+          image: teamBDS,
+          name: "Emma Le Vouedec",
+          role: "Membre",
+        },
+      ],
+    },
+    bda: {
+      teamName: "Team BDA",
+      teamDetail:
+        "La Team BDA (Bureau Des Arts) stimule la créativité et l'expression artistique au sein de l'école.",
+      members: [
+        {
+          image: teamBDS,
+          name: "Maël Ricouard",
+          role: "Président",
+        },
+        {
+          image: teamBDS,
+          name: "Antoine Laurent",
+          role: "Vice-Président",
+        },
+        {
+          image: teamBDS,
+          name: "Pierre Etheve",
+          role: "Membre",
+        },
+        {
+          image: teamBDS,
+          name: "Quentin Brisson",
+          role: "Membre",
+        },
+        {
+          image: teamBDS,
+          name: "Maxence Janiak",
+          role: "Membre",
+        },
+      ],
+    },
   };
   return teams[teamId];
 }
@@ -151,7 +338,7 @@ const TeamPage = () => {
           <p className="team-name justify-content-center">{teamName}</p>
           <p className="team-description">{teamDetail}</p>
         </Container>
-        <Container className="team-members justify-content-center">
+        <Container className="team-members">
           <Row className="text-center">
             {members.map((member, index) => (
               <Col key={index} xs={12} sm={6} md={4} lg={3} className="mb-4">

@@ -25,7 +25,7 @@ type Teams = {
 function getTeamDetails(teamId: string): TeamDetails {
   const teams: Teams = {
     bds: {
-      teamName: "La Team BDS",
+      teamName: "Team BDS",
       teamDetail:
         "La team BDS est chargée d'organiser tous les événements sportifs. Au cours du mandat c'est elle qui s'occupe des créneaux sportifs ainsi que de l'organisation des événements comme le TOSS ou le High Five par exemple",
       members: [
@@ -92,7 +92,7 @@ function getTeamDetails(teamId: string): TeamDetails {
       ],
     },
     bureau: {
-      teamName: "Le Bureau",
+      teamName: "Bureau",
       teamDetail:
         "Le bureau est le coeur de la liste, il est composé des membres principaux qui dirigent et organisent toutes les actions. Le bureau sert aussi de représentant au près de l'administration et des autres écoles.",
       members: [
@@ -129,7 +129,7 @@ function getTeamDetails(teamId: string): TeamDetails {
       ],
     },
     alumni: {
-      teamName: "Team Alumni",
+      teamName: "Team ALUMNIS",
       teamDetail:
         "L'équipe Alumni garde le contact avec les anciens membres et organise des événements pour maintenir le réseau actif.",
       members: [
@@ -141,7 +141,7 @@ function getTeamDetails(teamId: string): TeamDetails {
       ],
     },
     assos: {
-      teamName: "Team Association",
+      teamName: "Team ASSOS",
       teamDetail:
         "L'équipe Association soutient et coordonne les activités des différentes associations étudiantes.",
       members: [
@@ -158,7 +158,7 @@ function getTeamDetails(teamId: string): TeamDetails {
       ],
     },
     partenariat: {
-      teamName: "Team Partnariat",
+      teamName: "Team PARTENARIAT",
       teamDetail:
         "La team partenariat s'occupe des relations avec les entreprises aifn de régaler les étudiants.",
       members: [
@@ -195,7 +195,7 @@ function getTeamDetails(teamId: string): TeamDetails {
       ],
     },
     soiree: {
-      teamName: "Team Soirée",
+      teamName: "Team SOIREE",
       teamDetail:
         "La Team Soirée organise les événements festifs, garantissant des moments mémorables pour tous.",
       members: [
@@ -252,7 +252,7 @@ function getTeamDetails(teamId: string): TeamDetails {
       ],
     },
     com: {
-      teamName: "Team Communication",
+      teamName: "Team COM",
       teamDetail:
         "La Team Communication promeut les événements et maintient une image positive de l'organisation à travers différents médias.",
       members: [
@@ -330,44 +330,20 @@ const TeamPage = () => {
 
   return (
     <>
+      <NavBar />
       <Container className="fullscreen-container">
-        <Container className="navbar-container">
-          <NavBar />
-        </Container>
-        <Container className="text-container justify-content-center">
-          <p className="team-name justify-content-center">{teamName}</p>
+        <Container className="text-container position-absolute top-0 end-0">
+          <p className="team-name">{teamName}</p>
           <p className="team-description">{teamDetail}</p>
         </Container>
         <Container className="team-members">
-          <Row className="text-center">
-            {members.map((member, index) => (
-              <Col key={index} xs={12} sm={6} md={4} lg={3} className="mb-4">
-                <Image src={member.image} rounded className="img-fluid" />
-                <Container className="image-description">
-                  <p className="member-name">{member.name}</p>
-                  <h5>
-                    <Badge
-                      pill
-                      bg={
-                        member.role === "Président"
-                          ? "danger"
-                          : member.role === "Présidente"
-                          ? "danger"
-                          : member.role === "Vice-Président"
-                          ? "warning"
-                          : member.role === "Vice-Présidente"
-                          ? "warning"
-                          : "secondary"
-                      }
-                      className="text-center"
-                    >
-                      {member.role}
-                    </Badge>
-                  </h5>
-                </Container>
-              </Col>
-            ))}
-          </Row>
+          {members.map((member, index) => (
+            <Row className="team-role">
+              <Badge pill bg="danger">
+                {member.role}
+              </Badge>
+            </Row>
+          ))}
         </Container>
       </Container>
       <Footer />

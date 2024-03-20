@@ -38,7 +38,7 @@ export default function CariTaxi() {
 
   return <>
     <NavBar />
-    <Container className="fullscreen-container">
+    <Container className="fullscreen-container map-box">
       <div className="map-container">
         <GoogleMap
           bootstrapURLKeys={{ key: Config.Key.Maps }}

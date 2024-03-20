@@ -1,0 +1,28 @@
+.marker {
+  width: 30px;
+  cursor: pointer;
+  transform: translate(-15px, -15px);
+}
+
+.marker-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.marker-popup {
+  background-color: rgb(225, 225, 225);
+  position: absolute;
+  width: 100px;
+  transform: translate(-35px, 0);
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.marker-popup>h1 {
+  font-size: 0.8rem;
+}
+
+.marker-popup>h2 {
+  font-size: 0.7rem;
+}

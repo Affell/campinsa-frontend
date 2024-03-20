@@ -1,7 +1,7 @@
 /* Import polices */
 @font-face {
-  font-family: "Accid";
-  src: url("src\\assets\\fonts\\accid___.ttf");
+  font-family: "Nunito";
+  src: url("src/assets/fonts/Nunito-VariableFont_wght.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -19,6 +19,6 @@ html,
 
 .fullscreen-container {
   min-height: 100dvh;
-  font-family: Accid, sans-serif;
+  font-family: Nunito, sans-serif;
   font-feature-settings: "liga" 1, "calt" 1;
 }

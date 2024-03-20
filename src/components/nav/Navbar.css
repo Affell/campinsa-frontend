@@ -1,17 +1,9 @@
-/* Import police Grafton */
-@font-face {
-    font-family: "Accid";
-    src: url('src\\assets\\fonts\\accid___.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
 .navbar {
-    font-family: Accid, sans-serif;
-    font-feature-settings: 'liga' 1, 'calt' 1;
-    font-size: 1.5rem;
+  font-family: Nunito, sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1;
+  font-size: 1.5rem;
 }
 
 .navbar-toggler:focus {
-    box-shadow: 0 0 0 0 !important;
+  box-shadow: 0 0 0 0 !important;
 }

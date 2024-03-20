@@ -30,7 +30,7 @@ export default function NavBar() {
       expanded={isOpen}
       expand="lg"
       className="navbar bg-body-tertiary fixed-top"
-    // style={{ opacity }}
+      // style={{ opacity }}
     >
       <Container>
         <Link className="navbar-brand" to="/">

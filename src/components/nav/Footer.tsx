@@ -1,6 +1,8 @@
 import { Col, Container, Row, Image } from "react-bootstrap";
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import tikTokLogo from "../../assets/images/socials/logoTikTok.png";
+import instaLogo from "../../assets/images/socials/logoInsta.png";
 
 function Footer() {
   return (
@@ -24,7 +26,7 @@ function Footer() {
             <Link to={"https://www.tiktok.com/@bdeinsahdf?_t=8kdiqYroQHQ&_r=1"}>
               <Image
                 className="social-logo tik-tok-logo"
-                src="src\assets\images\socials\logoTikTok.png"
+                src={tikTokLogo}
                 alt="TikTok"
                 rounded
                 width={40}
@@ -38,7 +40,7 @@ function Footer() {
             >
               <Image
                 className="social-logo instagram-logo"
-                src="src\assets\images\socials\logoInsta.png"
+                src={instaLogo}
                 alt="Instagram"
                 rounded
                 width={40}

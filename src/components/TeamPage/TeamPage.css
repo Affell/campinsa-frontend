@@ -1,0 +1,20 @@
+.fullscreen-container {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.image-description {
+  padding: 0.5rem;
+}
+
+.team-name {
+  font-size: 3rem;
+}
+
+.team-description {
+  font-size: 1.5rem;
+}
+
+.team-members {
+  padding-top: 5rem;
+}

@@ -22,7 +22,7 @@ const TeamPage = () => {
       if (!grouped.has(member.role)) grouped.set(member.role, [[member]]);
       else {
         var list = grouped.get(member.role);
-        if (list[list.length - 1].length == 3) {
+        if (list[list.length - 1].length == 3) { // 3 = LE MAX PAR LIGNE 
           list.push([member]);
         } else list[list.length - 1].push(member);
       }

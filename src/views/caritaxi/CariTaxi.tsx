@@ -11,13 +11,7 @@ import TaxiMarker from "./TaxiMarker";
 export default function CariTaxi() {
 
   const [socket, setSocket] = useState<Socket>();
-  const [taxiLocations, setTaxiLocations] = useState<LocationInfo[]>([{
-    location: {
-      latitude: 50.3475755,
-      longitude: 3.5164807
-    },
-    name: "Axel Lenroué"
-  }]);
+  const [taxiLocations, setTaxiLocations] = useState<LocationInfo[]>();
 
   useEffect(() => {
     if (socket?.ws.readyState == 1) {
@@ -28,12 +22,13 @@ export default function CariTaxi() {
         console.log(data);
         setTaxiLocations(data);
       });
-      // var id = setInterval(() => {
-      //   socket.emit("updateTaxiLocation", {});
-      // }, 1000);
-      // return () => {
-      //   clearInterval(id);
-      // }
+      socket.emit("updateTaxiLocation", {});
+      var id = setInterval(() => {
+        socket.emit("updateTaxiLocation", {});
+      }, 3000);
+      return () => {
+        clearInterval(id);
+      }
     } else {
       var s = new Socket(Config.Urls.WS!);
       s.on("connect", () => {
@@ -49,10 +44,10 @@ export default function CariTaxi() {
         <GoogleMap
           bootstrapURLKeys={{ key: Config.Key.Maps }}
           defaultCenter={{
-            lat: 50.36,
+            lat: 50.34,
             lng: 3.52
           }}
-          defaultZoom={12}
+          defaultZoom={13}
         >
           {taxiLocations?.map((taxi) => <TaxiMarker key={taxi.name} lat={taxi.location.latitude} lng={taxi.location.longitude} name={taxi.name} />)}
         </GoogleMap>

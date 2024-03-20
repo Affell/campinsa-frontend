@@ -10,8 +10,6 @@
 }
 
 .text-on-image {
-  font-family: Nunito, sans-serif;
-  font-feature-settings: "liga" 1, "calt" 1;
   color: white;
   text-align: center;
 }
@@ -27,7 +25,6 @@
 }
 
 .sponsors {
-  font-family: Nunito, "sans-serif";
   padding: 2rem;
   font-size: 3rem;
 }
@@ -37,7 +34,6 @@
 }
 
 .video-container {
-  font-family: Nunito, "sans-serif";
   font-size: 3rem;
   padding-top: 2rem;
 }

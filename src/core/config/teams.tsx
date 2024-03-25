@@ -27,13 +27,13 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Adrien Garnier",
         role: "Président",
-        citation: "",
+        citation: "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
       },
       {
         image: teamBDS,
         name: "Laurine Lefrançois",
         role: "Vice-Prez",
-        citation: "Ses grosses cuisses la miam le poulet succulent",
+        citation: "Heureuse seulement quand elle est à la salle ou au RU",
 
       },
       {
@@ -53,7 +53,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Simon Breton",
         role: "Sous fifre",
-        citation: "",
+        citation: "Normand ou Breton selon ce quand ça m’arrange",
       },
       {
         image: teamBDS,
@@ -71,7 +71,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Kevin Le Sommer",
         role: "Sous fifre",
-        citation: "",
+        citation: "Wazinkkkkkkkkkkkkkkkkkk",
       },
       {
         image: teamBDS,
@@ -83,7 +83,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Victor Baville",
         role: "Sous fifre",
-        citation: "",
+        citation: "그건 인종차별이야",
       },
       {
         image: teamBDS,
@@ -189,7 +189,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Ruben Vieira",
         role: "Vice-Prez",
-        citation: "",
+        citation: "C'est moi qui ait fait le site pas plus de 90 caractères svp",
       },
       {
         image: teamBDS,
@@ -274,7 +274,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Victor Piaget",
         role: "Sous fifre",
-        citation: "",
+        citation: "team naps okay okay",
       },
       {
         image: teamBDS,

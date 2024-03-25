@@ -5,10 +5,10 @@
   import Footer from "../nav/Footer";
   import "./TeamPage.css";
   import { teams, validTeamId } from "../../core/config/teams";
+import { todo } from "node:test";
 
   const TeamPage = () => {
 
-     
     const { teamId } = useParams<{ teamId: string }>();
 
     if (teamId === undefined || !validTeamId(teamId)) {
@@ -62,6 +62,11 @@
 
     }
 
+    /* TODO */
+    // Team Page version mobile
+    // Coller le texte du rôle à l'image sur la version ordi
+    // Changer le flip card pour ne pas avoir que du hover
+
 
     return (
       <>
@@ -76,46 +81,6 @@
             {groupMembers()}
           </Container>
         </Container>
-        {/* tel */}
-        {/* <Container className="d-md-none">
-          <Container className="text-container justify-content-center">
-              <p className="team-name justify-content-center">{teamName}</p>
-              <p className="team-description">{teamDetail}</p>
-          </Container>
-          <Container className="team-members justify-content-center">
-            <Container className="team-members">
-              <Row className="text-center">
-                {members.map((member, index) => (
-                  <Col key={index} xs={12} sm={6} md={4} lg={3} className="mb-4">
-                    <Image src={member.image} rounded className="img-fluid" />
-                    <Container className="image-description">
-                      <p className="member-name">{member.name}</p>
-                      <h5>
-                        <Badge
-                          pill
-                          bg={
-                            member.role === "Président"
-                              ? "dark"
-                              : member.role === "Présidente"
-                              ? "dark"
-                              : member.role === "Vice-Président"
-                              ? "dark"
-                              : member.role === "Vice-Présidente"
-                              ? "dark"
-                              : "dark"
-                          }
-                          className="text-center"
-                        >
-                          {member.role}
-                        </Badge>
-                      </h5>
-                    </Container>
-                  </Col>
-                ))}
-              </Row>
-            </Container>
-            </Container> */}
-        {/* </Container> */}
         <div className="footer-container">
           <Footer />                 
         </div>

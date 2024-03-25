@@ -8,6 +8,7 @@ import { LocationInfo } from "../../core/models/Location";
 import "./CariTaxi.css";
 import TaxiMarker from "./TaxiMarker";
 
+
 export default function CariTaxi() {
 
   const [socket, setSocket] = useState<Socket>();
@@ -18,19 +19,22 @@ export default function CariTaxi() {
       socket.on("disconnect", () => {
         setSocket(undefined);
       });
-      socket.on("updateTaxiLocation", (data) => {
+      socket.on("taxiLocation", (data) => {
         setTaxiLocations(data);
       });
-      socket.emit("updateTaxiLocation", {});
+      socket.emit("askTaxiLocation", {});
       var id = setInterval(() => {
-        socket.emit("updateTaxiLocation", {});
+        socket.emit("askTaxiLocation", {});
       }, 3000);
       return () => {
         clearInterval(id);
       }
     } else {
       var s = new Socket(Config.Urls.WS!);
-      s.on("connect", () => {
+      s.on("mode", () => {
+        s.emit("mode", { mode: "external" });
+      })
+      s.on("authenticated", () => {
         setSocket(s);
       });
     }

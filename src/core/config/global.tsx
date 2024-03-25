@@ -1,7 +1,7 @@
 export const Config = {
   Urls: {
     API: "https://api.campinsa.fr",
-    WS: "wss://api.campinsa.fr/ws/web"
+    WS: "wss://api.campinsa.fr/ws/caritaxi"
   },
   App: {
     Name: "Camp'INSA",

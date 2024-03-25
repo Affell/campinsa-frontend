@@ -7,30 +7,30 @@ import NavBarToogler from "./NavBarToggler";
 import { useCycle } from "framer-motion";
 import { Image } from "react-bootstrap";
 import logo from "../../assets/images/logo.svg";
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function NavBar() {
   const [isOpen, toggleOpen] = useCycle(false, true);
 
-  // const [opacity, setOpacity] = useState(-1);
+  const [opacity, setOpacity] = useState(1);
 
-  // const handleScroll = () => {
-  //   const newOpacity = 0.9;
-  //   setOpacity(newOpacity);
-  // };
+  const handleScroll = () => {
+    const newOpacity = 0.9;
+    setOpacity(newOpacity);
+  };
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
 
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return <>
     <Navbar
       expanded={isOpen}
       expand="lg"
       className="navbar bg-body-tertiary fixed-top"
-    // style={{ opacity }}
+      style={{ opacity }}
     >
       <Container>
         <Link className="navbar-brand" to="/">

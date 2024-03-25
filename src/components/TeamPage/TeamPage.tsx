@@ -24,7 +24,7 @@ import { todo } from "node:test";
         if (!grouped.has(member.role)) grouped.set(member.role, [[member]]);
         else {
           var list = grouped.get(member.role);
-          if (list[list.length - 1].length == 3) { // 3 = LE MAX PAR LIGNE 
+          if (window.innerWidth > 768 && list[list.length - 1].length == 3) { // 3 = LE MAX PAR LIGNE 
             list.push([member]);
           } else list[list.length - 1].push(member);
         }
@@ -45,7 +45,7 @@ import { todo } from "node:test";
               <div className="flip-card">
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
-                    <img className="member-image" src={member.image} height={162} width={138}/>
+                    <img className="member-image" src={member.image}/>
                   </div>
                   <div className="flip-card-back member-image">
                     <h1 className="member-name">{member.name}</h1>
@@ -63,17 +63,16 @@ import { todo } from "node:test";
     }
 
     /* TODO */
-    // Team Page version mobile
     // Coller le texte du rôle à l'image sur la version ordi
     // Changer le flip card pour ne pas avoir que du hover
+    // Augmenter taille image version mobile
 
 
     return (
       <>
         <NavBar />
-        {/* ordi */}
         <Container className="fullscreen-container">
-          <div className="text-container position-fixed top-0 end-0">
+          <div className="text-container">
             <p className="team-name">{teamName}</p>
             <p className="team-description">{teamDetail}</p>
           </div>

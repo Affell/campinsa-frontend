@@ -299,7 +299,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Axel Messaoudi",
         role: "Vice-Prez",
-        citation: ""
+        citation: "L'Homme des caméras Besoin d'une photo ? Cherchez Axel"
       },
       {
         image: teamBDS,

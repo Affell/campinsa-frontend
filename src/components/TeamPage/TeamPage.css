@@ -1,8 +1,10 @@
 .text-container {
   padding: 8rem 2rem 0 0;
-  /* padding-top: 8rem; */
-  width: 40dvw !important;
+  width: 40vw; 
   text-align: right;
+  position: fixed; 
+  top: 0;
+  right: 0;
 }
 
 .team-name {
@@ -37,7 +39,6 @@
 
 .card-member {
   width: 10rem !important;
-  padding-right: 8rem !important;
 }
 
 .flip-card{
@@ -83,6 +84,8 @@
 .member-image{
   border-radius: 10px;
   border: 1px solid;
+  height: 162px;
+  width: 138px;
 }
 
 .member-name{
@@ -98,4 +101,59 @@
   height: 100%;
   text-align: center;
   vertical-align:middle;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .card-member{
+    width: 75dvw ;
+  }
+
+  .text-container {
+    position: relative;
+    width: auto;
+    padding: 0 0; 
+    text-align: left;
+    top: 0;
+  }
+
+  .text-container .team-name{
+    font-size: 2rem;
+    padding: 0;
+    font-weight: bold;
+  }
+
+  .team-description{
+    font-size: 1rem;
+  }
+
+  .team-role .text-role {
+    transform: rotate(0deg);
+    width: auto;
+    text-align: center;
+    margin-bottom: 1rem; 
+  }
+
+  .team-role {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    font-size: 1.5rem;
+  }
+
+  .card-member {
+    width: 75dvw;
+    padding-right: 0 !important; 
+    margin-bottom: 1rem;
+  }
+
+  .team-members{
+    padding-top: 2rem;
+  }
+
+  .member-image{
+    height: 180px;
+    width: 150px;
+  }
+
 }

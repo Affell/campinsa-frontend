@@ -23,7 +23,7 @@ function Footer() {
         <Col>
           <h6 className="title-text">Nos réseaux</h6>
           <div className="socials">
-            <Link to={"https://www.tiktok.com/@bdeinsahdf?_t=8kdiqYroQHQ&_r=1"}>
+            <a href="https://www.tiktok.com/@bdeinsahdf?_t=8kdiqYroQHQ&_r=1" target="_blank" rel="noopener noreferrer">
               <Image
                 className="social-logo tik-tok-logo"
                 src={tikTokLogo}
@@ -32,12 +32,8 @@ function Footer() {
                 width={40}
                 height={40}
               />
-            </Link>
-            <Link
-              to={
-                "https://www.instagram.com/bdeinsahdf?igsh=MXJ4YndjamY1MHljdA=="
-              }
-            >
+            </a>
+            <a href="https://www.instagram.com/bdeinsahdf?igsh=MXJ4YndjamY1MHljdA==" target="_blank" rel="noopener noreferrer">
               <Image
                 className="social-logo instagram-logo"
                 src={instaLogo}
@@ -46,7 +42,7 @@ function Footer() {
                 width={40}
                 height={40}
               />
-            </Link>
+            </a>
           </div>
         </Col>
         <Col>

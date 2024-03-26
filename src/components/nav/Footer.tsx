@@ -1,6 +1,5 @@
 import { Col, Container, Row, Image } from "react-bootstrap";
 import "./Footer.css";
-import { Link } from "react-router-dom";
 import tikTokLogo from "../../assets/images/socials/logoTikTok.png";
 import instaLogo from "../../assets/images/socials/logoInsta.png";
 

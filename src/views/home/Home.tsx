@@ -7,7 +7,11 @@ import arrowDown from "../../assets/images/arrow.png";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export default function Home() {
+interface HomeProps {
+  particlesInit: boolean;
+}
+
+export default function Home({ particlesInit }: HomeProps) {
   const [isTextVisible, setIsTextVisible] = useState(false);
 
   useEffect(() => {
@@ -24,8 +28,6 @@ export default function Home() {
     visible: { opacity: 1 },
     hidden: { opacity: 0 },
   };
-
-  scrollBy();
 
   return (
     <>

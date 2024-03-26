@@ -29,6 +29,7 @@
   width: 10rem;
   text-align: left;
   transform: rotate(-90deg) translateY(4rem);
+  font-weight: 900;
 }
 
 /* .team-role .badge {
@@ -98,7 +99,7 @@
 }
 
 .member-citation {
-  font-size: .7rem;
+  font-size: 0.7rem;
   font-weight: normal;
   height: 100%;
   text-align: center;
@@ -106,7 +107,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-
   .card-member {
     width: 75dvw;
   }
@@ -160,5 +160,4 @@
   .team-members {
     padding-top: 2rem;
   }
-
 }

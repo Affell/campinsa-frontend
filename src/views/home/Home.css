@@ -1,12 +1,32 @@
-.first-container {
+@keyframes zoomOutAnimation {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.bg-image {
   background-image: url("src/assets/images/homePage.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Assurez-vous que l'image de fond est derrière le texte */
+  animation: zoomOutAnimation 1.5s ease-out forwards;
+}
+
+.first-container {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .text-on-image {
@@ -14,12 +34,14 @@
   text-align: center;
 }
 
-.text-on-image.principal {
+.principal {
   font-size: 4rem;
   padding-top: 10rem;
+  opacity: 1;
+  visibility: visible;
 }
 
-.text-on-image.secondary {
+.secondary {
   font-size: 2rem;
   padding-top: 7rem;
   display: flex;

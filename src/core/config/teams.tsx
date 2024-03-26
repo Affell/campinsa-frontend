@@ -245,7 +245,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Clara Gory",
         role: "Sous fifre",
-        citation: "",
+        citation: "La FISA",
       },
       {
         image: teamBDS,
@@ -257,7 +257,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Théo Durand",
         role: "Sous fifre",
-        citation: "",
+        citation: "Mec de cité simple",
       },
       {
         image: teamBDS,
@@ -312,7 +312,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Robin Carpentier",
         role: "Membre",
-        citation: "",
+        citation: "Je t’avais dit de ne pas faire le con",
       },
       {
         image: teamBDS,

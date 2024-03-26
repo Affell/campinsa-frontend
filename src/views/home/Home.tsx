@@ -4,22 +4,57 @@ import Carousel from "../../components/Carousel/Carousel";
 import Footer from "../../components/nav/Footer";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import arrowDown from "../../assets/images/arrow.png";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [isTextVisible, setIsTextVisible] = useState(false);
 
-  scrollBy()
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsTextVisible(true);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const text = "Bienvenue à Camp'INSA".split(" ");
+
+  const variants = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
+  };
+
+  scrollBy();
+
   return (
     <>
       <NavBar />
       <div className="first-container fullscreen-container">
-        <div className="text-on-image principal">
-          Bienvenue à Camp'INSA
-          <div className="text-on-image secondary" onClick={() => scrollBy(0, innerHeight - 80 - scrollY)}>
+        <div className="bg-image" />
+        <motion.div
+          className="text-on-image"
+          variants={variants}
+          initial="hidden"
+          animate={isTextVisible ? "visible" : "hidden"}
+        >
+          <motion.div
+            className="text-content"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            exit={{ opacity: 0 }}
+          >
+            <div className="principal">Bienvenue à Camp'INSA</div>
+          </motion.div>
+          <div
+            className="secondary"
+            onClick={() => scrollBy(0, innerHeight - 80 - scrollY)}
+          >
             En savoir plus
             <img src={arrowDown} className="arrow-down" />
           </div>
-
-        </div>
+        </motion.div>
       </div>
       <div id="video" className="video-container text-center">
         <p>Retrouvez notre film ici !</p>

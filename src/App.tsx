@@ -7,7 +7,10 @@ import CariTaxi from "./views/caritaxi/CariTaxi";
 import Teams from "./views/teams/Teams";
 import Error from "./views/error/Error";
 import TeamPage from "./components/TeamPage/TeamPage";
-import { useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
+import { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import { loadPolygonMaskPlugin } from "@tsparticles/plugin-polygon-mask";
 
 export default function App() {
   return (
@@ -18,13 +21,25 @@ export default function App() {
 }
 
 function Inner() {
+
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+      await loadPolygonMaskPlugin(engine);
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
+
   const location = useLocation();
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
   return <Routes>
-    <Route path="/" element={<Home />} />
+    <Route path="/" element={<Home particlesInit={init} />} />
     <Route path="/planning" element={<Planning />} />
     <Route path="/shotgun" element={<Shotgun />} />
     <Route path="/caritaxi" element={<CariTaxi />} />

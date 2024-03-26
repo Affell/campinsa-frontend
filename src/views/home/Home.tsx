@@ -5,9 +5,12 @@ import Footer from "../../components/nav/Footer";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import arrowDown from "../../assets/images/arrow.png";
 
-export default function Home() {
+interface HomeProps {
+  particlesInit: boolean
+}
 
-  scrollBy()
+export default function Home({ particlesInit }: HomeProps) {
+
   return (
     <>
       <NavBar />

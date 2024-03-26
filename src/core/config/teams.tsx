@@ -27,21 +27,20 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Adrien Garnier",
         role: "Président",
-        citation: "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+        citation:
+          "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
       },
       {
         image: teamBDS,
         name: "Laurine Lefrançois",
         role: "Vice-Prez",
         citation: "Heureuse seulement quand elle est à la salle ou au RU",
-
       },
       {
         image: teamBDS,
         name: "Richie Abboud",
         role: "Vice-Prez",
         citation: "",
-
       },
       {
         image: teamBDS,
@@ -95,7 +94,8 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Antoine Mongrand",
         role: "Sous fifre",
-        citation: "",
+        citation:
+          "oublie que t'as aucune chance vas-y fonce on sait jamais sur un malentendu ça peut marcher",
       },
     ],
   },
@@ -132,7 +132,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Antoine Frémont",
         role: "Vice Trésorier",
-        citation: "",
+        citation: "Encore plus polyvalent que son couteau suisse",
       },
       {
         image: teamBDS,
@@ -189,7 +189,8 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Ruben Vieira",
         role: "Vice-Prez",
-        citation: "C'est moi qui ait fait le site pas plus de 90 caractères svp",
+        citation:
+          "C'est moi qui ait fait le site pas plus de 90 caractères svp",
       },
       {
         image: teamBDS,
@@ -262,7 +263,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Lucas Villegas",
         role: "Sous fifre",
-        citation: "",
+        citation: "Bon si t'insistes...",
       },
       {
         image: teamBDS,
@@ -293,19 +294,19 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Manon Delforge",
         role: "Présidente",
-        citation: "",
+        citation: "Est + team cum que team com",
       },
       {
         image: teamBDS,
         name: "Axel Messaoudi",
         role: "Vice-Prez",
-        citation: "L'Homme des caméras Besoin d'une photo ? Cherchez Axel"
+        citation: "L'Homme des caméras Besoin d'une photo ? Cherchez Axel",
       },
       {
         image: teamBDS,
         name: "Mathieu Caffier",
         role: "Membre",
-        citation: "",
+        citation: "Rien de mieux qu’une bonne bière après une bonne bière",
       },
       {
         image: teamBDS,
@@ -330,7 +331,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Maël Ricouard",
         role: "Président",
-        citation: "",
+        citation: "Tout cul tendu mérite son dû",
       },
       {
         image: teamBDS,
@@ -342,7 +343,8 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Pierre Etheve",
         role: "Membre",
-        citation: "",
+        citation:
+          "J’ai assez d’inspiration pour m’habiller en sac cabas mais pas assez pour trouver une description ",
       },
       {
         image: teamBDS,

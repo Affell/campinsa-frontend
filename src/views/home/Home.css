@@ -2,6 +2,7 @@
   from {
     transform: scale(1.2);
   }
+
   to {
     transform: scale(1);
   }
@@ -17,7 +18,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Assurez-vous que l'image de fond est derrière le texte */
+  z-index: -1;
+  /* Assurez-vous que l'image de fond est derrière le texte */
   animation: zoomOutAnimation 1.5s ease-out forwards;
 }
 
@@ -32,18 +34,20 @@
 .text-on-image {
   color: white;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .principal {
   font-size: 4rem;
-  padding-top: 10rem;
   opacity: 1;
   visibility: visible;
 }
 
 .secondary {
   font-size: 2rem;
-  padding-top: 7rem;
+  margin-top: 7rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,12 +87,15 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .text-on-image.principal {
-    font-size: 2rem;
+  .principal {
+    font-size: 1.8rem;
   }
 
-  .text-on-image.secondary {
-    font-size: 1rem;
+  .secondary {
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: absolute;
+    bottom: 1rem;
   }
 
   .video-container {
@@ -107,5 +114,9 @@
 
   .carousel {
     padding-top: 5rem;
+  }
+
+  .arrow-down {
+    width: 4rem;
   }
 }

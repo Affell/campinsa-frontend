@@ -86,8 +86,7 @@ export default function Caribou() {
       },
       number: {
         limit: 0,
-        value: 400,
-        density: 0.5
+        value: 300,
       },
       opacity: {
         animation: {
@@ -131,7 +130,6 @@ export default function Caribou() {
   };
 
   return <Particles
-    id="tsparticles"
     particlesLoaded={particlesLoaded}
     options={options}
   />

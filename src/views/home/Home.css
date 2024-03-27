@@ -26,7 +26,6 @@
 .first-container {
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
@@ -47,12 +46,13 @@
 
 .secondary {
   font-size: 2rem;
-  margin-top: 7rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   cursor: pointer;
+  position: absolute;
+  bottom: 1rem;
 }
 
 .arrow-down {
@@ -87,6 +87,11 @@
 }
 
 @media only screen and (max-width: 768px) {
+
+  .first-container {
+    justify-content: center;
+  }
+
   .principal {
     font-size: 1.8rem;
   }
@@ -94,8 +99,6 @@
   .secondary {
     font-size: 1.2rem;
     font-weight: bold;
-    position: absolute;
-    bottom: 1rem;
   }
 
   .video-container {

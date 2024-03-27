@@ -23,8 +23,6 @@ export default function Home({ particlesInit }: HomeProps) {
     return () => clearTimeout(timer);
   }, []);
 
-  const text = "Bienvenue à Camp'INSA".split(" ");
-
   const variants = {
     visible: { opacity: 1 },
     hidden: { opacity: 0 },

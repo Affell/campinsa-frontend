@@ -1,6 +1,10 @@
-.image-responsive {
-  max-width: 100%;
-  height: auto;
+.title .image-responsive {
+  width: 50vw;
+}
+
+.days .image-responsive {
+  margin: 1rem;
+  width: 110vw;
 }
 
 .times {

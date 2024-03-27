@@ -233,7 +233,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Fabien Saint-Pe",
         role: "Vice-Prez",
-        citation: "Viens on se bat (ici c'est Paris) ",
+        citation: "Viens on se bat \n (ici c'est Paris) ",
       },
       {
         image: teamBDS,

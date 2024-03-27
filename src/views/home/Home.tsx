@@ -6,6 +6,7 @@ import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import arrowDown from "../../assets/images/arrow.png";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Caribou from "../../components/Anim/Caribou";
 
 interface HomeProps {
   particlesInit: boolean;
@@ -21,8 +22,6 @@ export default function Home({ particlesInit }: HomeProps) {
 
     return () => clearTimeout(timer);
   }, []);
-
-  const text = "Bienvenue à Camp'INSA".split(" ");
 
   const variants = {
     visible: { opacity: 1 },
@@ -40,6 +39,7 @@ export default function Home({ particlesInit }: HomeProps) {
           initial="hidden"
           animate={isTextVisible ? "visible" : "hidden"}
         >
+          {particlesInit && <Caribou />}
           <motion.div
             className="text-content"
             initial={{ opacity: 0, y: 20 }}

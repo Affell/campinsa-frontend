@@ -1,4 +1,13 @@
 #tsparticles {
-  width: 20dvw;
-  height: 50dvh;
+  width: 350px;
+  height: 400px;
+}
+
+@media only screen and (max-width: 768px) {
+  #tsparticles {
+    position: absolute;
+    top: 0;
+    width: 100dvw;
+    height: 100dvh;
+  }
 }

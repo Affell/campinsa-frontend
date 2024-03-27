@@ -1,15 +1,35 @@
-.title{
-    padding-left: 7rem;
-}
-.days{
-    padding-top: 2rem;
-    padding-left: 7rem;
+.title .image-responsive {
+  width: 40vw;
 }
 
-.times{
-    padding-top: 3rem;
+.days .image-responsive {
+  margin: 1rem;
+  width: 75vw;
 }
 
-.events{
-    padding-top: 4rem;
+.times {
+  padding-left: 2rem;
+  width: auto;
+}
+
+.events {
+  padding-top: 2rem;
+}
+
+.image-responsive-times {
+  margin: 1rem;
+  height: 10vw;
+}
+
+.image-responsive-events {
+  height: 10vw;
+}
+
+.image-responsive-allos {
+  margin: 1rem;
+  height: 10vw;
+}
+
+.image-responsive-allos2 {
+  height: 10vw;
 }

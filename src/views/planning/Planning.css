@@ -1,10 +1,9 @@
 .title .image-responsive {
-  width: 50vw;
+  width: 40vw;
 }
 
 .days .image-responsive {
   margin: 1rem;
-  margin-left: 6rem;
   width: 75vw;
 }
 
@@ -19,18 +18,18 @@
 
 .image-responsive-times {
   margin: 1rem;
-  height: 45vh;
+  height: 10vw;
 }
 
 .image-responsive-events {
-  height: 45vh;
+  height: 10vw;
 }
 
 .image-responsive-allos {
   margin: 1rem;
-  height: 12vh;
+  height: 10vw;
 }
 
 .image-responsive-allos2 {
-  height: 13.1vh;
+  height: 10vw;
 }

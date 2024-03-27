@@ -7,6 +7,7 @@ import arrowDown from "../../assets/images/arrow.png";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Caribou from "../../components/Anim/Caribou";
+import CarouselItem from "../../components/Carousel/CarouselItem";
 
 interface HomeProps {
   particlesInit: boolean;
@@ -27,6 +28,29 @@ export default function Home({ particlesInit }: HomeProps) {
     visible: { opacity: 1 },
     hidden: { opacity: 0 },
   };
+
+  const items = [
+    <CarouselItem
+      imagePath="src\assets\images\partnerships\logoRedBull.jpg"
+      primaryText="Red Bull"
+      secondaryText="Boisson energisante"
+    />,
+    <CarouselItem
+      imagePath="src\assets\images\partnerships\logoLyfPay.png"
+      primaryText="Lyf Pay"
+      secondaryText="Paiement mobile"
+    />,
+    <CarouselItem
+      imagePath="src\assets\images\partnerships\logoDivertyBox.jpg"
+      primaryText="Diverty Box"
+      secondaryText="Bar"
+    />,
+    <CarouselItem
+      imagePath="src\assets\images\partnerships\logoCBC.jpg"
+      primaryText="Caramels Bonbons Chocolats"
+      secondaryText="Confiserie"
+    />,
+  ];
 
   return (
     <>
@@ -69,7 +93,7 @@ export default function Home({ particlesInit }: HomeProps) {
       <div className="second-container">
         <div className="sponsors">Nos partenaires</div>
         <div className="carousel">
-          <Carousel />
+          <Carousel items={items} />
         </div>
       </div>
       <div className="footer-container">

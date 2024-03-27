@@ -9,7 +9,7 @@ export default function Planning() {
     <>
       <NavBar />
       <Container className="fullscreen-container d-flex justify-content-center">
-        <Image src={planning} fluid />
+        <Image src={planning} fluid className="planning" />
       </Container>
       <div className="footer-container">
         <Footer />

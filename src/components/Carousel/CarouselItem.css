@@ -1,8 +1,14 @@
 .item-carousel {
   font-size: 1.5rem;
 }
+
 .item-carousel .text-carousel {
   padding-top: 1rem;
+}
+
+.item-carousel .text-secondary {
+  font-family: Nunito, sans-serif;
+
 }
 
 @media only screen and (max-width: 768px) {

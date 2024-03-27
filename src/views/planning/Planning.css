@@ -4,7 +4,8 @@
 
 .days .image-responsive {
   margin: 1rem;
-  width: 110vw;
+  margin-left: 6rem;
+  width: 75vw;
 }
 
 .times {

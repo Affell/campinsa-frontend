@@ -1,4 +1,4 @@
-.footer-container{
+.footer-container {
   padding-top: 8rem;
 }
 
@@ -7,16 +7,13 @@
   font-size: 0.8rem;
 }
 
-.title-text {
-  font-weight: bold;
-}
-
 .socials {
   padding-top: 1rem;
 }
 
 .socials img {
-  margin: 5px; /* Ceci ajoutera une marge tout autour des images */
+  margin: 5px;
+  /* Ceci ajoutera une marge tout autour des images */
 }
 
 .legals {
@@ -27,6 +24,11 @@
 .footer-container .footer-copyrigth {
   padding-top: 1rem;
   font-size: 1rem;
+}
+
+.footer-container p {
+  font-family: Nunito, sans-serif;
+
 }
 
 @media (max-width: 767.98px) {

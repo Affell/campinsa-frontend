@@ -40,7 +40,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Richie Abboud",
         role: "Vice-Prez",
-        citation: "",
+        citation: "Le libanais préféré de ton libanais préféré",
       },
       {
         image: teamBDS,
@@ -52,7 +52,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Simon Breton",
         role: "Sous fifre",
-        citation: "Normand ou Breton selon ce quand ça m’arrange",
+        citation: "Normand ou Breton selon ce qui m’arrange",
       },
       {
         image: teamBDS,
@@ -70,7 +70,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Kevin Le Sommer",
         role: "Sous fifre",
-        citation: "Wazinkkkkkkkkkkkkkkkkkk",
+        citation: "Wazinkkkkkkkkkkkkkkk",
       },
       {
         image: teamBDS,
@@ -95,7 +95,7 @@ export const teams: Teams = {
         name: "Antoine Mongrand",
         role: "Sous fifre",
         citation:
-          "oublie que t'as aucune chance vas-y fonce on sait jamais sur un malentendu ça peut marcher",
+          "Oublie que t'as aucune chance vas-y fonce on sait jamais sur un malentendu ça peut marcher",
       },
     ],
   },
@@ -233,7 +233,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Fabien Saint-Pe",
         role: "Vice-Prez",
-        citation: "Viens on se bat (ici c'est Paris) ",
+        citation: "Viens on se bat \n (ici c'est Paris) ",
       },
       {
         image: teamBDS,

@@ -5,6 +5,7 @@ type Member = {
   name: string;
   role: string;
   citation: string;
+  bomb?: boolean
 };
 
 type TeamDetails = {
@@ -114,7 +115,8 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Georges Halisso",
         role: "VP Interne",
-        citation: "",
+        citation: "Boom Mohammed",
+        bomb: true
       },
       {
         image: teamBDS,

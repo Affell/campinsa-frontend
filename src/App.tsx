@@ -11,6 +11,7 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { loadPolygonMaskPlugin } from "@tsparticles/plugin-polygon-mask";
+import { loadEmittersPlugin } from "@tsparticles/plugin-emitters";
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ function Inner() {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
       await loadPolygonMaskPlugin(engine);
+      await loadEmittersPlugin(engine);
     }).then(() => {
       setInit(true);
     });

@@ -36,8 +36,8 @@ export default function NavBar() {
             <Link className="nav-link" to="/planning">
               Programme
             </Link>
-            <Link className="nav-link" to="/shotgun">
-              Shotgun
+            <Link className="nav-link" to="/events">
+              Events
             </Link>
             <Link className="nav-link" to="/teams">
               Teams

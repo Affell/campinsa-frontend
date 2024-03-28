@@ -1,8 +1,13 @@
 import { Container, ISourceOptions } from "@tsparticles/engine";
 import Particles from "@tsparticles/react";
 import "./Caribou.css";
+import smalldeer from "../../assets/images/smalldeer.svg";
 
-export default function Caribou() {
+interface CaribouProps {
+  color: string
+}
+
+export default function Caribou({ color }: CaribouProps) {
   const options = {
     name: "Polygon Mask",
     fullScreen: {
@@ -68,11 +73,11 @@ export default function Caribou() {
     },
     particles: {
       color: {
-        value: "#ffffff"
+        value: color
       },
       links: {
         blink: false,
-        color: "#ffffff",
+        color: color,
         consent: false,
         distance: 30,
         enable: true,
@@ -109,7 +114,7 @@ export default function Caribou() {
     polygon: {
       draw: {
         enable: true,
-        lineColor: "rgba(255,255,255,0.2)",
+        lineColor: color + "33",
         lineWidth: 1
       },
       enable: true,
@@ -121,7 +126,7 @@ export default function Caribou() {
       },
       scale: 0.5,
       type: "inline",
-      url: "https://particles.js.org/images/smalldeer.svg"
+      url: smalldeer,
     }
   } as ISourceOptions;
 
@@ -130,6 +135,7 @@ export default function Caribou() {
   };
 
   return <Particles
+    className="anim-caribou"
     particlesLoaded={particlesLoaded}
     options={options}
   />

@@ -5,10 +5,13 @@ import NavBar from "../nav/Navbar";
 import Footer from "../nav/Footer";
 import "./TeamPage.css";
 import { teams, validTeamId } from "../../core/config/teams";
+import { useState } from "react";
+import Bombs from "../Anim/Bombs";
 
 const TeamPage = () => {
 
   const { teamId } = useParams<{ teamId: string }>();
+  const [bomb, setBomb] = useState(false);
 
   if (teamId === undefined || !validTeamId(teamId)) {
     return <Navigate to="/*" />;
@@ -36,13 +39,13 @@ const TeamPage = () => {
       for (let i = 0; i < groups.length; i++) {
         const group = groups[i];
         rows.push(
-          <div key={group.teamName} className="team-role">
+          <div key={role + i} className="team-role">
             <p className="text-role">{role}</p>
             {/* <Badge pill bg="dark">
               {role}
             </Badge> */}
             {group.map((member: any, index: number) =>
-              <div key={member.name} className="card-member">
+              <div key={member.name} className="card-member" onMouseEnter={() => { if (member.bomb) setBomb(true) }} onMouseLeave={() => { if (member.bomb) setBomb(false) }}>
                 <div id={globalIndex + index + ""} className={"flip-card"}>
                   <div className="flip-card-inner">
                     <div className="flip-card-front">
@@ -73,6 +76,7 @@ const TeamPage = () => {
   return (
     <>
       <NavBar />
+      {bomb && <Bombs />}
       <Container className="fullscreen-container">
         <div className="text-container">
           <p className="team-name">{teamName}</p>

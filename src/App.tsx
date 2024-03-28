@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import Home from "./views/home/Home";
 import Planning from "./views/planning/Planning";
-import Shotgun from "./views/shotgun/Shotgun";
+import Shotgun from "./views/events/Events";
 import CariTaxi from "./views/caritaxi/CariTaxi";
 import Teams from "./views/teams/Teams";
 import Error from "./views/error/Error";
@@ -12,6 +12,7 @@ import { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { loadPolygonMaskPlugin } from "@tsparticles/plugin-polygon-mask";
 import { loadEmittersPlugin } from "@tsparticles/plugin-emitters";
+import Events from "./views/events/Events";
 
 export default function App() {
   return (
@@ -43,7 +44,7 @@ function Inner() {
   return <Routes>
     <Route path="/" element={<Home particlesInit={init} />} />
     <Route path="/planning" element={<Planning />} />
-    <Route path="/shotgun" element={<Shotgun />} />
+    <Route path="/events" element={<Events />} />
     <Route path="/caritaxi" element={<CariTaxi />} />
     <Route path="/teams" element={<Teams />} />
     <Route path="/teams/:teamId" element={<TeamPage />} />

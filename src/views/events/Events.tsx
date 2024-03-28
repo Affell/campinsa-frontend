@@ -1,10 +1,10 @@
-import { Col, Container, Image, Row } from "react-bootstrap";
+import { Col, Container, Image } from "react-bootstrap";
 import NavBar from "../../components/nav/Navbar";
-import "./Shotgun.css";
+import "./Events.css";
 import soireeOB from "../../assets/images/events/soireeOB.png";
 import apremSport from "../../assets/images/events/apremSport.png";
 
-export default function Shotgun() {
+export default function Events() {
   return (
     <>
       <NavBar />

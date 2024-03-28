@@ -3,7 +3,6 @@ import "./Home.css";
 import Carousel from "../../components/Carousel/Carousel";
 import Footer from "../../components/nav/Footer";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
-import arrowDown from "../../assets/images/arrow.png";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Caribou from "../../components/Anim/Caribou";
@@ -86,7 +85,9 @@ export default function Home({ particlesInit }: HomeProps) {
             onClick={() => scrollBy(0, innerHeight - 80 - scrollY)}
           >
             En savoir plus
-            <img src={arrowDown} className="arrow-down" />
+            <div className="arrow-container">
+              <div className="arrow-down"></div>
+            </div>
           </div>
         </motion.div>
       </div>

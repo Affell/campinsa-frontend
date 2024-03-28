@@ -5,6 +5,12 @@
   padding-top: 1rem;
 }
 
+.item-carousel .carousel-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 115px;
+}
+
 @media only screen and (max-width: 768px) {
   .item-carousel {
     font-size: 1rem;

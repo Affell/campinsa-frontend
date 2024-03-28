@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import Home from "./views/home/Home";
 import Planning from "./views/planning/Planning";
-import Shotgun from "./views/events/Events";
 import CariTaxi from "./views/caritaxi/CariTaxi";
 import Teams from "./views/teams/Teams";
 import Error from "./views/error/Error";

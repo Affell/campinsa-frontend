@@ -34,21 +34,29 @@ export default function Home({ particlesInit }: HomeProps) {
       imagePath="src\assets\images\partnerships\logoRedBull.jpg"
       primaryText="Red Bull"
       secondaryText="Boisson energisante"
+      width={250}
+      height={250}
     />,
     <CarouselItem
       imagePath="src\assets\images\partnerships\logoLyfPay.png"
       primaryText="Lyf Pay"
       secondaryText="Paiement mobile"
+      width={250}
+      height={250}
     />,
     <CarouselItem
       imagePath="src\assets\images\partnerships\logoDivertyBox.jpg"
       primaryText="Diverty Box"
       secondaryText="Bar"
+      width={250}
+      height={250}
     />,
     <CarouselItem
       imagePath="src\assets\images\partnerships\logoCBC.jpg"
       primaryText="Caramels Bonbons Chocolats"
       secondaryText="Confiserie"
+      width={250}
+      height={200}
     />,
   ];
 

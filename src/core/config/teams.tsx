@@ -28,7 +28,7 @@ export const teams: Teams = {
         name: "Adrien Garnier",
         role: "Président",
         citation:
-          "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+          "Coup (d'État) dans la team Cum",
       },
       {
         image: teamBDS,
@@ -126,7 +126,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Augustin Zahorka",
         role: "Trésorier",
-        citation: "",
+        citation: "Actuellement en partie de cache-cache avec l'argent. Spoiler : l'argent est super bon.",
       },
       {
         image: teamBDS,
@@ -170,7 +170,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Leo Waetcher",
         role: "Vice-Prez",
-        citation: "",
+        citation: "Je cherche une meuf protestante pour me marier svp ",
       },
     ],
   },
@@ -233,7 +233,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Fabien Saint-Pe",
         role: "Vice-Prez",
-        citation: "Viens on se bat \n (ici c'est Paris) ",
+        citation: "Viens on se bat  (ici c'est Paris) ",
       },
       {
         image: teamBDS,

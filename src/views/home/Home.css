@@ -123,3 +123,31 @@
     width: 4rem;
   }
 }
+
+@media only screen and (max-height: 800px) and (min-width: 769px) {
+  .principal {
+    font-size: 3rem;
+  }
+
+  .secondary {
+    font-size: 1.5rem;
+  }
+
+  .arrow-down {
+    width: 4rem;
+  }
+}
+
+@media only screen and (max-height: 720px) and (min-width: 769px) {
+  .principal {
+    font-size: 2rem;
+  }
+
+  .secondary {
+    font-size: 1rem;
+  }
+
+  .arrow-down {
+    width: 3rem;
+  }
+}

@@ -57,3 +57,18 @@
   margin: 0; /* Retirer les marges par défaut */
   padding: 5px; /* Ajustez selon vos besoins */
 }
+
+.daily-event {
+  margin: 5rem;
+}
+
+.daily-event .today {
+  font-size: 2rem;
+}
+
+.daily-event .events {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}

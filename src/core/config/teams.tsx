@@ -122,7 +122,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Hugo Roger",
         role: "VP Externe",
-        citation: "",
+        citation: "Un jour je vous expliquerai pourquoi le Mont est breton",
       },
       {
         image: teamBDS,
@@ -140,7 +140,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Samuel Rignault",
         role: "Secrétaire",
-        citation: "",
+        citation: "C’est zinzin gars ",
       },
     ],
   },
@@ -198,7 +198,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Nathan Chartel",
         role: "Vice-Prez",
-        citation: "",
+        citation: "L’homme au bob mais sans les muscles ",
       },
       {
         image: teamBDS,

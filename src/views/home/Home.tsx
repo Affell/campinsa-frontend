@@ -8,6 +8,12 @@ import { useEffect, useState } from "react";
 import Caribou from "../../components/Anim/Caribou";
 import CarouselItem from "../../components/Carousel/CarouselItem";
 
+import bgImage from "../../assets/images/homePage.jpg";
+import redbull from "../../assets/images/partnerships/logoRedBull.jpg";
+import lyfpay from "../../assets/images/partnerships/logoLyfPay.png";
+import diverty from "../../assets/images/partnerships/logoDivertyBox.jpg";
+import cbc from "../../assets/images/partnerships/logoCBC.jpg";
+
 interface HomeProps {
   particlesInit: boolean;
 }
@@ -30,28 +36,28 @@ export default function Home({ particlesInit }: HomeProps) {
 
   const items = [
     <CarouselItem
-      imagePath="src\assets\images\partnerships\logoRedBull.jpg"
+      imagePath={redbull}
       primaryText="Red Bull"
       secondaryText="Boisson energisante"
       width={250}
       height={250}
     />,
     <CarouselItem
-      imagePath="src\assets\images\partnerships\logoLyfPay.png"
+      imagePath={lyfpay}
       primaryText="Lyf Pay"
       secondaryText="Paiement mobile"
       width={250}
       height={250}
     />,
     <CarouselItem
-      imagePath="src\assets\images\partnerships\logoDivertyBox.jpg"
+      imagePath={diverty}
       primaryText="Diverty Box"
       secondaryText="Bar"
       width={250}
       height={250}
     />,
     <CarouselItem
-      imagePath="src\assets\images\partnerships\logoCBC.jpg"
+      imagePath={cbc}
       primaryText="Caramels Bonbons Chocolats"
       secondaryText="Confiserie"
       width={250}
@@ -63,7 +69,7 @@ export default function Home({ particlesInit }: HomeProps) {
     <>
       <NavBar />
       <div className="first-container fullscreen-container">
-        <div className="bg-image" />
+        <div className="bg-image" style={{ backgroundImage: "url(" + bgImage + ")" }} />
         <motion.div
           className="text-on-image"
           variants={variants}

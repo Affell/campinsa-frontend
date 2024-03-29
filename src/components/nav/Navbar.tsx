@@ -11,11 +11,19 @@ import logo from "../../assets/images/logo.svg";
 export default function NavBar() {
   const [isOpen, toggleOpen] = useCycle(false, true);
 
+  const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    if (e.detail == 3) {
+      e.preventDefault();
+      //TODO Easter egg
+    }
+  }
+
   return <>
     <Navbar
       expanded={isOpen}
       expand="lg"
       className="navbar bg-body-tertiary fixed-top"
+      onClick={handleClick}
     >
       <Container>
         <Link className="navbar-brand" to="/">

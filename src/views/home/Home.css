@@ -95,6 +95,7 @@
   transform-origin: 0% 0%;
   border-radius: 5px;
 }
+
 .arrow-down:after {
   content: "";
   position: absolute;

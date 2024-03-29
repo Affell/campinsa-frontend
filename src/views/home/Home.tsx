@@ -71,7 +71,7 @@ export default function Home({ particlesInit }: HomeProps) {
           initial="hidden"
           animate={isTextVisible ? "visible" : "hidden"}
         >
-          {particlesInit && <Caribou />}
+          {particlesInit && <Caribou color="#ffffff" />}
           <motion.div
             className="text-content"
             initial={{ opacity: 0, y: 20 }}

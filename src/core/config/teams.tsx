@@ -253,7 +253,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Clémence Malterre",
         role: "Sous fifre",
-        citation: "L'armée de l'air recrute  www.sengager.fr",
+        citation: "L'armée de l'air recrute (envoyez lui vos CV) (que les bruns ténébreux +1m90)",
       },
       {
         image: teamBDS,

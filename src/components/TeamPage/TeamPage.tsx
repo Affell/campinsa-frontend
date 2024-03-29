@@ -45,7 +45,7 @@ const TeamPage = () => {
               {role}
             </Badge> */}
             {group.map((member: any, index: number) =>
-              <div key={member.name} className="card-member" onMouseEnter={() => { if (member.bomb) setBomb(true) }} onMouseLeave={() => { if (member.bomb) setBomb(false) }}>
+              <div key={member.name} className="card-member" onMouseEnter={() => { if (member.bomb) setBomb(old => !old) }}>
                 <div id={globalIndex + index + ""} className={"flip-card"}>
                   <div className="flip-card-inner">
                     <div className="flip-card-front">

@@ -1,4 +1,4 @@
-import { Container, ISourceOptions } from "@tsparticles/engine";
+import { ISourceOptions } from "@tsparticles/engine";
 import Particles from "@tsparticles/react";
 import "./Caribou.css";
 import smalldeer from "../../assets/images/smalldeer.svg";
@@ -130,13 +130,8 @@ export default function Caribou({ color }: CaribouProps) {
     }
   } as ISourceOptions;
 
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
-  };
-
   return <Particles
     className="anim-caribou"
-    particlesLoaded={particlesLoaded}
     options={options}
   />
 

@@ -1,13 +1,135 @@
-.map-box {
-  display: flex;
-  align-items: center;
-}
-
 .map-container {
   width: 100%;
   height: 70dvh;
+  display: flex;
+  margin-bottom: 50px;
 }
 
 .gm-style iframe+div {
   border: none !important;
+}
+
+.taxi-list-container {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  height: 70dvh;
+  display: flex;
+}
+
+.taxi-list-container hr {
+  width: 80%;
+}
+
+.round-container {
+  width: 50px;
+  height: 50px;
+  color: bisque;
+  background-color: white;
+  border-radius: 50px;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.round-container img {
+  width: 30px;
+}
+
+.taxi-list {
+  display: none;
+  width: 0px;
+  height: 100%;
+  padding-top: 50px;
+  background-color: white;
+  border-top-right-radius: 25px;
+}
+
+.active {
+  width: 300px;
+  display: block;
+}
+
+.taxi-list h3 {
+  font-size: 1.2rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.taxi-list .scroller {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.taxi-list-element {
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 10px;
+  transition: background-color linear 0.1s;
+}
+
+.taxi-list-element:hover {
+  background-color: rgb(220, 220, 220);
+}
+
+.taxi-list-element h5 {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.taxi-list-element h6 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.header {
+  margin-bottom: 50px;
+}
+
+.header h1 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+}
+
+.header h2 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+
+.app-info-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 120px;
+}
+
+.app-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 325px;
+}
+
+.app-info>img {
+  width: 150px;
+}
+
+.app-info h1 {
+  font-size: 2rem;
+}
+
+.download-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.download-container img {
+  width: 150px;
+}
+
+.dl-link {
+  cursor: pointer;
 }

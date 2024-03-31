@@ -5,6 +5,8 @@ import dynamite from "../../assets/images/bomb/dynamite.png";
 import grenade from "../../assets/images/bomb/grenade.png";
 import mine from "../../assets/images/bomb/mine.png";
 import caritaxi from "../../assets/images/caritaxi.png";
+import plane from "../../assets/images/army/plane.png";
+import soldier from "../../assets/images/army/soldier.png";
 
 import saymyname from "../../assets/audio/saymyname.aac";
 
@@ -279,7 +281,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Fabien Saint-Pe",
         role: "Vice-Prez",
-        citation: "Viens on se bat  (ici c'est Paris) ",
+        citation: "Viens on se bat (ici c'est Paris) ",
       },
       {
         image: teamBDS,
@@ -298,6 +300,14 @@ export const teams: Teams = {
         name: "Clémence Malterre",
         role: "Sous fifre",
         citation: "L'armée de l'air recrute (envoyez lui vos CV) (que les bruns ténébreux +1m90)",
+        animation: {
+          background: {
+            images: [
+              plane,
+              soldier
+            ]
+          }
+        }
       },
       {
         image: teamBDS,

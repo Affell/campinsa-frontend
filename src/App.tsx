@@ -8,10 +8,11 @@ import Error from "./views/error/Error";
 import TeamPage from "./components/TeamPage/TeamPage";
 import { useEffect, useLayoutEffect, useState } from "react";
 import { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
 import { loadPolygonMaskPlugin } from "@tsparticles/plugin-polygon-mask";
 import { loadEmittersPlugin } from "@tsparticles/plugin-emitters";
 import Events from "./views/events/Events";
+import { loadSeaAnemonePreset } from "@tsparticles/preset-sea-anemone";
+import { loadSlim } from "@tsparticles/slim";
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ function Inner() {
       await loadSlim(engine);
       await loadPolygonMaskPlugin(engine);
       await loadEmittersPlugin(engine);
+      await loadSeaAnemonePreset(engine);
     }).then(() => {
       setInit(true);
     });

@@ -536,7 +536,7 @@ export default function Background({ config }: { config: BackgroundAnimationConf
   const options = useMemo(() => generateConfig(config), [config]);
 
   return <Particles
-    className="anim-bombs"
+    className="anim-background"
     options={options}
   />
 

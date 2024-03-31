@@ -15,7 +15,7 @@ const TeamPage = () => {
   const [audioEnded, setAudioEnded] = useState(false);
 
   if (teamId === undefined || !validTeamId(teamId)) {
-    return <Navigate to="/*" />;
+    return <Navigate to="/404" />;
   }
 
   const { teamName, teamDetail, members } = teams[teamId];
@@ -77,11 +77,6 @@ const TeamPage = () => {
     return rows;
 
   }
-
-  /* TODO */
-  // Coller le texte du rôle à l'image sur la version ordi
-  // Changer le flip card pour ne pas avoir que du hover
-  // Augmenter taille image version mobile
 
 
   return (

@@ -4,6 +4,7 @@ import bomb from "../../assets/images/bomb/bomb.png";
 import dynamite from "../../assets/images/bomb/dynamite.png";
 import grenade from "../../assets/images/bomb/grenade.png";
 import mine from "../../assets/images/bomb/mine.png";
+import caritaxi from "../../assets/images/caritaxi.png";
 
 import saymyname from "../../assets/audio/saymyname.aac";
 
@@ -204,7 +205,12 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Axel Lenroué",
         role: "Président",
-        citation: "",
+        citation: "Crise de swag",
+        animation: {
+          background: {
+            images: [caritaxi]
+          }
+        }
       },
       {
         image: teamBDS,

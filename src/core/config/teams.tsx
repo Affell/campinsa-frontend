@@ -216,7 +216,7 @@ export const teams: Teams = {
       },
       {
         image: teamBDS,
-        name: "Leo Waetcher",
+        name: "Leo Waechter",
         role: "Vice-Prez",
         citation: "Je cherche une meuf protestante pour me marier svp ",
       },

@@ -9,8 +9,6 @@
 
 .team-name {
   font-size: 4rem;
-  padding-left: 10rem;
-  /* font-weight: bold; */
 }
 
 .team-description {
@@ -30,12 +28,6 @@
   text-align: left;
   transform: rotate(-90deg) translateY(4rem);
 }
-
-/* .team-role .badge {
-  font-weight: bold;
-  width: 10rem;
-  transform: rotate(-90deg);
-} */
 
 .card-member {
   display: contents;
@@ -104,6 +96,15 @@
   vertical-align: middle;
   padding: 0 10px;
   font-family: Nunito, sans-serif;
+}
+
+.btn-anim {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-anim span {
+  display: none;
 }
 
 @media only screen and (max-width: 768px) {

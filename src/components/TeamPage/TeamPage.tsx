@@ -4,14 +4,15 @@ import { Container } from "react-bootstrap";
 import NavBar from "../nav/Navbar";
 import Footer from "../nav/Footer";
 import "./TeamPage.css";
-import { teams, validTeamId } from "../../core/config/teams";
+import { AnimationConfig, Member, teams, validTeamId } from "../../core/config/teams";
 import { useState } from "react";
-import Bombs from "../Anim/Bombs";
+import Background from "../Anim/Background";
 
 const TeamPage = () => {
 
   const { teamId } = useParams<{ teamId: string }>();
-  const [bomb, setBomb] = useState(false);
+  const [memberAnim, setMemberAnim] = useState<AnimationConfig>();
+  const [audioEnded, setAudioEnded] = useState(false);
 
   if (teamId === undefined || !validTeamId(teamId)) {
     return <Navigate to="/*" />;
@@ -19,6 +20,15 @@ const TeamPage = () => {
 
   const { teamName, teamDetail, members } = teams[teamId];
 
+  const initMemberAnim = (member: Member) => {
+    setAudioEnded(false);
+    setMemberAnim(member.animation);
+  }
+
+  const btnAnimClick = (name: string, state: string) => {
+    const span = document.getElementById(name);
+    if (span) span.style.display = state;
+  }
 
   const groupMembers = () => {
 
@@ -41,11 +51,8 @@ const TeamPage = () => {
         rows.push(
           <div key={role + i} className="team-role">
             <p className="text-role">{role}</p>
-            {/* <Badge pill bg="dark">
-              {role}
-            </Badge> */}
             {group.map((member: any, index: number) =>
-              <div key={member.name} className="card-member" onMouseEnter={() => { if (member.bomb) setBomb(old => !old) }}>
+              <div key={member.name} className="card-member" onMouseEnter={() => initMemberAnim(member)} onMouseLeave={() => btnAnimClick(member.name, "none")}>
                 <div id={globalIndex + index + ""} className={"flip-card"}>
                   <div className="flip-card-inner">
                     <div className="flip-card-front">
@@ -53,7 +60,11 @@ const TeamPage = () => {
                     </div>
                     <div className="flip-card-back member-image">
                       <h1 className="member-name">{member.name}</h1>
-                      <p className="member-citation">{member.citation}</p>
+                      <div className="member-citation">{member.animation?.button ? <div className="btn-anim">
+                        {member.animation.button.preText}
+                        <button onClick={() => btnAnimClick(member.name, "block")}>{member.animation.button.btnText}</button>
+                        <span id={member.name} className="btn-anim-hidden">{member.animation.button.afterText}</span>
+                      </div> : member.citation}</div>
                     </div>
                   </div>
                 </div>
@@ -76,7 +87,8 @@ const TeamPage = () => {
   return (
     <>
       <NavBar />
-      {bomb && <Bombs />}
+      {memberAnim && memberAnim.background && <Background config={memberAnim.background} />}
+      {!audioEnded && memberAnim && memberAnim.button && memberAnim.button.music && <audio autoPlay onEnded={() => setAudioEnded(true)}><source src={memberAnim.button.music} type="audio/aac"></source></audio>}
       <Container className="fullscreen-container">
         <div className="text-container">
           <p className="team-name">{teamName}</p>

@@ -1,11 +1,32 @@
 import teamBDS from "../../assets/images/teams/teamBDS.png";
 
-type Member = {
+import bomb from "../../assets/images/bomb/bomb.png";
+import dynamite from "../../assets/images/bomb/dynamite.png";
+import grenade from "../../assets/images/bomb/grenade.png";
+import mine from "../../assets/images/bomb/mine.png";
+
+import saymyname from "../../assets/audio/saymyname.aac";
+
+export type BackgroundAnimationConfig = {
+  images: string[];
+}
+
+export type AnimationConfig = {
+  background?: BackgroundAnimationConfig;
+  button?: {
+    preText: string;
+    btnText: string;
+    afterText: string;
+    music?: string;
+  }
+}
+
+export type Member = {
   image: string;
   name: string;
   role: string;
   citation: string;
-  bomb?: boolean
+  animation?: AnimationConfig;
 };
 
 type TeamDetails = {
@@ -78,6 +99,14 @@ export const teams: Teams = {
         name: "Yael Lucas",
         role: "Sous fifre",
         citation: "",
+        animation: {
+          button: {
+            preText: "Say my name",
+            btnText: "Yael Lucas",
+            afterText: "You're goddamn right.",
+            music: saymyname
+          }
+        }
       },
       {
         image: teamBDS,
@@ -116,7 +145,16 @@ export const teams: Teams = {
         name: "Georges Halisso",
         role: "VP Interne",
         citation: "Boom Mohammed",
-        bomb: true
+        animation: {
+          background: {
+            images: [
+              bomb,
+              dynamite,
+              grenade,
+              mine
+            ]
+          }
+        }
       },
       {
         image: teamBDS,

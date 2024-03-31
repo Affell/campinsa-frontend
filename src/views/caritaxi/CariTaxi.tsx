@@ -58,9 +58,9 @@ export default function CariTaxi() {
     <NavBar />
     <Container className="fullscreen-container">
       <div className="header">
-        <h1>Car'Taxi</h1>
+        <h1>Cari'Taxi</h1>
         <h2>Salut les campeurs, besoin d'un taxi pour aller camper ?<br />
-          Clique sur le bouton commander pour être rediriger vers notre standard !<br />
+          Clique sur le bouton commander pour être redirigé vers notre standard !<br />
           Grace à notre appli un taxi te sera automatiquement attribué selon ta localisation, alors prépare toi à embarquer à bord de la fabuleuse aventure Camp'INSA !<br />
           Cordialement votre camping préféré.</h2>
       </div>

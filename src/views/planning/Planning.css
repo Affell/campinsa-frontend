@@ -1,6 +1,9 @@
 .planning {
   scale: 1.2;
+  width: 75dvw;
 }
+
+
 
 @media only screen and (max-width: 768px) {
   .d-md-none {

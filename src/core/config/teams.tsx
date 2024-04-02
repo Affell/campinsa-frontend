@@ -224,7 +224,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Leo Waechter",
         role: "Vice-Prez",
-        citation: "Je cherche une meuf protestante pour me marier svp ",
+        citation: "NIQUE LES SALOPES QUI PARLENT EN SCRED SI LE SAVOIR EST UNE ARME ET BAH NIQUE TA MERE LA RUE C'EST DANGEREUX POTO LE MONDE APPARTIENT A CEUX QUI LEVENT LE YAMAHA 4 TEMPS NIQUE LA CANINE ET LES STUPS QUI SY FROTTE EFFRITE PLAN WEED BIEN SERVI 8 € LE GRAMME 0683647893",
       },
     ],
   },

@@ -13,17 +13,16 @@ export default function Background({ config }: { config: BackgroundAnimationConf
     for (let i = 0; i < config.images.length; i++) {
       const link = config.images[i];
       imageShapes.push({
-        "name": i
+        "name": link
       })
       imageLinks.push({
         "src": link,
         "gif": false,
         "height": 32,
-        "name": i,
+        "name": link,
         "width": 32
       })
     }
-
     return {
       "autoPlay": true,
       "background": {

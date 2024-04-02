@@ -16,6 +16,10 @@ html,
   width: 100vw !important;
 }
 
+.root {
+  height: 100dvh;
+}
+
 .fullscreen-container {
   min-height: 100dvh;
   padding-top: 8rem;

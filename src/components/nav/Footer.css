@@ -1,5 +1,6 @@
 .footer-container {
-  padding-top: 8rem;
+  padding-top: 6rem;
+  padding-bottom: 20px;
 }
 
 .text-center .text-footer {
@@ -31,6 +32,10 @@
 
 }
 
+.footer-copyrigth p {
+  margin-bottom: 0;
+}
+
 @media (max-width: 767.98px) {
   .socials .tik-tok-logo {
     height: 30px;
@@ -49,13 +54,39 @@
 
   .text-center .text-footer {
     font-size: 0.4rem;
+    padding-top: 0;
+    margin-bottom: 1rem;
   }
 
   .legals {
     font-size: 0.4rem;
   }
 
+  .footer-container {
+    padding: 0;
+    padding-top: 1rem;
+    margin-top: 3rem;
+  }
+
   .footer-container .footer-copyrigth {
     font-size: 0.5rem;
   }
+
+  .footer-container .row {
+    flex-direction: column;
+  }
+
+  .footer-container p {
+    margin-bottom: 0.5rem;
+  }
+
+  .socials {
+    padding-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .legals {
+    padding-top: 0;
+  }
+
 }

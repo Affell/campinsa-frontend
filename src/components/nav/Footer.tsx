@@ -6,7 +6,7 @@ import instaLogo from "../../assets/images/socials/logoInsta.png";
 function Footer() {
   return (
     <Container
-      className="footer-container bg-body-tertiary text-black p-4 text-center"
+      className="footer-container bg-body-tertiary text-black text-center"
       fluid
     >
       <Row>

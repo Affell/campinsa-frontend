@@ -7,6 +7,7 @@ import mine from "../../assets/images/bomb/mine.png";
 import caritaxi from "../../assets/images/caritaxi.png";
 import plane from "../../assets/images/army/plane.png";
 import soldier from "../../assets/images/army/soldier.png";
+import walterwhite from "../../assets/images/anims/walterwhite.png";
 
 import saymyname from "../../assets/audio/saymyname.aac";
 
@@ -108,6 +109,11 @@ export const teams: Teams = {
             btnText: "Yael Lucas",
             afterText: "You're goddamn right.",
             music: saymyname
+          },
+          background: {
+            images: [
+              walterwhite
+            ]
           }
         }
       },

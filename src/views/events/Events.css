@@ -1,5 +1,6 @@
 .title {
   font-size: 3rem;
+  text-transform: uppercase;
 }
 
 .main-pictures {
@@ -51,11 +52,17 @@
   font-size: 1rem;
 }
 
+.day {
+  text-transform: uppercase;
+}
+
 .day,
 .name,
 .shotgun {
-  margin: 0; /* Retirer les marges par défaut */
-  padding: 5px; /* Ajustez selon vos besoins */
+  margin: 0;
+  /* Retirer les marges par défaut */
+  padding: 5px;
+  /* Ajustez selon vos besoins */
 }
 
 .daily-event {

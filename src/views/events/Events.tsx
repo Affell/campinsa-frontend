@@ -7,58 +7,19 @@ import { useEffect, useState } from "react";
 import opePetitDej from "../../assets/images/events/opePetitDej.png";
 import jeuMidi from "../../assets/images/events/jeuMidi.png";
 import soiree from "../../assets/images/events/soiree.png";
-
-type TimeLeft = {
-  days: number;
-  hours: number;
-  minutes: number;
-  seconds: number;
-};
+import { getFetch } from "../../core/api/fetch";
+import { TimeLeft, calculateTimeLeft } from "../../core/utils/date";
 
 type Shotgun = {
   id: number;
-  time: Date;
-  eventName: string;
-  eventDay: string;
+  unlockTime: Date;
+  day: string;
+  imageBytes: string;
+  formLink: string;
+  name: string;
+  description: string;
+  ended: boolean;
 };
-
-function useCountdown(targetDate: Date) {
-  const calculateTimeLeft = () => {
-    const now = new Date();
-    const difference = targetDate.getTime() - now.getTime();
-    let timeLeft: TimeLeft = {
-      days: 0,
-      hours: 0,
-      minutes: 0,
-      seconds: 0,
-    };
-
-    if (difference > 0) {
-      timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
-      };
-    }
-
-    return timeLeft;
-  };
-
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-
-  useEffect(() => {
-    setTimeLeft(calculateTimeLeft());
-
-    const interval = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [targetDate]);
-
-  return timeLeft;
-}
 
 function getTimeOfDay(eventTime: Date) {
   const hour = eventTime.getHours();
@@ -71,113 +32,169 @@ function getTimeOfDay(eventTime: Date) {
   }
 }
 
+const Days = [
+  "Lundi",
+  "Mardi",
+  "Mercredi",
+  "Jeudi",
+  "Vendredi",
+  "Samedi",
+  "Dimanche",
+]
+
 // TODO
 // Corriger cette fonction jour renvoyé correspond pas
 const getCurrentDay = () => {
-  const days = [
-    "Dimanche",
-    "Lundi",
-    "Mardi",
-    "Mercredi",
-    "Jeudi",
-    "Vendredi",
-    "Samedi",
-  ];
   const currentDate = new Date();
-  console.log(days[currentDate.getDay()]);
-  return days[currentDate.getDay()];
+  return Days[currentDate.getDay()];
 };
 
-const shotguns: Shotgun[] = [
-  {
-    id: 1,
-    time: new Date("2024-04-19T21:30:00Z"),
-    eventName: "INSA Boom Boom",
-    eventDay: "Vendredi",
-  },
-  {
-    id: 2,
-    time: new Date("2024-04-18T15:00:00Z"),
-    eventName: "Aprem Sportive",
-    eventDay: "Jeudi",
-  },
-  {
-    id: 3,
-    time: new Date("2024-04-15T12:30:00Z"),
-    eventName: "Rap Jeu",
-    eventDay: "Lundi",
-  },
-  {
-    id: 4,
-    time: new Date("2024-03-29T21:00:00Z"),
-    eventName: "Soirée Diverty Box",
-    eventDay: "Lundi",
-  },
-];
+function remainingTime(timeLeft: TimeLeft) {
+  return `${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`;
+}
+
+const Timer = ({ date }: { date: Date }) => {
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(date));
+
+  useEffect(() => {
+    setTimeLeft(calculateTimeLeft(date));
+
+    const interval = setInterval(() => {
+      setTimeLeft(calculateTimeLeft(date));
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [date]);
+
+  return <>{remainingTime(timeLeft)}</>;
+};
+
+// const shotguns: Shotgun[] = [
+//   {
+//     id: 1,
+//     time: new Date("2024-04-19T21:30:00Z"),
+//     eventName: "INSA Boom Boom",
+//     eventDay: "Vendredi",
+//   },
+//   {
+//     id: 2,
+//     time: new Date("2024-04-18T15:00:00Z"),
+//     eventName: "Aprem Sportive",
+//     eventDay: "Jeudi",
+//   },
+//   {
+//     id: 3,
+//     time: new Date("2024-04-15T12:30:00Z"),
+//     eventName: "Rap Jeu",
+//     eventDay: "Lundi",
+//   },
+//   {
+//     id: 4,
+//     time: new Date("2024-03-29T21:00:00Z"),
+//     eventName: "Soirée Diverty Box",
+//     eventDay: "Lundi",
+//   },
+// ];
 
 export default function Events() {
-  const eventFriday = shotguns.filter(
-    (shotgun) => shotgun.eventDay === "Vendredi"
-  )[0];
-  const countdownFriday = useCountdown(eventFriday.time);
 
-  const eventThursday = shotguns.filter(
-    (shotgun) => shotgun.eventDay === "Jeudi"
-  )[0];
-  const countdownThursday = useCountdown(eventThursday.time);
+  const [loading, setLoading] = useState(false);
+  const [shotguns, setShotguns] = useState<Map<number, Map<string, Shotgun[]>>>();
+  const [tuesday, setTuesday] = useState<Shotgun>();
+  const [friday, setFriday] = useState<Shotgun>();
 
-  // TODO
-  // Le filtrage est mal fait, ça renvoie les événements liés au jour et pas vraiment à la date
-  const dailyEvent = shotguns.filter(
-    (event) => event.eventDay === getCurrentDay()
-  );
-  console.log(dailyEvent);
-  const morningEvent = dailyEvent.filter(
-    (event) => getTimeOfDay(event.time) === "morning"
-  );
-  const middayEvent = dailyEvent.filter(
-    (event) => getTimeOfDay(event.time) === "midday"
-  );
-  const eveningEvent = dailyEvent.filter(
-    (event) => getTimeOfDay(event.time) === "evening"
-  );
+  useEffect(() => {
+    getFetch("/shotgun/list", (data) => {
+      const temp: Map<number, Map<string, Shotgun[]>> = new Map();
+      if (data?.shotguns) {
+        for (const s of data.shotguns) {
+          const date = new Date(s.unlock_time * 1000);
+          if (!temp.has(date.getDay())) {
+            temp.set(date.getDay(), new Map());
+          }
+          if (!temp.get(date.getDay())!.has(getTimeOfDay(date))) {
+            temp.get(date.getDay())!.set(getTimeOfDay(date), []);
+          }
+          temp.get(date.getDay())!.get(getTimeOfDay(date))!.push({
+            id: s.id,
+            unlockTime: date,
+            day: Days[date.getDay()],
+            imageBytes: s.image_bytes,
+            formLink: s.formLink,
+            name: s.name,
+            description: s.description,
+            ended: s.ended
+          });
+
+          if (date.getDay() == 4) {
+            setTuesday({
+              id: s.id,
+              unlockTime: date,
+              day: Days[date.getDay()],
+              imageBytes: s.image_bytes,
+              formLink: s.formLink,
+              name: s.name,
+              description: s.description,
+              ended: s.ended
+            });
+          }
+
+          if (date.getDay() == 5) {
+            setFriday({
+              id: s.id,
+              unlockTime: date,
+              day: Days[date.getDay()],
+              imageBytes: s.image_bytes,
+              formLink: s.formLink,
+              name: s.name,
+              description: s.description,
+              ended: s.ended
+            });
+          }
+
+        }
+      }
+
+      setShotguns(temp)
+    }, setLoading, (err) => console.log(err));
+  }, [])
 
   return (
     <>
       <NavBar />
       <Container className="fullscreen-container">
         <div className="head">
-          <p className="title text-start">{"événements".toUpperCase()}</p>
-          <Col className="main-pictures">
-            <div className="soiree-ob">
-              <Image src={soireeOB} fluid />
+          <p className="title text-start">évenements</p>
+          {tuesday && friday && <Col className="main-pictures">
+            <div>
+              <img src={"data:image/png;base64," + tuesday.imageBytes} />
               <div className="text-overlay top-left">
-                <p className="day">{eventThursday.eventDay.toUpperCase()}</p>
+                <p className="day">{tuesday.day}</p>
               </div>
               <div className="text-overlay bottom-right">
-                <p className="name">{eventThursday.eventName}</p>
+                <p className="name">{tuesday.name}</p>
                 <p className="shotgun">
                   Shotgun Disponible dans: <br />
-                  {`${countdownThursday.days}d ${countdownThursday.hours}h ${countdownThursday.minutes}min ${countdownThursday.seconds}sec`}
+                  <Timer date={tuesday.unlockTime} />
                 </p>
               </div>
             </div>
-            <div className="aprem-sport">
-              <Image src={apremSport} fluid />
+            <div>
+              <img src={"data:image/png;base64," + friday.imageBytes} />
               <div className="text-overlay top-right">
-                <p className="day">{eventFriday.eventDay.toUpperCase()}</p>
+                <p className="day">{friday.day}</p>
               </div>
               <div className="text-overlay bottom-left">
-                <p className="name">{eventFriday.eventName}</p>
+                <p className="name">{friday.name}</p>
                 <p className="shotgun">
                   Shotgun Disponible dans: <br />
-                  {`${countdownFriday.days}d ${countdownFriday.hours}h ${countdownFriday.minutes}min ${countdownFriday.seconds}sec`}
+                  <Timer date={friday.unlockTime} />
                 </p>
               </div>
             </div>
-          </Col>
+          </Col>}
         </div>
-        <div className="daily-event">
+        {/* <div className="daily-event">
           <p className="today">Aujourd'hui</p>
           <Col className="events">
             <div className="morning">
@@ -204,17 +221,17 @@ export default function Events() {
             <div className="evening">
               {/* <Image src={soiree} fluid />
               <p className="name">Soirée Diverty Box</p> */}
-              {eveningEvent.map((event) => (
-                <div key={event.id}>
-                  <Image src={soiree} fluid />
-                  <p className="name">{event.eventName}</p>
-                  <p className="">zfj</p>
-                </div>
-              ))}
-            </div>
-          </Col>
-        </div>
-      </Container>
+        {/* {eveningEvent.map((event) => (
+          <div key={event.id}>
+            <Image src={soiree} fluid />
+            <p className="name">{event.name}</p>
+            <p className="">{event.description}</p>
+          </div>
+        ))}
+      </div>
+    </Col >
+        </div > */}
+      </Container >
     </>
   );
 }

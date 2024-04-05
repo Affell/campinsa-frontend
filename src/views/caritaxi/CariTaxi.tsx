@@ -102,8 +102,8 @@ export default function CariTaxi() {
           <img src={caritaxi} />
           <h1>Disponible partout !</h1>
           <div className="download-container">
-            <a className="dl-link" href={Config.Urls.API + "/download/apple"}><img src={applestore} /></a>
-            <a className="dl-link" href={Config.Urls.API + "/download/android"}><img src={android} /></a>
+            <a className="dl-link" href={Config.Urls.API + "/taxi/download/ios"} target="_blank"><img src={applestore} /></a>
+            <a className="dl-link" href={Config.Urls.API + "/taxi/download/android"} target="_blank"><img src={android} /></a>
           </div>
         </div>
       </div>

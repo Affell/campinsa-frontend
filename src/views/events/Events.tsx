@@ -1,25 +1,28 @@
-import { Col, Container, Image } from "react-bootstrap";
+import { Button, Col, Container } from "react-bootstrap";
 import NavBar from "../../components/nav/Navbar";
 import "./Events.css";
-import soireeOB from "../../assets/images/events/soireeOB.png";
-import apremSport from "../../assets/images/events/apremSport.png";
 import { useEffect, useState } from "react";
-import opePetitDej from "../../assets/images/events/opePetitDej.png";
-import jeuMidi from "../../assets/images/events/jeuMidi.png";
-import soiree from "../../assets/images/events/soiree.png";
 import { getFetch } from "../../core/api/fetch";
 import { TimeLeft, calculateTimeLeft } from "../../core/utils/date";
+import { Config } from "../../core/config/global";
 
 type Shotgun = {
   id: number;
   unlockTime: Date;
   day: string;
   imageBytes: string;
-  formLink: string;
   name: string;
-  description: string;
-  ended: boolean;
 };
+
+const Days = [
+  "Lundi",
+  "Mardi",
+  "Mercredi",
+  "Jeudi",
+  "Vendredi",
+  "Samedi",
+  "Dimanche",
+];
 
 function getTimeOfDay(eventTime: Date) {
   const hour = eventTime.getHours();
@@ -32,28 +35,11 @@ function getTimeOfDay(eventTime: Date) {
   }
 }
 
-const Days = [
-  "Lundi",
-  "Mardi",
-  "Mercredi",
-  "Jeudi",
-  "Vendredi",
-  "Samedi",
-  "Dimanche",
-]
-
-// TODO
-// Corriger cette fonction jour renvoyé correspond pas
-const getCurrentDay = () => {
-  const currentDate = new Date();
-  return Days[currentDate.getDay()];
-};
-
 function remainingTime(timeLeft: TimeLeft) {
   return `${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`;
 }
 
-const Timer = ({ date }: { date: Date }) => {
+const Timer = ({ date, id }: { date: Date; id: int }) => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(date));
 
   useEffect(() => {
@@ -66,98 +52,94 @@ const Timer = ({ date }: { date: Date }) => {
     return () => clearInterval(interval);
   }, [date]);
 
-  return <>{remainingTime(timeLeft)}</>;
+  return (
+    <>
+      {remainingTime(timeLeft) === "0d 0h 0m 0s" ? (
+        <Button
+          href={Config.Urls.API + "/shotgun/link/" + id}
+          target="_blank"
+        />
+      ) : (
+        remainingTime(timeLeft)
+      )}
+    </>
+  );
 };
 
-// const shotguns: Shotgun[] = [
-//   {
-//     id: 1,
-//     time: new Date("2024-04-19T21:30:00Z"),
-//     eventName: "INSA Boom Boom",
-//     eventDay: "Vendredi",
-//   },
-//   {
-//     id: 2,
-//     time: new Date("2024-04-18T15:00:00Z"),
-//     eventName: "Aprem Sportive",
-//     eventDay: "Jeudi",
-//   },
-//   {
-//     id: 3,
-//     time: new Date("2024-04-15T12:30:00Z"),
-//     eventName: "Rap Jeu",
-//     eventDay: "Lundi",
-//   },
-//   {
-//     id: 4,
-//     time: new Date("2024-03-29T21:00:00Z"),
-//     eventName: "Soirée Diverty Box",
-//     eventDay: "Lundi",
-//   },
-// ];
+const dailyShotguns: Shotgun[] = [
+  {
+    id: 1,
+    unlockTime: new Date("2024-04-10T01:26:00+02:00"),
+    day: "Lundi",
+    imageBytes: "",
+    name: "Rap Jeu",
+  },
+  {
+    id: 2,
+    unlockTime: new Date("2024-04-15T21:30:00Z"),
+    day: "Lundi",
+    imageBytes: "",
+    name: "Diverty Box",
+  },
+];
 
 export default function Events() {
-
   const [loading, setLoading] = useState(false);
-  const [shotguns, setShotguns] = useState<Map<number, Map<string, Shotgun[]>>>();
-  const [tuesday, setTuesday] = useState<Shotgun>();
+  const [shotguns, setShotguns] =
+    useState<Map<number, Map<string, Shotgun[]>>>();
+  const [thursday, setTuesday] = useState<Shotgun>();
   const [friday, setFriday] = useState<Shotgun>();
 
   useEffect(() => {
-    getFetch("/shotgun/list", (data) => {
-      const temp: Map<number, Map<string, Shotgun[]>> = new Map();
-      if (data?.shotguns) {
-        for (const s of data.shotguns) {
-          const date = new Date(s.unlock_time * 1000);
-          if (!temp.has(date.getDay())) {
-            temp.set(date.getDay(), new Map());
-          }
-          if (!temp.get(date.getDay())!.has(getTimeOfDay(date))) {
-            temp.get(date.getDay())!.set(getTimeOfDay(date), []);
-          }
-          temp.get(date.getDay())!.get(getTimeOfDay(date))!.push({
-            id: s.id,
-            unlockTime: date,
-            day: Days[date.getDay()],
-            imageBytes: s.image_bytes,
-            formLink: s.formLink,
-            name: s.name,
-            description: s.description,
-            ended: s.ended
-          });
-
-          if (date.getDay() == 4) {
-            setTuesday({
+    getFetch(
+      "/shotgun/list",
+      (data) => {
+        const temp: Map<number, Map<string, Shotgun[]>> = new Map();
+        if (data?.shotguns) {
+          for (const s of data.shotguns) {
+            const date = new Date(s.unlock_time * 1000);
+            if (!temp.has(date.getDay())) {
+              temp.set(date.getDay(), new Map());
+            }
+            if (!temp.get(date.getDay())!.has(getTimeOfDay(date))) {
+              temp.get(date.getDay())!.set(getTimeOfDay(date), []);
+            }
+            temp.get(date.getDay())!.get(getTimeOfDay(date))!.push({
               id: s.id,
               unlockTime: date,
               day: Days[date.getDay()],
               imageBytes: s.image_bytes,
-              formLink: s.formLink,
               name: s.name,
-              description: s.description,
-              ended: s.ended
             });
-          }
 
-          if (date.getDay() == 5) {
-            setFriday({
-              id: s.id,
-              unlockTime: date,
-              day: Days[date.getDay()],
-              imageBytes: s.image_bytes,
-              formLink: s.formLink,
-              name: s.name,
-              description: s.description,
-              ended: s.ended
-            });
-          }
+            if (date.getDay() == 4) {
+              setTuesday({
+                id: s.id,
+                unlockTime: date,
+                day: Days[date.getDay()],
+                imageBytes: s.image_bytes,
+                name: s.name,
+              });
+            }
 
+            if (date.getDay() == 5) {
+              setFriday({
+                id: s.id,
+                unlockTime: date,
+                day: Days[date.getDay()],
+                imageBytes: s.image_bytes,
+                name: s.name,
+              });
+            }
+          }
         }
-      }
 
-      setShotguns(temp)
-    }, setLoading, (err) => console.log(err));
-  }, [])
+        setShotguns(temp);
+      },
+      setLoading,
+      (err) => console.log(err)
+    );
+  }, []);
 
   return (
     <>
@@ -165,73 +147,53 @@ export default function Events() {
       <Container className="fullscreen-container">
         <div className="head">
           <p className="title text-start">évenements</p>
-          {tuesday && friday && <Col className="main-pictures">
-            <div>
-              <img src={"data:image/png;base64," + tuesday.imageBytes} />
-              <div className="text-overlay top-left">
-                <p className="day">{tuesday.day}</p>
+          {thursday && friday && (
+            <Col className="main-pictures">
+              <div>
+                <img src={"data:image/png;base64," + thursday.imageBytes} />
+                <div className="text-overlay top-left">
+                  <p className="day">{thursday.day}</p>
+                </div>
+                <div className="text-overlay bottom-right">
+                  <p className="name">{thursday.name}</p>
+                  <p className="shotgun">
+                    Shotgun Disponible dans: <br />
+                    <Timer date={thursday.unlockTime} id={thursday.id} />
+                  </p>
+                </div>
               </div>
-              <div className="text-overlay bottom-right">
-                <p className="name">{tuesday.name}</p>
-                <p className="shotgun">
-                  Shotgun Disponible dans: <br />
-                  <Timer date={tuesday.unlockTime} />
-                </p>
+              <div>
+                <img src={"data:image/png;base64," + friday.imageBytes} />
+                <div className="text-overlay top-right">
+                  <p className="day">{friday.day}</p>
+                </div>
+                <div className="text-overlay bottom-left">
+                  <p className="name">{friday.name}</p>
+                  <p className="shotgun">
+                    Shotgun Disponible dans: <br />
+                    <Timer date={friday.unlockTime} id={friday.id} />
+                  </p>
+                </div>
               </div>
-            </div>
-            <div>
-              <img src={"data:image/png;base64," + friday.imageBytes} />
-              <div className="text-overlay top-right">
-                <p className="day">{friday.day}</p>
-              </div>
-              <div className="text-overlay bottom-left">
-                <p className="name">{friday.name}</p>
-                <p className="shotgun">
-                  Shotgun Disponible dans: <br />
-                  <Timer date={friday.unlockTime} />
-                </p>
-              </div>
-            </div>
-          </Col>}
+            </Col>
+          )}
         </div>
-        {/* <div className="daily-event">
+        <div className="daily-event">
           <p className="today">Aujourd'hui</p>
           <Col className="events">
-            <div className="morning">
-              <Image src={opePetitDej} fluid />
-              {morningEvent.map((event) => (
-                <div key={event.id}>
-                  <Image src={opePetitDej} fluid />
-                  <p className="name">{event.eventName}</p>
-                  <p className="">zfj</p>
-                </div>
-              ))}
-            </div>
-            <div className="midday">
-              <Image src={jeuMidi} fluid />
-              <p className="name">Rap Jeu</p>
-              {middayEvent.map((event) => (
-                <div key={event.id}>
-                  <Image src={jeuMidi} fluid />
-                  <p className="name">{event.eventName}</p>
-                  <p className="">zfj</p>
-                </div>
-              ))}
-            </div>
-            <div className="evening">
-              {/* <Image src={soiree} fluid />
-              <p className="name">Soirée Diverty Box</p> */}
-        {/* {eveningEvent.map((event) => (
-          <div key={event.id}>
-            <Image src={soiree} fluid />
-            <p className="name">{event.name}</p>
-            <p className="">{event.description}</p>
-          </div>
-        ))}
-      </div>
-    </Col >
-        </div > */}
-      </Container >
+            {dailyShotguns.map((event, index) => (
+              <div key={index} className="event">
+                <img src={"data:image/png;base64," + event.imageBytes} />
+                <p className="name">{event.name}</p>
+                <p className="shotgun">
+                  Shotgun disponible dans: <br />
+                  <Timer date={event.unlockTime} id={event.id} />
+                </p>
+              </div>
+            ))}
+          </Col>
+        </div>
+      </Container>
     </>
   );
 }

@@ -60,9 +60,7 @@
 .name,
 .shotgun {
   margin: 0;
-  /* Retirer les marges par défaut */
   padding: 5px;
-  /* Ajustez selon vos besoins */
 }
 
 .daily-event {

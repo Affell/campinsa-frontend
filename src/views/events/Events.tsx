@@ -140,7 +140,7 @@ export default function Events() {
               <div>
                 <img src={"data:image/png;base64," + thursday.imageBytes} />
                 <div className="text-overlay top-left">
-                  <p className="day">{thursday.day}</p>
+                  <p className="day">Jeudi</p>
                 </div>
                 <div className="text-overlay bottom-right">
                   <p className="name">{thursday.name}</p>
@@ -153,7 +153,7 @@ export default function Events() {
               <div>
                 <img src={"data:image/png;base64," + friday.imageBytes} />
                 <div className="text-overlay top-right">
-                  <p className="day">{friday.day}</p>
+                  <p className="day">Vendredi</p>
                 </div>
                 <div className="text-overlay bottom-left">
                   <p className="name">{friday.name}</p>

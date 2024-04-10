@@ -71,7 +71,7 @@ const Timer = ({ date, id }: { date: Date; id: number }) => {
 // ];
 
 export default function Events() {
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const [dailyShotguns, setDailyShotguns] = useState<Shotgun[]>([]);
   const [thursday, setThursday] = useState<Shotgun>();
   const [friday, setFriday] = useState<Shotgun>();
@@ -172,9 +172,8 @@ export default function Events() {
           <Row
             xs={1}
             md={3}
-            className={`g-4 ${
-              dailyShotguns.length === 1 ? "justify-content-md-center" : ""
-            }`}
+            className={`g-4 ${dailyShotguns.length === 1 ? "justify-content-md-center" : ""
+              }`}
           >
             {dailyShotguns.map((event, index) => (
               <Col key={index} className="event">

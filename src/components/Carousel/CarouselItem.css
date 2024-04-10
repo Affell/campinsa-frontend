@@ -7,9 +7,7 @@
 }
 
 .item-carousel .carousel-image {
-  max-width: 100%;
   height: auto;
-  max-height: 115px;
 }
 
 .item-carousel .text-secondary {
@@ -19,5 +17,8 @@
 @media only screen and (max-width: 768px) {
   .item-carousel {
     font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

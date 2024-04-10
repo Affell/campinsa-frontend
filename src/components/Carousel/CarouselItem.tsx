@@ -12,6 +12,7 @@ interface Props {
   secondaryText: string;
   height: number;
   width: number;
+  className?: string;
 }
 
 const CarouselItem = ({
@@ -20,6 +21,7 @@ const CarouselItem = ({
   secondaryText,
   height,
   width,
+  className,
 }: Props) => {
   return (
     <Container className="item-carousel">
@@ -29,6 +31,7 @@ const CarouselItem = ({
         role="presentation"
         height={height}
         width={width}
+        className={className}
       />
       <p className="text-carousel">{primaryText}</p>
       <p className="text-secondary">{secondaryText}</p>

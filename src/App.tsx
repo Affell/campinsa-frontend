@@ -10,7 +10,7 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import { initParticlesEngine } from "@tsparticles/react";
 import { loadPolygonMaskPlugin } from "@tsparticles/plugin-polygon-mask";
 import { loadEmittersPlugin } from "@tsparticles/plugin-emitters";
-import Events from "./views/events/Events";
+import Events from "./views/shotgun/Shotgun";
 import { loadSeaAnemonePreset } from "@tsparticles/preset-sea-anemone";
 import { loadSlim } from "@tsparticles/slim";
 
@@ -23,7 +23,6 @@ export default function App() {
 }
 
 function Inner() {
-
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -42,21 +41,20 @@ function Inner() {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  return <Routes>
-    <Route path="/" element={<Home particlesInit={init} />} />
-    <Route path="/planning" element={<Planning />} />
-    <Route path="/events" element={<Events />} />
-    <Route path="/caritaxi" element={<CariTaxi />} />
-    <Route path="/teams" element={<Teams />} />
-    <Route path="/teams/:teamId" element={<TeamPage />} />
-    <Route
-      path="/*"
-      element={
-        <Error
-          title="404"
-          subtitle="La page demandée n'est pas disponible"
-        />
-      }
-    />
-  </Routes>
+  return (
+    <Routes>
+      <Route path="/" element={<Home particlesInit={init} />} />
+      <Route path="/planning" element={<Planning />} />
+      <Route path="/events" element={<Events />} />
+      <Route path="/caritaxi" element={<CariTaxi />} />
+      <Route path="/teams" element={<Teams />} />
+      <Route path="/teams/:teamId" element={<TeamPage />} />
+      <Route
+        path="/*"
+        element={
+          <Error title="404" subtitle="La page demandée n'est pas disponible" />
+        }
+      />
+    </Routes>
+  );
 }

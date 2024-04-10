@@ -1,10 +1,11 @@
 import { Button, Col, Container } from "react-bootstrap";
 import NavBar from "../../components/nav/Navbar";
-import "./Events.css";
+import "./Shotgun.css";
 import { useEffect, useState } from "react";
 import { getFetch } from "../../core/api/fetch";
 import { TimeLeft, calculateTimeLeft } from "../../core/utils/date";
 import { Config } from "../../core/config/global";
+import Footer from "../../components/nav/Footer";
 
 type Shotgun = {
   id: number;
@@ -88,6 +89,8 @@ export default function Events() {
   const [thursday, setThursday] = useState<Shotgun>();
   const [friday, setFriday] = useState<Shotgun>();
 
+  console.log(dailyShotguns);
+
   useEffect(() => {
     getFetch(
       "/shotgun/list",
@@ -99,8 +102,8 @@ export default function Events() {
               id: s.id,
               unlockTime: new Date(s.unlock_time * 1000),
               imageBytes: s.image_bytes,
-              name: s.name
-            })
+              name: s.name,
+            });
           }
           setDailyShotguns(temp);
         }
@@ -110,7 +113,7 @@ export default function Events() {
             id: data.thursday.id,
             unlockTime: new Date(data.thursday.unlock_time * 1000),
             imageBytes: data.thursday.image_bytes,
-            name: data.thursday.name
+            name: data.thursday.name,
           });
         }
 
@@ -119,10 +122,9 @@ export default function Events() {
             id: data.friday.id,
             unlockTime: new Date(data.friday.unlock_time * 1000),
             imageBytes: data.friday.image_bytes,
-            name: data.friday.name
+            name: data.friday.name,
           });
         }
-
       },
       setLoading,
       (err) => console.log(err)
@@ -166,22 +168,28 @@ export default function Events() {
             </Col>
           )}
         </div>
+        {/* TODO 
+        Reshape image
+        Change Button Style
+        Mobile version (responsive) */}
         <div className="daily-event">
           <p className="today">Aujourd'hui</p>
           <Col className="events">
-            {dailyShotguns && dailyShotguns.map((event, index) => (
-              <div key={index} className="event">
-                <img src={"data:image/png;base64," + event.imageBytes} />
-                <p className="name">{event.name}</p>
-                <p className="shotgun">
-                  Shotgun disponible dans: <br />
-                  <Timer date={event.unlockTime} id={event.id} />
-                </p>
-              </div>
-            ))}
+            {dailyShotguns &&
+              dailyShotguns.map((event, index) => (
+                <div key={index} className="event">
+                  <img src={"data:image/png;base64," + event.imageBytes} />
+                  <p className="name">{event.name}</p>
+                  <p className="shotgun">
+                    Shotgun disponible dans: <br />
+                    <Timer date={event.unlockTime} id={event.id} />
+                  </p>
+                </div>
+              ))}
           </Col>
         </div>
       </Container>
+      <Footer />
     </>
   );
 }

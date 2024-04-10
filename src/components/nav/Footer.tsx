@@ -15,14 +15,23 @@ function Footer() {
           <div className="text-footer">
             <p>Campus Mont Houy</p>
             <p>59313 Valenciennes cedex 9</p>
-            <p>Standard: 06 10 10 10 10</p>
+            <p>
+              Standard:{" "}
+              <a className="standard" href="tel:+33374471672">
+                03 74 47 16 72
+              </a>{" "}
+            </p>
             <p>caricampeur@gmail.com</p>
           </div>
         </Col>
         <Col>
           <h6 className="title-text">Nos réseaux</h6>
           <div className="socials">
-            <a href="https://www.tiktok.com/@bdeinsahdf?_t=8kdiqYroQHQ&_r=1" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.tiktok.com/@bdeinsahdf?_t=8kdiqYroQHQ&_r=1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image
                 className="social-logo tik-tok-logo"
                 src={tikTokLogo}
@@ -32,7 +41,11 @@ function Footer() {
                 height={40}
               />
             </a>
-            <a href="https://www.instagram.com/bdeinsahdf?igsh=MXJ4YndjamY1MHljdA==" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.instagram.com/bdeinsahdf?igsh=MXJ4YndjamY1MHljdA=="
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image
                 className="social-logo instagram-logo"
                 src={instaLogo}

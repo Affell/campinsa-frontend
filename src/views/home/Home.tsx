@@ -41,6 +41,7 @@ export default function Home({ particlesInit }: HomeProps) {
       secondaryText="Boisson energisante"
       width={250}
       height={250}
+      className="item"
     />,
     <CarouselItem
       imagePath={lyfpay}
@@ -48,6 +49,7 @@ export default function Home({ particlesInit }: HomeProps) {
       secondaryText="Paiement mobile"
       width={250}
       height={250}
+      className="item"
     />,
     <CarouselItem
       imagePath={diverty}
@@ -55,6 +57,7 @@ export default function Home({ particlesInit }: HomeProps) {
       secondaryText="Bar"
       width={250}
       height={250}
+      className="item"
     />,
     <CarouselItem
       imagePath={cbc}
@@ -62,6 +65,7 @@ export default function Home({ particlesInit }: HomeProps) {
       secondaryText="Confiserie"
       width={250}
       height={200}
+      className="item"
     />,
   ];
 
@@ -69,7 +73,10 @@ export default function Home({ particlesInit }: HomeProps) {
     <>
       <NavBar />
       <div className="first-container fullscreen-container">
-        <div className="bg-image" style={{ backgroundImage: "url(" + bgImage + ")" }} />
+        <div
+          className="bg-image"
+          style={{ backgroundImage: "url(" + bgImage + ")" }}
+        />
         <motion.div
           className="text-on-image"
           variants={variants}

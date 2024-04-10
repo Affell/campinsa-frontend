@@ -64,7 +64,7 @@ export default function Home({ particlesInit }: HomeProps) {
       primaryText="Caramels Bonbons Chocolats"
       secondaryText="Confiserie"
       width={250}
-      height={200}
+      height={250}
       className="item"
     />,
   ];

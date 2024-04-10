@@ -25,7 +25,7 @@
 .main-pictures .text-overlay.bottom-right {
   position: absolute;
   bottom: 10px;
-  right: 10px;
+  right: 20px;
   color: white;
 }
 
@@ -76,4 +76,8 @@
   flex-direction: row;
   justify-content: space-between;
   position: relative;
+}
+
+.image-daily-event {
+  border-radius: 10px;
 }

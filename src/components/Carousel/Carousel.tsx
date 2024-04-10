@@ -22,17 +22,15 @@ const Carousel: React.FC<Props> = ({ items }) => {
           responsive={responsive}
           controlsStrategy="default"
           disableButtonsControls={true}
-          paddingLeft={50}
         />
       </div>
-      <div className="d-md-none">
+      <div className="d-md-none text-center">
         <AliceCarousel
           mouseTracking
           items={items}
           responsive={responsive}
           controlsStrategy="default"
           disableButtonsControls={true}
-          paddingLeft={50}
         />
       </div>
     </>

@@ -9,7 +9,6 @@ import { Config } from "../../core/config/global";
 type Shotgun = {
   id: number;
   unlockTime: Date;
-  day: string;
   imageBytes: string;
   name: string;
 };
@@ -39,7 +38,7 @@ function remainingTime(timeLeft: TimeLeft) {
   return `${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`;
 }
 
-const Timer = ({ date, id }: { date: Date; id: int }) => {
+const Timer = ({ date, id }: { date: Date; id: number }) => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(date));
 
   useEffect(() => {
@@ -66,75 +65,64 @@ const Timer = ({ date, id }: { date: Date; id: int }) => {
   );
 };
 
-const dailyShotguns: Shotgun[] = [
-  {
-    id: 1,
-    unlockTime: new Date("2024-04-10T01:26:00+02:00"),
-    day: "Lundi",
-    imageBytes: "",
-    name: "Rap Jeu",
-  },
-  {
-    id: 2,
-    unlockTime: new Date("2024-04-15T21:30:00Z"),
-    day: "Lundi",
-    imageBytes: "",
-    name: "Diverty Box",
-  },
-];
+// const dailyShotguns: Shotgun[] = [
+//   {
+//     id: 1,
+//     unlockTime: new Date("2024-04-10T01:26:00+02:00"),
+//     day: "Lundi",
+//     imageBytes: "",
+//     name: "Rap Jeu",
+//   },
+//   {
+//     id: 2,
+//     unlockTime: new Date("2024-04-15T21:30:00Z"),
+//     day: "Lundi",
+//     imageBytes: "",
+//     name: "Diverty Box",
+//   },
+// ];
 
 export default function Events() {
   const [loading, setLoading] = useState(false);
-  const [shotguns, setShotguns] =
-    useState<Map<number, Map<string, Shotgun[]>>>();
-  const [thursday, setTuesday] = useState<Shotgun>();
+  const [dailyShotguns, setDailyShotguns] = useState<Shotgun[]>([]);
+  const [thursday, setThursday] = useState<Shotgun>();
   const [friday, setFriday] = useState<Shotgun>();
 
   useEffect(() => {
     getFetch(
       "/shotgun/list",
       (data) => {
-        const temp: Map<number, Map<string, Shotgun[]>> = new Map();
         if (data?.shotguns) {
+          let temp: Shotgun[] = [];
           for (const s of data.shotguns) {
-            const date = new Date(s.unlock_time * 1000);
-            if (!temp.has(date.getDay())) {
-              temp.set(date.getDay(), new Map());
-            }
-            if (!temp.get(date.getDay())!.has(getTimeOfDay(date))) {
-              temp.get(date.getDay())!.set(getTimeOfDay(date), []);
-            }
-            temp.get(date.getDay())!.get(getTimeOfDay(date))!.push({
+            temp.push({
               id: s.id,
-              unlockTime: date,
-              day: Days[date.getDay()],
+              unlockTime: new Date(s.unlock_time * 1000),
               imageBytes: s.image_bytes,
-              name: s.name,
-            });
-
-            if (date.getDay() == 4) {
-              setTuesday({
-                id: s.id,
-                unlockTime: date,
-                day: Days[date.getDay()],
-                imageBytes: s.image_bytes,
-                name: s.name,
-              });
-            }
-
-            if (date.getDay() == 5) {
-              setFriday({
-                id: s.id,
-                unlockTime: date,
-                day: Days[date.getDay()],
-                imageBytes: s.image_bytes,
-                name: s.name,
-              });
-            }
+              name: s.name
+            })
           }
+          setDailyShotguns(temp);
         }
 
-        setShotguns(temp);
+        if (data?.thursday) {
+          setThursday({
+            id: data.thursday.id,
+            unlockTime: new Date(data.thursday.unlock_time * 1000),
+            imageBytes: data.thursday.image_bytes,
+            name: data.thursday.name
+          });
+        }
+
+        if (data?.friday) {
+          setFriday({
+            id: data.friday.id,
+            unlockTime: new Date(data.friday.unlock_time * 1000),
+            imageBytes: data.friday.image_bytes,
+            name: data.friday.name
+          });
+        }
+
       },
       setLoading,
       (err) => console.log(err)
@@ -181,7 +169,7 @@ export default function Events() {
         <div className="daily-event">
           <p className="today">Aujourd'hui</p>
           <Col className="events">
-            {dailyShotguns.map((event, index) => (
+            {dailyShotguns && dailyShotguns.map((event, index) => (
               <div key={index} className="event">
                 <img src={"data:image/png;base64," + event.imageBytes} />
                 <p className="name">{event.name}</p>

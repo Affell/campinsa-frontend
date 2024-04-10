@@ -39,6 +39,7 @@ export default function NavBar() {
           <NavBarToogler toggle={toggleOpen} isOpen={isOpen} />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
+              <hr className="d-md-none" />
               <Link className="nav-link" to="/">
                 Accueil
               </Link>

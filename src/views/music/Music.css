@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin: 2%;
+  margin: 0 2%;
 }
 
 .music-cover {
@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .link-container>h1 {
@@ -24,9 +25,24 @@
 }
 
 .link-container>ul {
+  display: flex;
+  flex-direction: column;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  width: 100%;
+}
+
+.link-container>ul>li {
+  margin-bottom: 20px;
+}
+
+.fullscreen-container>h6 {
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 15px;
   width: 100%;
 }
 
@@ -47,5 +63,15 @@
   .link-container {
     margin: 20px 0;
     width: 100%;
+  }
+
+  .link-container ul {
+    padding: 0 20px;
+  }
+
+  .fullscreen-container>h6 {
+    font-size: 0.6rem;
+    position: relative;
+    padding: 0 25px;
   }
 }

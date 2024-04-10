@@ -8,6 +8,14 @@ import caritaxi from "../../assets/images/caritaxi.png";
 import plane from "../../assets/images/army/plane.png";
 import soldier from "../../assets/images/army/soldier.png";
 import walterwhite from "../../assets/images/anims/walterwhite.png";
+import lapin1 from "../../assets/images/anims/lapin1.png";
+import lapin2 from "../../assets/images/anims/lapin2.png";
+import lievre1 from "../../assets/images/anims/lievre1.png";
+import lievre2 from "../../assets/images/anims/lievre2.png";
+import money from "../../assets/images/anims/money.png";
+import piggyBank from "../../assets/images/anims/piggy-bank.png";
+import dollarEye from "../../assets/images/anims/dollar-eye.png";
+import rich from "../../assets/images/anims/rich.png";
 
 import saymyname from "../../assets/audio/saymyname.aac";
 
@@ -148,6 +156,16 @@ export const teams: Teams = {
         name: "Evan Le Lièvre",
         role: "Président",
         citation: "Tu fais quoi, je fais le lièvre",
+        animation: {
+          background: {
+            images: [
+              lapin1,
+              lapin2,
+              lievre1,
+              lievre2
+            ]
+          }
+        }
       },
       {
         image: teamBDS,
@@ -175,7 +193,17 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Augustin Zahorka",
         role: "Trésorier",
-        citation: "Actuellement en partie de cache-cache avec l'argent. Spoiler : l'argent est super bon.",
+        citation: "Personne s'y attendait",
+        animation: {
+          background: {
+            images: [
+              money,
+              piggyBank,
+              dollarEye,
+              rich
+            ]
+          }
+        }
       },
       {
         image: teamBDS,

@@ -144,6 +144,11 @@
   .carousel {
     padding-top: 5rem;
   }
+
+  .item {
+    height: 40dvw;
+    width: 40dvw;
+  }
 }
 
 @media only screen and (max-height: 800px) and (min-width: 769px) {

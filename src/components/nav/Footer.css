@@ -29,11 +29,14 @@
 
 .footer-container p {
   font-family: Nunito, sans-serif;
-
 }
 
 .footer-copyrigth p {
   margin-bottom: 0;
+}
+
+.standard {
+  text-decoration: none;
 }
 
 @media (max-width: 767.98px) {
@@ -88,5 +91,4 @@
   .legals {
     padding-top: 0;
   }
-
 }

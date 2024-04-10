@@ -111,7 +111,7 @@ export default function Events() {
           });
         }
       },
-      setLoading,
+      () => { },
       (err) => console.log(err)
     );
   }, []);

@@ -284,7 +284,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Léo Emanuel Diouf",
         role: "Sous fifre",
-        citation: "Rien ne sert de courir à point quand il faut partir. Parcequ’aux dernières nouvelles Kylian Mbappé n’a jamais fait de disque d’or. Gingembre",
+        citation: "Rien ne sert de courir à point quand il faut partir. Parce qu’aux dernières nouvelles Kylian Mbappé n’a jamais fait de disque d’or. Gingembre",
       },
       {
         image: teamBDS,

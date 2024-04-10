@@ -48,12 +48,12 @@
   }
 
   .title-text {
-    font-weight: bold;
-    font-size: 0.7rem;
+    font-weight: 100;
+    font-size: 0.8rem;
   }
 
   .text-center .text-footer {
-    font-size: 0.4rem;
+    font-size: 0.6rem;
     padding-top: 0;
     margin-bottom: 1rem;
   }

@@ -24,3 +24,11 @@ html,
   min-height: 100dvh;
   padding-top: 8rem;
 }
+
+.channel-ads-banner,
+.page-sidebar .subscribe,
+.ads,
+#banner1,
+#google_ads_div_ADS_300_250 {
+  display: none !important;
+}

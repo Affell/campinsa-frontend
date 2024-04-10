@@ -12,9 +12,9 @@ export default function NavBar() {
   const [isOpen, toggleOpen] = useCycle(false, true);
 
   const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-    if (e.detail == 3) {
+    if (e.detail == 5) {
       e.preventDefault();
-      //TODO Easter egg
+      alert("OUAIS GROS")
     }
   };
 
@@ -53,6 +53,9 @@ export default function NavBar() {
               </Link>
               <Link className="nav-link" to="/caritaxi">
                 CariTaxi
+              </Link>
+              <Link className="nav-link" to="/music">
+                Musique
               </Link>
             </Nav>
           </Navbar.Collapse>

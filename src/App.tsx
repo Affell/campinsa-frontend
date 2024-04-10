@@ -13,6 +13,7 @@ import { loadEmittersPlugin } from "@tsparticles/plugin-emitters";
 import Events from "./views/shotgun/Shotgun";
 import { loadSeaAnemonePreset } from "@tsparticles/preset-sea-anemone";
 import { loadSlim } from "@tsparticles/slim";
+import Music from "./views/music/Music";
 
 export default function App() {
   return (
@@ -47,6 +48,7 @@ function Inner() {
       <Route path="/planning" element={<Planning />} />
       <Route path="/events" element={<Events />} />
       <Route path="/caritaxi" element={<CariTaxi />} />
+      <Route path="/music" element={<Music />} />
       <Route path="/teams" element={<Teams />} />
       <Route path="/teams/:teamId" element={<TeamPage />} />
       <Route

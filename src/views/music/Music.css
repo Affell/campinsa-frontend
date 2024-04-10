@@ -1,0 +1,51 @@
+.music {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 2%;
+}
+
+.music-cover {
+  aspect-ratio: 1/1;
+  width: 75dvh;
+  margin-right: 20px;
+  border-radius: 30px;
+}
+
+.link-container {
+  width: 40dvw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link-container>h1 {
+  margin-bottom: 30px;
+}
+
+.link-container>ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .music {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .music-cover {
+    width: 100%;
+    margin: 0;
+    height: 45dvh;
+    width: fit-content;
+  }
+
+  .link-container {
+    margin: 20px 0;
+    width: 100%;
+  }
+}

@@ -6,6 +6,7 @@ import { getFetch } from "../../core/api/fetch";
 import { TimeLeft, calculateTimeLeft } from "../../core/utils/date";
 import { Config } from "../../core/config/global";
 import Footer from "../../components/nav/Footer";
+import LoadingBar from "react-top-loading-bar";
 
 type Shotgun = {
   id: number;

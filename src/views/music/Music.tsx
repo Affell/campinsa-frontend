@@ -27,8 +27,8 @@ export default function Music() {
           </ul>
         </div>
       </div>
-      <h6>Remerciements à Bastien pour la prod, Quentin pour l’enregistrement et Tibe pour le mix</h6>
     </div>
+    <h6 className="quote">Remerciements à Bastien pour la prod, Quentin pour l’enregistrement et Tibe pour le mix</h6>
     <Footer />
   </>
 }

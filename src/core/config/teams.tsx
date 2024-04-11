@@ -16,6 +16,11 @@ import money from "../../assets/images/anims/money.png";
 import piggyBank from "../../assets/images/anims/piggy-bank.png";
 import dollarEye from "../../assets/images/anims/dollar-eye.png";
 import rich from "../../assets/images/anims/rich.png";
+import julien from "../../assets/images/anims/julien.png";
+import tLetter from "../../assets/images/anims/t.png";
+import gwenn from "../../assets/images/anims/gwenn.png";
+import hermine from "../../assets/images/anims/hermine.png";
+import triskel from "../../assets/images/anims/triskel.png";
 
 import saymyname from "../../assets/audio/saymyname.aac";
 
@@ -210,6 +215,14 @@ export const teams: Teams = {
         name: "Antoine Frémont",
         role: "Vice Trésorier",
         citation: "Encore plus polyvalent que son couteau suisse",
+        animation: {
+          background: {
+            images: [
+              julien,
+              tLetter
+            ]
+          }
+        }
       },
       {
         image: teamBDS,
@@ -310,6 +323,15 @@ export const teams: Teams = {
         name: "Quentin Berthelot",
         role: "Président",
         citation: "Yec’hed mad mes goulus !",
+        animation: {
+          background: {
+            images: [
+              gwenn,
+              hermine,
+              triskel
+            ]
+          }
+        }
       },
       {
         image: teamBDS,

@@ -1,11 +1,12 @@
 import { Col, Container, Image, Row } from "react-bootstrap";
 import NavBar from "../../components/nav/Navbar";
 import "./Shotgun.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getFetch } from "../../core/api/fetch";
 import { TimeLeft, calculateTimeLeft } from "../../core/utils/date";
 import { Config } from "../../core/config/global";
 import Footer from "../../components/nav/Footer";
+import LoadingBar, { LoadingBarRef } from "react-top-loading-bar";
 
 type Shotgun = {
   id: number;
@@ -70,11 +71,13 @@ const Timer = ({ date, id }: { date: Date; id: number }) => {
 //   },
 // ];
 
-export default function Events() {
-  // const [loading, setLoading] = useState(false);
+export default function Shotgun() {
+  const [loading, setLoading] = useState(false);
   const [dailyShotguns, setDailyShotguns] = useState<Shotgun[]>([]);
   const [thursday, setThursday] = useState<Shotgun>();
   const [friday, setFriday] = useState<Shotgun>();
+
+  const loadingBar = useRef<any>(null);
 
   useEffect(() => {
     getFetch(
@@ -111,7 +114,7 @@ export default function Events() {
           });
         }
       },
-      () => { },
+      (b) => { if (b) { loadingBar.current.continuousStart() } else { loadingBar.current.complete() } setLoading(b) },
       (err) => console.log(err)
     );
   }, []);
@@ -119,9 +122,10 @@ export default function Events() {
   return (
     <>
       <NavBar />
+      <LoadingBar ref={loadingBar} color="#f11946" onLoaderFinished={() => loadingBar!.current!.decrease(100)} />
       <Container className="fullscreen-container">
-        <div className="head">
-          <p className="title text-start">évenements</p>
+        {!loading && <div className="head">
+          <p className="title text-start">Shotguns</p>
           <Row xs={1} md={2} className="g-4 main-pictures">
             {thursday && (
               <Col>
@@ -162,12 +166,12 @@ export default function Events() {
               </Col>
             )}
           </Row>
-        </div>
+        </div>}
         {/* TODO 
         Reshape image
         Change Button Style
         Mobile version (responsive) */}
-        <div className="daily-event">
+        {!loading && <div className="daily-event">
           <p className="today">Aujourd'hui</p>
           <Row
             xs={1}
@@ -190,7 +194,7 @@ export default function Events() {
               </Col>
             ))}
           </Row>
-        </div>
+        </div>}
       </Container>
       <Footer />
     </>

@@ -10,7 +10,7 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import { initParticlesEngine } from "@tsparticles/react";
 import { loadPolygonMaskPlugin } from "@tsparticles/plugin-polygon-mask";
 import { loadEmittersPlugin } from "@tsparticles/plugin-emitters";
-import Events from "./views/shotgun/Shotgun";
+import Shotgun from "./views/shotgun/Shotgun";
 import { loadSeaAnemonePreset } from "@tsparticles/preset-sea-anemone";
 import { loadSlim } from "@tsparticles/slim";
 import Music from "./views/music/Music";
@@ -46,7 +46,7 @@ function Inner() {
     <Routes>
       <Route path="/" element={<Home particlesInit={init} />} />
       <Route path="/planning" element={<Planning />} />
-      <Route path="/events" element={<Events />} />
+      <Route path="/shotguns" element={<Shotgun />} />
       <Route path="/caritaxi" element={<CariTaxi />} />
       <Route path="/music" element={<Music />} />
       <Route path="/teams" element={<Teams />} />

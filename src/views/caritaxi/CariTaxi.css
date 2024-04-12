@@ -133,3 +133,9 @@
 .dl-link {
   cursor: pointer;
 }
+
+@media only screen and (max-width: 768px) {
+  .active {
+    width: 70dvw;
+  }
+}

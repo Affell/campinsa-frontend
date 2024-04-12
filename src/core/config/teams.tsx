@@ -16,8 +16,17 @@ import money from "../../assets/images/anims/money.png";
 import piggyBank from "../../assets/images/anims/piggy-bank.png";
 import dollarEye from "../../assets/images/anims/dollar-eye.png";
 import rich from "../../assets/images/anims/rich.png";
-
+import julien from "../../assets/images/anims/julien.png";
+import tLetter from "../../assets/images/anims/t.png";
+import gwenn from "../../assets/images/anims/gwenn.png";
+import hermine from "../../assets/images/anims/hermine.png";
+import triskel from "../../assets/images/anims/triskel.png";
+import camera from "../../assets/images/anims/camera.png";
+import film from "../../assets/images/anims/film.png";
+import hollywood from "../../assets/images/anims/hollywood.png";
+import asse from "../../assets/images/anims/ASSE.png";
 import saymyname from "../../assets/audio/saymyname.aac";
+import musicAsse from "../../assets/audio/musiqueAsse.aac";
 
 export type BackgroundAnimationConfig = {
   images: string[];
@@ -29,8 +38,8 @@ export type AnimationConfig = {
     preText: string;
     btnText: string;
     afterText: string;
-    music?: string;
   }
+  music?: string;
 }
 
 export type Member = {
@@ -92,7 +101,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Maxence Abélard",
         role: "Sous fifre",
-        citation: "",
+        citation: "Attention ! Ne fini jamais ses",
       },
       {
         image: teamBDS,
@@ -115,9 +124,9 @@ export const teams: Teams = {
           button: {
             preText: "Say my name",
             btnText: "Yael Lucas",
-            afterText: "You're goddamn right.",
-            music: saymyname
+            afterText: "You're goddamn right."
           },
+          music: saymyname,
           background: {
             images: [
               walterwhite
@@ -178,9 +187,11 @@ export const teams: Teams = {
               bomb,
               dynamite,
               grenade,
-              mine
+              mine,
+              asse
             ]
-          }
+          },
+          music: musicAsse
         }
       },
       {
@@ -210,6 +221,14 @@ export const teams: Teams = {
         name: "Antoine Frémont",
         role: "Vice Trésorier",
         citation: "Encore plus polyvalent que son couteau suisse",
+        animation: {
+          background: {
+            images: [
+              julien,
+              tLetter
+            ]
+          }
+        }
       },
       {
         image: teamBDS,
@@ -228,7 +247,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Valentin Naegely",
         role: "Président",
-        citation: "",
+        citation: "Ah mais t'es revenu ?",
       },
     ],
   },
@@ -310,6 +329,15 @@ export const teams: Teams = {
         name: "Quentin Berthelot",
         role: "Président",
         citation: "Yec’hed mad mes goulus !",
+        animation: {
+          background: {
+            images: [
+              gwenn,
+              hermine,
+              triskel
+            ]
+          }
+        }
       },
       {
         image: teamBDS,
@@ -390,7 +418,19 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Axel Messaoudi",
         role: "Vice-Prez",
-        citation: "L'Homme des caméras Besoin d'une photo ? Cherchez Axel",
+        citation: "A recemment detroné la joconde en tant que meilleur meuble du Lucullus",
+        animation: {
+
+          background: {
+            images: [
+              camera,
+              film,
+              hollywood
+            ]
+
+          }
+
+        }
       },
       {
         image: teamBDS,
@@ -408,7 +448,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Emma Le Vouedec",
         role: "Membre",
-        citation: "",
+        citation: "La vérité j'ai pas d'idée c'est une singerie",
       },
     ],
   },

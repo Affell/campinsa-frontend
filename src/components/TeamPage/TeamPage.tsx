@@ -83,7 +83,7 @@ const TeamPage = () => {
     <>
       <NavBar />
       {memberAnim && memberAnim.background && <Background config={memberAnim.background} />}
-      {!audioEnded && memberAnim && memberAnim.button && memberAnim.button.music && <audio autoPlay onEnded={() => setAudioEnded(true)}><source src={memberAnim.button.music} type="audio/aac"></source></audio>}
+      {!audioEnded && memberAnim && memberAnim.music && <audio autoPlay onEnded={() => setAudioEnded(true)}><source src={memberAnim.music} type="audio/aac"></source></audio>}
       <Container className="fullscreen-container">
         <div className="text-container">
           <p className="team-name">{teamName}</p>

@@ -26,6 +26,7 @@ import film from "../../assets/images/anims/film.png";
 import hollywood from "../../assets/images/anims/hollywood.png";
 import asse from "../../assets/images/anims/ASSE.png";
 import saymyname from "../../assets/audio/saymyname.aac";
+import musicAsse from "../../assets/audio/musiqueAsse.aac";
 
 export type BackgroundAnimationConfig = {
   images: string[];
@@ -189,7 +190,8 @@ export const teams: Teams = {
               mine,
               asse
             ]
-          }
+          },
+          music: musicAsse
         }
       },
       {

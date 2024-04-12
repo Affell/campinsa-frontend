@@ -21,7 +21,10 @@ import tLetter from "../../assets/images/anims/t.png";
 import gwenn from "../../assets/images/anims/gwenn.png";
 import hermine from "../../assets/images/anims/hermine.png";
 import triskel from "../../assets/images/anims/triskel.png";
-
+import camera from "../../assets/images/anims/camera.png";
+import film from "../../assets/images/anims/film.png";
+import hollywood from "../../assets/images/anims/hollywood.png";
+import asse from "../../assets/images/anims/ASSE.png";
 import saymyname from "../../assets/audio/saymyname.aac";
 
 export type BackgroundAnimationConfig = {
@@ -183,7 +186,8 @@ export const teams: Teams = {
               bomb,
               dynamite,
               grenade,
-              mine
+              mine,
+              asse
             ]
           }
         }
@@ -413,6 +417,18 @@ export const teams: Teams = {
         name: "Axel Messaoudi",
         role: "Vice-Prez",
         citation: "A recemment detroné la joconde en tant que meilleur meuble du Lucullus",
+        animation: {
+          
+          background: {
+            images: [
+              camera,
+              film,
+              hollywood
+            ]
+            
+          }
+          
+        }
       },
       {
         image: teamBDS,

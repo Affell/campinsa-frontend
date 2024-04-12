@@ -9,10 +9,13 @@ import Caribou from "../../components/Anim/Caribou";
 import CarouselItem from "../../components/Carousel/CarouselItem";
 
 import bgImage from "../../assets/images/homePage.jpg";
-import redbull from "../../assets/images/partnerships/logoRedBull.jpg";
+import otera from "../../assets/images/partnerships/Otera.jpg";
 import lyfpay from "../../assets/images/partnerships/logoLyfPay.png";
 import diverty from "../../assets/images/partnerships/logoDivertyBox.jpg";
 import cbc from "../../assets/images/partnerships/logoCBC.jpg";
+// import sogeco from "../../assets/images/partnerships/Sogeco.jpg";
+import beerco from "../../assets/images/partnerships/Beers&Co.png";
+import sens from "../../assets/images/partnerships/Aux5Sens.png";
 
 interface HomeProps {
   particlesInit: boolean;
@@ -36,7 +39,7 @@ export default function Home({ particlesInit }: HomeProps) {
 
   const items = [
     <CarouselItem
-      imagePath={redbull}
+      imagePath={otera}
       primaryText="Red Bull"
       secondaryText="Boisson energisante"
       width={250}
@@ -63,6 +66,22 @@ export default function Home({ particlesInit }: HomeProps) {
       imagePath={cbc}
       primaryText="Caramels Bonbons Chocolats"
       secondaryText="Confiserie"
+      width={250}
+      height={250}
+      className="item"
+    />,
+    <CarouselItem
+      imagePath={beerco}
+      primaryText="Beers & Co"
+      secondaryText="Restauration"
+      width={250}
+      height={250}
+      className="item"
+    />,
+    <CarouselItem
+      imagePath={sens}
+      primaryText="Aux 5 Sens"
+      secondaryText="Maison d'Hôtes"
       width={250}
       height={250}
       className="item"

@@ -37,8 +37,8 @@ export type AnimationConfig = {
     preText: string;
     btnText: string;
     afterText: string;
-    music?: string;
   }
+  music?: string;
 }
 
 export type Member = {
@@ -123,9 +123,9 @@ export const teams: Teams = {
           button: {
             preText: "Say my name",
             btnText: "Yael Lucas",
-            afterText: "You're goddamn right.",
-            music: saymyname
+            afterText: "You're goddamn right."
           },
+          music: saymyname,
           background: {
             images: [
               walterwhite
@@ -418,16 +418,16 @@ export const teams: Teams = {
         role: "Vice-Prez",
         citation: "A recemment detroné la joconde en tant que meilleur meuble du Lucullus",
         animation: {
-          
+
           background: {
             images: [
               camera,
               film,
               hollywood
             ]
-            
+
           }
-          
+
         }
       },
       {

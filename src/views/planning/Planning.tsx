@@ -19,6 +19,7 @@ const items = [
     secondaryText=""
     height={500}
     width={250}
+    linkTo=""
   />,
   <CarouselItem
     imagePath={mardi}
@@ -26,6 +27,7 @@ const items = [
     secondaryText=""
     height={500}
     width={250}
+    linkTo=""
   />,
   <CarouselItem
     imagePath={mercredi}
@@ -33,6 +35,7 @@ const items = [
     secondaryText=""
     height={500}
     width={250}
+    linkTo=""
   />,
   <CarouselItem
     imagePath={jeudi}
@@ -40,6 +43,7 @@ const items = [
     secondaryText=""
     height={500}
     width={250}
+    linkTo=""
   />,
   <CarouselItem
     imagePath={vendredi}
@@ -47,6 +51,7 @@ const items = [
     secondaryText=""
     height={500}
     width={250}
+    linkTo=""
   />,
 ];
 

@@ -21,7 +21,10 @@ import tLetter from "../../assets/images/anims/t.png";
 import gwenn from "../../assets/images/anims/gwenn.png";
 import hermine from "../../assets/images/anims/hermine.png";
 import triskel from "../../assets/images/anims/triskel.png";
-
+import camera from "../../assets/images/anims/camera.png";
+import film from "../../assets/images/anims/film.png";
+import hollywood from "../../assets/images/anims/hollywood.png";
+import asse from "../../assets/images/anims/ASSE.png";
 import saymyname from "../../assets/audio/saymyname.aac";
 
 export type BackgroundAnimationConfig = {
@@ -97,7 +100,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Maxence Abélard",
         role: "Sous fifre",
-        citation: "",
+        citation: "Attention ! Ne fini jamais ses",
       },
       {
         image: teamBDS,
@@ -183,7 +186,8 @@ export const teams: Teams = {
               bomb,
               dynamite,
               grenade,
-              mine
+              mine,
+              asse
             ]
           }
         }
@@ -241,7 +245,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Valentin Naegely",
         role: "Président",
-        citation: "",
+        citation: "Ah mais t'es revenu ?",
       },
     ],
   },
@@ -412,7 +416,19 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Axel Messaoudi",
         role: "Vice-Prez",
-        citation: "L'Homme des caméras Besoin d'une photo ? Cherchez Axel",
+        citation: "A recemment detroné la joconde en tant que meilleur meuble du Lucullus",
+        animation: {
+          
+          background: {
+            images: [
+              camera,
+              film,
+              hollywood
+            ]
+            
+          }
+          
+        }
       },
       {
         image: teamBDS,
@@ -430,7 +446,7 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Emma Le Vouedec",
         role: "Membre",
-        citation: "",
+        citation: "La vérité j'ai pas d'idée c'est une singerie",
       },
     ],
   },

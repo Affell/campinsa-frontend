@@ -13,6 +13,7 @@ interface Props {
   height: number;
   width: number;
   className?: string;
+  linkTo: string;
 }
 
 const CarouselItem = ({
@@ -22,6 +23,7 @@ const CarouselItem = ({
   height,
   width,
   className,
+  linkTo,
 }: Props) => {
   return (
     <Container className="item-carousel">
@@ -33,7 +35,10 @@ const CarouselItem = ({
         width={width}
         className={className}
       />
-      <p className="text-carousel">{primaryText}</p>
+
+      <a href={linkTo} target="_blank" className="linkTo">
+        <p className="text-carousel">{primaryText}</p>
+      </a>
       <p className="text-secondary">{secondaryText}</p>
     </Container>
   );

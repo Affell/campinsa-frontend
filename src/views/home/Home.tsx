@@ -15,7 +15,9 @@ import diverty from "../../assets/images/partnerships/logoDivertyBox.jpg";
 import cbc from "../../assets/images/partnerships/logoCBC.jpg";
 // import sogeco from "../../assets/images/partnerships/Sogeco.jpg";
 import beerco from "../../assets/images/partnerships/Beers&Co.png";
-import sens from "../../assets/images/partnerships/Aux5Sens.png";
+// import sens from "../../assets/images/partnerships/Aux5Sens.png";
+import fleur from "../../assets/images/partnerships/Floralement Votre.jpg";
+import vadyna from "../../assets/images/partnerships/VaDynamite.png";
 
 interface HomeProps {
   particlesInit: boolean;
@@ -39,12 +41,22 @@ export default function Home({ particlesInit }: HomeProps) {
 
   const items = [
     <CarouselItem
+      imagePath={vadyna}
+      primaryText="Valenciennes dynamites"
+      secondaryText="Vols en montgolfière"
+      width={250}
+      height={250}
+      className="item"
+      linkTo="http://www.valenciennes-dynamite.fr/"
+    />,
+    <CarouselItem
       imagePath={otera}
       primaryText="Red Bull"
       secondaryText="Boisson energisante"
       width={250}
       height={250}
       className="item"
+      linkTo="https://www.otera.fr/magasins/otera-aulnoy"
     />,
     <CarouselItem
       imagePath={lyfpay}
@@ -53,6 +65,7 @@ export default function Home({ particlesInit }: HomeProps) {
       width={250}
       height={250}
       className="item"
+      linkTo="https://www.lyf.eu/fr/"
     />,
     <CarouselItem
       imagePath={diverty}
@@ -61,6 +74,7 @@ export default function Home({ particlesInit }: HomeProps) {
       width={250}
       height={250}
       className="item"
+      linkTo="https://divertybox.com/"
     />,
     <CarouselItem
       imagePath={cbc}
@@ -69,6 +83,7 @@ export default function Home({ particlesInit }: HomeProps) {
       width={250}
       height={250}
       className="item"
+      linkTo="https://www.facebook.com/CaramelsBonbonsChocolats/"
     />,
     <CarouselItem
       imagePath={beerco}
@@ -77,14 +92,16 @@ export default function Home({ particlesInit }: HomeProps) {
       width={250}
       height={250}
       className="item"
+      linkTo="https://www.beers-and-co.fr/"
     />,
     <CarouselItem
-      imagePath={sens}
-      primaryText="Aux 5 Sens"
-      secondaryText="Maison d'Hôtes"
+      imagePath={fleur}
+      primaryText="Floralement votre"
+      secondaryText="Fleuriste"
       width={250}
       height={250}
       className="item"
+      linkTo="https://www.facebook.com/profile.php?id=100063504233641"
     />,
   ];
 

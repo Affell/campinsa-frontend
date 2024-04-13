@@ -28,6 +28,7 @@ export default function Music() {
         </div>
       </div>
     </div>
+    <h6 className="quote">Single écrit et produit par Fabien AKA "Le F", Rémi, Antoine, Georges, Maël et Maxence</h6>
     <h6 className="quote">Remerciements à Bastien pour la prod, Quentin pour l’enregistrement et Tibe pour le mix</h6>
     <Footer />
   </>

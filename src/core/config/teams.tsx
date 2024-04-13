@@ -139,7 +139,7 @@ export const teams: Teams = {
         image: louis,
         name: "Louis Richard",
         role: "Membre",
-        citation: "Faudrait penser à aller niquer sa race un jour! ",
+        citation: "Faudrait penser à aller niquer sa race un jour !",
       },
       {
         image: simon,
@@ -192,7 +192,7 @@ export const teams: Teams = {
         image: perrine,
         name: "Perrine Roeser",
         role: "Membre",
-        citation: "GCBranlette c'est trop ",
+        citation: "GCBranlette c'est trop",
       },
       {
         image: antoine,
@@ -263,7 +263,7 @@ export const teams: Teams = {
         image: samuel,
         name: "Samuel Rignault",
         role: "Secrétaire",
-        citation: "C’est zinzin gars ",
+        citation: "C’est zinzin gars",
       },
     ],
   },
@@ -327,7 +327,7 @@ export const teams: Teams = {
         image: nathan,
         name: "Nathan Chartel",
         role: "Vice-Prez",
-        citation: "L’homme au bob mais sans les muscles ",
+        citation: "L’homme au bob mais sans les muscles",
       },
       {
         image: leoE,
@@ -364,13 +364,13 @@ export const teams: Teams = {
         image: fabien,
         name: "Fabien Saint-Pe",
         role: "Vice-Prez",
-        citation: "Viens on se bat (ici c'est Paris) ",
+        citation: "Viens on se bat (ici c'est Paris)",
       },
       {
         image: remi,
         name: "Rémi Berthelet",
         role: "Membre",
-        citation: "69 La Trik dans le sang, 69 Patrick dans le cœur ",
+        citation: "69 La Trik dans le sang, 69 Patrick dans le cœur",
       },
       {
         image: clara,
@@ -383,7 +383,7 @@ export const teams: Teams = {
         name: "Clémence Malterre",
         role: "Membre",
         citation:
-          "L'armée de l'air recrute (envoyez lui vos CV) (que les bruns ténébreux)",
+          "L'armée de l'air recrute (envoyez lui vos CV)",
         animation: {
           background: {
             images: [plane, soldier],
@@ -480,27 +480,27 @@ export const teams: Teams = {
         image: antoineL,
         name: "Antoine Laurent",
         role: "Vice-Prez",
-        citation: "J'aime la musique mais pas tomber de scène ",
+        citation: "J'aime la musique mais pas tomber de scène",
       },
       {
         image: pierre,
         name: "Pierre Etheve",
         role: "Membre",
         citation:
-          "J’ai assez d’inspiration pour m’habiller en sac cabas mais pas assez pour trouver une description ",
+          "J’ai assez d’inspiration pour m’habiller en sac cabas mais pas assez pour trouver une description",
       },
       {
         image: quentin,
         name: "Quentin Brisson",
         role: "Membre",
-        citation: "Imitateur d’animaux à mes heures perdus ",
+        citation: "Imitateur d’animaux à mes heures perdus",
       },
       {
         image: maxenceJ,
         name: "Maxence Janiak",
         role: "Membre",
         citation:
-          "Prendre des douches plus de 1 fois par semaine n'est pas bon pour la peau et pour notre planète ",
+          "Prendre des douches plus de 1 fois par semaine n'est pas bon pour la peau et pour notre planète",
       },
     ],
   },

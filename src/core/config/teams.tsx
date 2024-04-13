@@ -28,9 +28,45 @@ import asse from "../../assets/images/anims/ASSE.png";
 import saymyname from "../../assets/audio/saymyname.aac";
 import musicAsse from "../../assets/audio/musiqueAsse.aac";
 
+import adrien from "../../assets/images/teams/bds/adrien.png";
+import antoine from "../../assets/images/teams/bds/antoine.png";
+import kevin from "../../assets/images/teams/bds/kevin.png";
+import laurine from "../../assets/images/teams/bds/laurine.png";
+import louis from "../../assets/images/teams/bds/louis.png";
+import maxence from "../../assets/images/teams/bds/maxence.png";
+import perrine from "../../assets/images/teams/bds/perrine.png";
+import richie from "../../assets/images/teams/bds/richie.png";
+import simon from "../../assets/images/teams/bds/simon.png";
+import thomas from "../../assets/images/teams/bds/thomas.png";
+import victor from "../../assets/images/teams/bds/victor.png";
+import yael from "../../assets/images/teams/bds/yael.png";
+
+import valentin from "../../assets/images/teams/alumnis/valentin.png";
+
+import leo from "../../assets/images/teams/assos/leo.png";
+import axel from "../../assets/images/teams/assos/axel.png";
+
+import antoineL from "../../assets/images/teams/bda/antoineL.png";
+import mael from "../../assets/images/teams/bda/mael.png";
+import maxenceJ from "../../assets/images/teams/bda/maxenceJ.png";
+import pierre from "../../assets/images/teams/bda/pierre.png";
+import quentin from "../../assets/images/teams/bda/quentin.png";
+
+import antoineF from "../../assets/images/teams/bureau/antoineF.png";
+import augustin from "../../assets/images/teams/bureau/augustin.png";
+import evan from "../../assets/images/teams/bureau/evan.png";
+import georges from "../../assets/images/teams/bureau/georges.png";
+import hugo from "../../assets/images/teams/bureau/hugo.png";
+import samuel from "../../assets/images/teams/bureau/samuel.png";
+
+import emma from "../../assets/images/teams/com/emma.png";
+import manon from "../../assets/images/teams/com/manon.png";
+import matthieu from "../../assets/images/teams/com/matthieu.png";
+import robin from "../../assets/images/teams/com/robin.png";
+
 export type BackgroundAnimationConfig = {
   images: string[];
-}
+};
 
 export type AnimationConfig = {
   background?: BackgroundAnimationConfig;
@@ -38,9 +74,9 @@ export type AnimationConfig = {
     preText: string;
     btnText: string;
     afterText: string;
-  }
+  };
   music?: string;
-}
+};
 
 export type Member = {
   image: string;
@@ -67,89 +103,86 @@ export const teams: Teams = {
       "La team BDS est chargée d'organiser tous les événements sportifs. Au cours du mandat c'est elle qui s'occupe des créneaux sportifs ainsi que de l'organisation des événements comme le TOSS ou le High Five par exemple",
     members: [
       {
-        image: teamBDS,
+        image: adrien,
         name: "Adrien Garnier",
         role: "Président",
-        citation:
-          "Coup (d'État) dans la team Cum",
+        citation: "Coup (d'État) dans la team Cum",
       },
       {
-        image: teamBDS,
+        image: laurine,
         name: "Laurine Lefrançois",
         role: "Vice-Prez",
         citation: "Heureuse seulement quand elle est à la salle ou au RU",
       },
       {
-        image: teamBDS,
+        image: richie,
         name: "Richie Abboud",
         role: "Vice-Prez",
         citation: "Le libanais préféré de ton libanais préféré",
       },
       {
-        image: teamBDS,
+        image: louis,
         name: "Louis Richard",
-        role: "Sous fifre",
+        role: "Membre",
         citation: "Faudrait penser à aller niquer sa race un jour! ",
       },
       {
-        image: teamBDS,
+        image: simon,
         name: "Simon Breton",
-        role: "Sous fifre",
+        role: "Membre",
         citation: "Normand ou Breton selon ce qui m’arrange",
       },
       {
-        image: teamBDS,
+        image: maxence,
         name: "Maxence Abélard",
-        role: "Sous fifre",
+        role: "Membre",
         citation: "Attention ! Ne fini jamais ses",
       },
       {
-        image: teamBDS,
+        image: thomas,
         name: "Thomas Vauley",
-        role: "Sous fifre",
+        role: "Membre",
         citation: "Pro de l'informatrique",
       },
       {
-        image: teamBDS,
+        image: kevin,
         name: "Kevin Le Sommer",
-        role: "Sous fifre",
+        role: "Membre",
         citation: "Wazinkkkkkkkkkkkkkkk",
       },
       {
-        image: teamBDS,
+        image: yael,
         name: "Yael Lucas",
-        role: "Sous fifre",
+        role: "Membre",
         citation: "",
         animation: {
           button: {
             preText: "Say my name",
             btnText: "Yael Lucas",
-            afterText: "You're goddamn right."
+            afterText: "You're goddamn right.",
           },
           music: saymyname,
           background: {
-            images: [
-              walterwhite
-            ]
-          }
-        }
+            images: [walterwhite],
+          },
+        },
       },
       {
-        image: teamBDS,
+        image: victor,
         name: "Victor Baville",
-        role: "Sous fifre",
+        role: "Membre",
         citation: "그건 인종차별이야",
       },
       {
-        image: teamBDS,
+        image: perrine,
         name: "Perrine Roeser",
-        role: "Sous fifre",
+        role: "Membre",
         citation: "GCBranlette c'est trop ",
       },
       {
-        image: teamBDS,
+        image: antoine,
         name: "Antoine Mongrand",
-        role: "Sous fifre",
+        role: "Membre",
         citation:
           "Oublie que t'as aucune chance vas-y fonce on sait jamais sur un malentendu ça peut marcher",
       },
@@ -161,77 +194,58 @@ export const teams: Teams = {
       "Le bureau est le coeur de la liste, il est composé des membres principaux qui dirigent et organisent toutes les actions. Le bureau sert aussi de représentant au près de l'administration et des autres écoles.",
     members: [
       {
-        image: teamBDS,
+        image: evan,
         name: "Evan Le Lièvre",
         role: "Président",
         citation: "Tu fais quoi, je fais le lièvre",
         animation: {
           background: {
-            images: [
-              lapin1,
-              lapin2,
-              lievre1,
-              lievre2
-            ]
-          }
-        }
+            images: [lapin1, lapin2, lievre1, lievre2],
+          },
+        },
       },
       {
-        image: teamBDS,
+        image: georges,
         name: "Georges Halisso",
         role: "VP Interne",
         citation: "Boom Mohammed",
         animation: {
           background: {
-            images: [
-              bomb,
-              dynamite,
-              grenade,
-              mine,
-              asse
-            ]
+            images: [bomb, dynamite, grenade, mine, asse],
           },
-          music: musicAsse
-        }
+          music: musicAsse,
+        },
       },
       {
-        image: teamBDS,
+        image: hugo,
         name: "Hugo Roger",
         role: "VP Externe",
         citation: "Un jour je vous expliquerai pourquoi le Mont est breton",
       },
       {
-        image: teamBDS,
+        image: augustin,
         name: "Augustin Zahorka",
         role: "Trésorier",
         citation: "Personne s'y attendait",
         animation: {
           background: {
-            images: [
-              money,
-              piggyBank,
-              dollarEye,
-              rich
-            ]
-          }
-        }
+            images: [money, piggyBank, dollarEye, rich],
+          },
+        },
       },
       {
-        image: teamBDS,
+        image: antoineF,
         name: "Antoine Frémont",
         role: "Vice Trésorier",
         citation: "Encore plus polyvalent que son couteau suisse",
         animation: {
           background: {
-            images: [
-              julien,
-              tLetter
-            ]
-          }
-        }
+            images: [julien, tLetter],
+          },
+        },
       },
       {
-        image: teamBDS,
+        image: samuel,
         name: "Samuel Rignault",
         role: "Secrétaire",
         citation: "C’est zinzin gars ",
@@ -244,7 +258,7 @@ export const teams: Teams = {
       "L'équipe Alumni garde le contact avec les anciens membres et organise des événements pour maintenir le réseau actif.",
     members: [
       {
-        image: teamBDS,
+        image: valentin,
         name: "Valentin Naegely",
         role: "Président",
         citation: "Ah mais t'es revenu ?",
@@ -257,21 +271,22 @@ export const teams: Teams = {
       "L'équipe Association soutient et coordonne les activités des différentes associations étudiantes.",
     members: [
       {
-        image: teamBDS,
+        image: axel,
         name: "Axel Lenroué",
         role: "Président",
         citation: "Crise de swag",
         animation: {
           background: {
-            images: [caritaxi]
-          }
-        }
+            images: [caritaxi],
+          },
+        },
       },
       {
-        image: teamBDS,
+        image: leo,
         name: "Leo Waechter",
         role: "Vice-Prez",
-        citation: "NIQUE LES SALOPES QUI PARLENT EN SCRED SI LE SAVOIR EST UNE ARME ET BAH NIQUE TA MERE LA RUE C'EST DANGEREUX POTO LE MONDE APPARTIENT A CEUX QUI LEVENT LE YAMAHA 4 TEMPS NIQUE LA CANINE ET LES STUPS QUI SY FROTTE EFFRITE PLAN WEED BIEN SERVI 8 € LE GRAMME 0683647893",
+        citation:
+          "NIQUE LES SALOPES QUI PARLENT EN SCRED SI LE SAVOIR EST UNE ARME ET BAH NIQUE TA MERE LA RUE C'EST DANGEREUX POTO LE MONDE APPARTIENT A CEUX QUI LEVENT LE YAMAHA 4 TEMPS NIQUE LA CANINE ET LES STUPS QUI SY FROTTE EFFRITE PLAN WEED BIEN SERVI 8 € LE GRAMME 0683647893",
       },
     ],
   },
@@ -302,19 +317,20 @@ export const teams: Teams = {
       {
         image: teamBDS,
         name: "Léo Emanuel Diouf",
-        role: "Sous fifre",
-        citation: "Rien ne sert de courir à point quand il faut partir. Parce qu’aux dernières nouvelles Kylian Mbappé n’a jamais fait de disque d’or. Gingembre",
+        role: "Membre",
+        citation:
+          "Rien ne sert de courir à point quand il faut partir. Parce qu’aux dernières nouvelles Kylian Mbappé n’a jamais fait de disque d’or. Gingembre",
       },
       {
         image: teamBDS,
         name: "Arthur Dumas",
-        role: "Sous fifre",
+        role: "Membre",
         citation: "Mieux vaut tard que jamais",
       },
       {
         image: teamBDS,
         name: "Momar Gueye",
-        role: "Sous fifre",
+        role: "Membre",
         citation: "« Momar, choisis tes batailles »",
       },
     ],
@@ -331,13 +347,9 @@ export const teams: Teams = {
         citation: "Yec’hed mad mes goulus !",
         animation: {
           background: {
-            images: [
-              gwenn,
-              hermine,
-              triskel
-            ]
-          }
-        }
+            images: [gwenn, hermine, triskel],
+          },
+        },
       },
       {
         image: teamBDS,
@@ -348,57 +360,55 @@ export const teams: Teams = {
       {
         image: teamBDS,
         name: "Rémi Berthelet",
-        role: "Sous fifre",
+        role: "Membre",
         citation: "69 La Trik dans le sang, 69 Patrick dans le cœur ",
       },
       {
         image: teamBDS,
         name: "Clara Gory",
-        role: "Sous fifre",
+        role: "Membre",
         citation: "La FISA",
       },
       {
         image: teamBDS,
         name: "Clémence Malterre",
-        role: "Sous fifre",
-        citation: "L'armée de l'air recrute (envoyez lui vos CV) (que les bruns ténébreux)",
+        role: "Membre",
+        citation:
+          "L'armée de l'air recrute (envoyez lui vos CV) (que les bruns ténébreux)",
         animation: {
           background: {
-            images: [
-              plane,
-              soldier
-            ]
-          }
-        }
+            images: [plane, soldier],
+          },
+        },
       },
       {
         image: teamBDS,
         name: "Théo Durand",
-        role: "Sous fifre",
+        role: "Membre",
         citation: "Mec de cité simple",
       },
       {
         image: teamBDS,
         name: "Lucas Villegas",
-        role: "Sous fifre",
+        role: "Membre",
         citation: "Bon si t'insistes...",
       },
       {
         image: teamBDS,
         name: "Bartomeo Alemany-Varin",
-        role: "Sous fifre",
+        role: "Membre",
         citation: "",
       },
       {
         image: teamBDS,
         name: "Victor Piaget",
-        role: "Sous fifre",
+        role: "Membre",
         citation: "team naps okay okay",
       },
       {
         image: teamBDS,
         name: "Charbel Ziade",
-        role: "Sous fifre",
+        role: "Membre",
         citation: "Mon plus gro kiff ? Quand j'ai sorti le porsche",
       },
     ],
@@ -409,7 +419,7 @@ export const teams: Teams = {
       "La Team Communication promeut les événements et maintient une image positive de l'organisation à travers différents médias.",
     members: [
       {
-        image: teamBDS,
+        image: manon,
         name: "Manon Delforge",
         role: "Présidente",
         citation: "Est + team cum que team com",
@@ -418,34 +428,28 @@ export const teams: Teams = {
         image: teamBDS,
         name: "Axel Messaoudi",
         role: "Vice-Prez",
-        citation: "A recemment detroné la joconde en tant que meilleur meuble du Lucullus",
+        citation:
+          "A recemment detroné la joconde en tant que meilleur meuble du Lucullus",
         animation: {
-
           background: {
-            images: [
-              camera,
-              film,
-              hollywood
-            ]
-
-          }
-
-        }
+            images: [camera, film, hollywood],
+          },
+        },
       },
       {
-        image: teamBDS,
+        image: matthieu,
         name: "Mathieu Caffier",
         role: "Membre",
         citation: "Rien de mieux qu’une bonne bière après une bonne bière",
       },
       {
-        image: teamBDS,
+        image: robin,
         name: "Robin Carpentier",
         role: "Membre",
         citation: "Je t’avais dit de ne pas faire le con",
       },
       {
-        image: teamBDS,
+        image: emma,
         name: "Emma Le Vouedec",
         role: "Membre",
         citation: "La vérité j'ai pas d'idée c'est une singerie",
@@ -458,35 +462,36 @@ export const teams: Teams = {
       "La Team BDA (Bureau Des Arts) stimule la créativité et l'expression artistique au sein de l'école.",
     members: [
       {
-        image: teamBDS,
+        image: mael,
         name: "Maël Ricouard",
         role: "Président",
         citation: "Tout cul tendu mérite son dû",
       },
       {
-        image: teamBDS,
+        image: antoineL,
         name: "Antoine Laurent",
         role: "Vice-Prez",
         citation: "J'aime la musique mais pas tomber de scène ",
       },
       {
-        image: teamBDS,
+        image: pierre,
         name: "Pierre Etheve",
         role: "Membre",
         citation:
           "J’ai assez d’inspiration pour m’habiller en sac cabas mais pas assez pour trouver une description ",
       },
       {
-        image: teamBDS,
+        image: quentin,
         name: "Quentin Brisson",
         role: "Membre",
         citation: "Imitateur d’animaux à mes heures perdus ",
       },
       {
-        image: teamBDS,
+        image: maxenceJ,
         name: "Maxence Janiak",
         role: "Membre",
-        citation: "Prendre des douches plus de 1 fois par semaine n'est pas bon pour la peau et pour notre planète ",
+        citation:
+          "Prendre des douches plus de 1 fois par semaine n'est pas bon pour la peau et pour notre planète ",
       },
     ],
   },

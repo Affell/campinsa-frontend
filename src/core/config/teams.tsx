@@ -64,6 +64,21 @@ import manon from "../../assets/images/teams/com/manon.png";
 import matthieu from "../../assets/images/teams/com/matthieu.png";
 import robin from "../../assets/images/teams/com/robin.png";
 
+import arthur from "../../assets/images/teams/partenariat/arthur.png";
+import leoE from "../../assets/images/teams/partenariat/leoE.png";
+import lucas from "../../assets/images/teams/partenariat/lucas.png";
+import nathan from "../../assets/images/teams/partenariat/nathan.png";
+import ruben from "../../assets/images/teams/partenariat/ruben.png";
+
+import barto from "../../assets/images/teams/soiree/barto.png";
+import clara from "../../assets/images/teams/soiree/clara.png";
+import clemence from "../../assets/images/teams/soiree/clemence.png";
+import fabien from "../../assets/images/teams/soiree/fabien.png";
+import lucasV from "../../assets/images/teams/soiree/lucas.png";
+import quentinB from "../../assets/images/teams/soiree/quentinB.png";
+import remi from "../../assets/images/teams/soiree/remi.png";
+import victorP from "../../assets/images/teams/soiree/victorP.png";
+
 export type BackgroundAnimationConfig = {
   images: string[];
 };
@@ -296,42 +311,36 @@ export const teams: Teams = {
       "La team partenariat s'occupe des relations avec les entreprises aifn de régaler les étudiants.",
     members: [
       {
-        image: teamBDS,
+        image: lucas,
         name: "Lucas Dervichian",
         role: "Président",
         citation: "Jeune entrepreneur malicieux",
       },
       {
-        image: teamBDS,
+        image: ruben,
         name: "Ruben Vieira",
         role: "Vice-Prez",
         citation:
           "C'est moi qui ait fait le site pas plus de 90 caractères svp",
       },
       {
-        image: teamBDS,
+        image: nathan,
         name: "Nathan Chartel",
         role: "Vice-Prez",
         citation: "L’homme au bob mais sans les muscles ",
       },
       {
-        image: teamBDS,
+        image: leoE,
         name: "Léo Emanuel Diouf",
         role: "Membre",
         citation:
           "Rien ne sert de courir à point quand il faut partir. Parce qu’aux dernières nouvelles Kylian Mbappé n’a jamais fait de disque d’or. Gingembre",
       },
       {
-        image: teamBDS,
+        image: arthur,
         name: "Arthur Dumas",
         role: "Membre",
         citation: "Mieux vaut tard que jamais",
-      },
-      {
-        image: teamBDS,
-        name: "Momar Gueye",
-        role: "Membre",
-        citation: "« Momar, choisis tes batailles »",
       },
     ],
   },
@@ -341,7 +350,7 @@ export const teams: Teams = {
       "La Team Soirée organise les événements festifs, garantissant des moments mémorables pour tous.",
     members: [
       {
-        image: teamBDS,
+        image: quentinB,
         name: "Quentin Berthelot",
         role: "Président",
         citation: "Yec’hed mad mes goulus !",
@@ -352,25 +361,25 @@ export const teams: Teams = {
         },
       },
       {
-        image: teamBDS,
+        image: fabien,
         name: "Fabien Saint-Pe",
         role: "Vice-Prez",
         citation: "Viens on se bat (ici c'est Paris) ",
       },
       {
-        image: teamBDS,
+        image: remi,
         name: "Rémi Berthelet",
         role: "Membre",
         citation: "69 La Trik dans le sang, 69 Patrick dans le cœur ",
       },
       {
-        image: teamBDS,
+        image: clara,
         name: "Clara Gory",
         role: "Membre",
         citation: "La FISA",
       },
       {
-        image: teamBDS,
+        image: clemence,
         name: "Clémence Malterre",
         role: "Membre",
         citation:
@@ -388,19 +397,19 @@ export const teams: Teams = {
         citation: "Mec de cité simple",
       },
       {
-        image: teamBDS,
+        image: lucasV,
         name: "Lucas Villegas",
         role: "Membre",
         citation: "Bon si t'insistes...",
       },
       {
-        image: teamBDS,
+        image: barto,
         name: "Bartomeo Alemany-Varin",
         role: "Membre",
         citation: "",
       },
       {
-        image: teamBDS,
+        image: victorP,
         name: "Victor Piaget",
         role: "Membre",
         citation: "team naps okay okay",

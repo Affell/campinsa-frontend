@@ -406,7 +406,7 @@ export const teams: Teams = {
         image: barto,
         name: "Bartomeo Alemany-Varin",
         role: "Membre",
-        citation: "",
+        citation: "Irréel et parfois aigri mais c'est pas ma faute, je dors 4h",
       },
       {
         image: victorP,

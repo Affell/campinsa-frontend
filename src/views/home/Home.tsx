@@ -154,7 +154,7 @@ export default function Home({ particlesInit }: HomeProps) {
         <p>Retrouvez notre film ici !</p>
         <hr className="w-50 mx-auto mb-1 border-dark-subtle"></hr>
         <div className="video-player">
-          <VideoPlayer videoId="cjaQCkNlYDg" />
+          <VideoPlayer videoId="8T5MP2g-10s" />
         </div>
         <hr className="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle"></hr>
       </div>
@@ -164,8 +164,6 @@ export default function Home({ particlesInit }: HomeProps) {
           <Carousel items={items} />
         </div>
       </div>
-      {/* TODO
-      Padding sur le footer */}
       <Footer />
     </>
   );

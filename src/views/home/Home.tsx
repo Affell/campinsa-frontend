@@ -51,8 +51,8 @@ export default function Home({ particlesInit }: HomeProps) {
     />,
     <CarouselItem
       imagePath={otera}
-      primaryText="Red Bull"
-      secondaryText="Boisson energisante"
+      primaryText="O'Tera"
+      secondaryText="Alimentaire"
       width={250}
       height={250}
       className="item"

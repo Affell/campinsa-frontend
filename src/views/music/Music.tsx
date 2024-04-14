@@ -16,7 +16,7 @@ export default function Music() {
           <h1>Disponible partout</h1>
           <ul>
             <li>
-              <iframe style={{ "borderRadius": "12px" }} src="https://open.spotify.com/embed/track/7dsplAGWoy1uwm5XEFRNDE?utm_source=generator" width="100%" height="152" allowFullScreen allow="autoplay; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              <iframe style={{ "borderRadius": "12px" }} src="https://open.spotify.com/embed/track/6cKIWsvVScoblaLy9PwSow?utm_source=generator" width="100%" height="152" allowFullScreen allow="autoplay; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </li>
             <li>
               <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/2531502391?tracklist=false&radius=true" width="100%" height="158" allowTransparency allow="encrypted-media"></iframe>

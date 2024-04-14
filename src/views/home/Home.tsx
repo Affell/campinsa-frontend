@@ -18,6 +18,7 @@ import beerco from "../../assets/images/partnerships/Beers&Co.png";
 // import sens from "../../assets/images/partnerships/Aux5Sens.png";
 import fleur from "../../assets/images/partnerships/Floralement Votre.jpg";
 import vadyna from "../../assets/images/partnerships/VaDynamite.png";
+import intersportRaimes from "../../assets/images/partnerships/intersportRaimes.jpg"
 
 interface HomeProps {
   particlesInit: boolean;
@@ -66,6 +67,15 @@ export default function Home({ particlesInit }: HomeProps) {
       height={250}
       className="item"
       linkTo="https://www.lyf.eu/fr/"
+    />,
+    <CarouselItem
+      imagePath={intersportRaimes}
+      primaryText="Intersport - Raimes"
+      secondaryText="Equipementier Sportif"
+      width={250}
+      height={250}
+      className="item"
+      linkTo="https://www.facebook.com/IntersportRaismes/"
     />,
     <CarouselItem
       imagePath={diverty}

@@ -13,6 +13,7 @@ type Shotgun = {
   unlockTime: Date;
   imageBytes: string;
   name: string;
+  location: string;
 };
 
 function remainingTime(timeLeft: TimeLeft) {
@@ -91,6 +92,7 @@ export default function Shotgun() {
               unlockTime: new Date(s.unlock_time * 1000),
               imageBytes: s.image_bytes,
               name: s.name,
+              location: s.location,
             });
           }
           setDailyShotguns(temp);
@@ -102,6 +104,7 @@ export default function Shotgun() {
             unlockTime: new Date(data.thursday.unlock_time * 1000),
             imageBytes: data.thursday.image_bytes,
             name: data.thursday.name,
+            location: data.location,
           });
         }
 
@@ -111,10 +114,18 @@ export default function Shotgun() {
             unlockTime: new Date(data.friday.unlock_time * 1000),
             imageBytes: data.friday.image_bytes,
             name: data.friday.name,
+            location: data.location,
           });
         }
       },
-      (b) => { if (b) { loadingBar.current.continuousStart() } else { loadingBar.current.complete() } setLoading(b) },
+      (b) => {
+        if (b) {
+          loadingBar.current.continuousStart();
+        } else {
+          loadingBar.current.complete();
+        }
+        setLoading(b);
+      },
       (err) => console.log(err)
     );
   }, []);
@@ -122,79 +133,85 @@ export default function Shotgun() {
   return (
     <>
       <NavBar />
-      <LoadingBar ref={loadingBar} color="#f11946" onLoaderFinished={() => loadingBar!.current!.decrease(100)} />
+      <LoadingBar
+        ref={loadingBar}
+        color="#f11946"
+        onLoaderFinished={() => loadingBar!.current!.decrease(100)}
+      />
       <Container className="fullscreen-container">
-        {!loading && <div className="head">
-          <p className="title text-start">Shotguns</p>
-          <Row xs={1} md={2} className="g-4 main-pictures">
-            {thursday && (
-              <Col>
-                <div>
-                  <Image
-                    src={`data:image/png;base64,${thursday.imageBytes}`}
-                    fluid
-                  />
-                  <div className="text-overlay top-left">
-                    <p className="day">Jeudi</p>
+        {!loading && (
+          <div className="head">
+            <p className="title text-start">Shotguns</p>
+            <Row xs={1} md={2} className="g-4 main-pictures">
+              {thursday && (
+                <Col>
+                  <div>
+                    <Image
+                      src={`data:image/png;base64,${thursday.imageBytes}`}
+                      fluid
+                    />
+                    <div className="text-overlay top-left">
+                      <p className="day">Jeudi</p>
+                    </div>
+                    <div className="text-overlay bottom-right">
+                      <p className="name">{thursday.name}</p>
+                      <p className="shotgun">
+                        <Timer date={thursday.unlockTime} id={thursday.id} />
+                      </p>
+                    </div>
                   </div>
-                  <div className="text-overlay bottom-right">
-                    <p className="name">{thursday.name}</p>
-                    <p className="shotgun">
-                      <Timer date={thursday.unlockTime} id={thursday.id} />
-                    </p>
+                </Col>
+              )}
+              {friday && (
+                <Col>
+                  <div>
+                    <Image
+                      src={`data:image/png;base64,${friday.imageBytes}`}
+                      fluid
+                    />
+                    <div className="text-overlay top-right">
+                      <p className="day">Vendredi</p>
+                    </div>
+                    <div className="text-overlay bottom-left">
+                      <p className="name">{friday.name}</p>
+                      <p className="shotgun">
+                        <Timer date={friday.unlockTime} id={friday.id} />
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </Col>
-            )}
-            {friday && (
-              <Col>
-                <div>
-                  <Image
-                    src={`data:image/png;base64,${friday.imageBytes}`}
-                    fluid
-                  />
-                  <div className="text-overlay top-right">
-                    <p className="day">Vendredi</p>
-                  </div>
-                  <div className="text-overlay bottom-left">
-                    <p className="name">{friday.name}</p>
-                    <p className="shotgun">
-                      <Timer date={friday.unlockTime} id={friday.id} />
-                    </p>
-                  </div>
-                </div>
-              </Col>
-            )}
-          </Row>
-        </div>}
-        {/* TODO 
-        Reshape image
-        Change Button Style
-        Mobile version (responsive) */}
-        {!loading && <div className="daily-event">
-          <p className="today">Aujourd'hui</p>
-          <Row
-            xs={1}
-            md={3}
-            className={`g-4 ${dailyShotguns.length === 1 ? "justify-content-md-center" : ""
+                </Col>
+              )}
+            </Row>
+          </div>
+        )}
+        {!loading && (
+          <div className="daily-event">
+            <p className="today">Aujourd'hui</p>
+            <Row
+              xs={1}
+              md={3}
+              className={`g-4 ${
+                dailyShotguns.length === 1 ? "justify-content-md-center" : ""
               }`}
-          >
-            {dailyShotguns.map((event, index) => (
-              <Col key={index} className="event">
-                <div className="event-card">
-                  <Image
-                    src={`data:image/png;base64,${event.imageBytes}`}
-                    className="img-fluid image-daily-event"
-                  />
-                  <div className="event-info">
-                    <p className="name">{event.name}</p>
-                    <Timer date={event.unlockTime} id={event.id} />
+            >
+              {dailyShotguns.map((event, index) => (
+                <Col key={index} className="event">
+                  <div className="event-card">
+                    <Image
+                      src={`data:image/png;base64,${event.imageBytes}`}
+                      className="img-fluid image-daily-event"
+                    />
+                    <div className="event-info">
+                      <p className="name">{event.name}</p>
+                      <p className="location">{event.location}</p>
+                      <Timer date={event.unlockTime} id={event.id} />
+                    </div>
                   </div>
-                </div>
-              </Col>
-            ))}
-          </Row>
-        </div>}
+                </Col>
+              ))}
+            </Row>
+          </div>
+        )}
       </Container>
       <Footer />
     </>

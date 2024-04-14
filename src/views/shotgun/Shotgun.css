@@ -80,9 +80,14 @@
   width: 100%;
 }
 
+.event-info .location {
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
 .timer-container {
   min-height: 30px;
-  /* Ajustez selon la taille de votre bouton */
   display: flex;
 }
 

@@ -39,15 +39,11 @@
 }
 
 @media (max-width: 767.98px) {
-  .socials .tik-tok-logo {
+  .socials .mobile-logo {
     height: 30px;
     width: 30px;
   }
 
-  .socials .instagram-logo {
-    height: 30px;
-    width: 30px;
-  }
 
   .title-text {
     font-weight: 100;

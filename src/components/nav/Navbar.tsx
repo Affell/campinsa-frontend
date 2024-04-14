@@ -55,9 +55,9 @@ export default function NavBar() {
               <Link className="nav-link" to="/caritaxi">
                 CariTaxi
               </Link>
-              {/* <Link className="nav-link" to="/music">
+              <Link className="nav-link" to="/music">
                 Musique
-              </Link> */}
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

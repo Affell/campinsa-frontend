@@ -35,7 +35,7 @@ const Timer = ({ date, id }: { date: Date; id: number }) => {
 
   return (
     <div className="timer-container">
-      {remainingTime(timeLeft) === "0d 0h 0m 0s" ? (
+      {remainingTime(timeLeft) === "0j 0h 0m 0s" ? (
         <a
           href={Config.Urls.API + "/shotgun/link/" + id}
           className="shotgun-button"
@@ -46,7 +46,7 @@ const Timer = ({ date, id }: { date: Date; id: number }) => {
           </button>
         </a>
       ) : (
-        <p>{remainingTime(timeLeft)}</p> // Encapsulez le texte dans une balise <p>
+        <p>{remainingTime(timeLeft)}</p> 
       )}
     </div>
   );

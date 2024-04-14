@@ -30,7 +30,7 @@ function Footer() {
           <h6 className="title-text">Nos réseaux</h6>
           <div className="socials">
             <a
-              href="https://www.tiktok.com/@bdeinsahdf?_t=8kdiqYroQHQ&_r=1"
+              href="https://www.tiktok.com/@campinsa?_t=8lWrdlh3EC9&_r=1"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -71,12 +71,14 @@ import nathan from "../../assets/images/teams/partenariat/nathan.png";
 import ruben from "../../assets/images/teams/partenariat/ruben.png";
 
 import barto from "../../assets/images/teams/soiree/barto.png";
+import charbel from "../../assets/images/teams/soiree/charbel.png";
 import clara from "../../assets/images/teams/soiree/clara.png";
 import clemence from "../../assets/images/teams/soiree/clemence.png";
 import fabien from "../../assets/images/teams/soiree/fabien.png";
 import lucasV from "../../assets/images/teams/soiree/lucas.png";
 import quentinB from "../../assets/images/teams/soiree/quentinB.png";
 import remi from "../../assets/images/teams/soiree/remi.png";
+import theo from "../../assets/images/teams/soiree/theo.png";
 import victorP from "../../assets/images/teams/soiree/victorP.png";
 
 export type BackgroundAnimationConfig = {
@@ -382,8 +384,7 @@ export const teams: Teams = {
         image: clemence,
         name: "Clémence Malterre",
         role: "Membre",
-        citation:
-          "L'armée de l'air recrute (envoyez lui vos CV)",
+        citation: "L'armée de l'air recrute (envoyez lui vos CV)",
         animation: {
           background: {
             images: [plane, soldier],
@@ -391,7 +392,7 @@ export const teams: Teams = {
         },
       },
       {
-        image: teamBDS,
+        image: theo,
         name: "Théo Durand",
         role: "Membre",
         citation: "Mec de cité simple",
@@ -415,7 +416,7 @@ export const teams: Teams = {
         citation: "team naps okay okay",
       },
       {
-        image: teamBDS,
+        image: charbel,
         name: "Charbel Ziade",
         role: "Membre",
         citation: "Mon plus gro kiff ? Quand j'ai sorti le porsche",

@@ -16,13 +16,13 @@ export default function Music() {
           <h1>Disponible partout</h1>
           <ul>
             <li>
-              <iframe style={{ "borderRadius": "12px" }} src="https://open.spotify.com/embed/track/7dsplAGWoy1uwm5XEFRNDE?utm_source=generator" width="100%" height="152" allowFullScreen allow="autoplay; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              <iframe style={{ "borderRadius": "12px" }} src="https://open.spotify.com/embed/track/6cKIWsvVScoblaLy9PwSow?utm_source=generator" width="100%" height="152" allowFullScreen allow="autoplay; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </li>
             <li>
-              <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/2531502391?tracklist=false&radius=true" width="100%" height="158" allowTransparency allow="encrypted-media"></iframe>
+              <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/2749256501?tracklist=false&radius=true" width="100%" height="158" allowTransparency allow="encrypted-media"></iframe>
             </li>
             <li>
-              <iframe allow="encrypted-media *; fullscreen *; clipboard-write" height="190" style={{ "width": "100%", "overflow": "hidden", "borderRadius": "10px" }} sandbox="allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/fr/album/sommet/1715328390?i=1715328392"></iframe>
+              <iframe allow="encrypted-media *; fullscreen *; clipboard-write" height="190" style={{ "width": "100%", "overflow": "hidden", "borderRadius": "10px" }} sandbox="allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/fr/album/sommet/1740687668?i=1740687669"></iframe>
             </li>
           </ul>
         </div>

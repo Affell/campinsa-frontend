@@ -22,7 +22,7 @@ export default function Music() {
               <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/2749256501?tracklist=false&radius=true" width="100%" height="158" allowTransparency allow="encrypted-media"></iframe>
             </li>
             <li>
-              <iframe allow="encrypted-media *; fullscreen *; clipboard-write" height="190" style={{ "width": "100%", "overflow": "hidden", "borderRadius": "10px" }} sandbox="allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/fr/album/sommet/1715328390?i=1715328392"></iframe>
+              <iframe allow="encrypted-media *; fullscreen *; clipboard-write" height="190" style={{ "width": "100%", "overflow": "hidden", "borderRadius": "10px" }} sandbox="allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/fr/album/sommet/1740687668?i=1740687669"></iframe>
             </li>
           </ul>
         </div>

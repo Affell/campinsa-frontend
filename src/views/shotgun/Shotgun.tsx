@@ -16,7 +16,7 @@ type Shotgun = {
 };
 
 function remainingTime(timeLeft: TimeLeft) {
-  return `${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`;
+  return `${timeLeft.days}j ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`;
 }
 
 const Timer = ({ date, id }: { date: Date; id: number }) => {

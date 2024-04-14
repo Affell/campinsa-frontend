@@ -18,7 +18,6 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  /* Assurez-vous que l'image de fond est derrière le texte */
   animation: zoomOutAnimation 1.5s ease-out forwards;
 }
 

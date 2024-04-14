@@ -110,9 +110,14 @@
   }
 }
 
-.secondary .standard{
+.first-container .standard-link{
   color: white;
-  text-decoration: none;
+  text-decoration: underline;
+}
+
+.first-container .standard{
+  color: white;
+  font-size: 1.5rem;
 }
 
 
@@ -125,9 +130,14 @@
     font-size: 1.8rem;
   }
 
-  .secondary {
+  .first-container .standard-link{
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .first-container .standard{
+    color: white;
     font-size: 1.2rem;
-    font-weight: bold;
   }
 
   .video-container {

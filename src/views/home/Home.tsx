@@ -143,14 +143,14 @@ export default function Home({ particlesInit }: HomeProps) {
             className="secondary"
             onClick={() => scrollBy(0, innerHeight - 80 - scrollY)}
           >
-            <a className="standard" href="tel:+33374471672">
-              Standard: 03 74 47 16 72
-            </a>{" "}
             <div className="arrow-container">
               <div className="arrow-down"></div>
             </div>
           </div>
         </motion.div>
+        <p className="standard">
+          Standard: <a className="standard-link" href="tel:+33374471672">03 74 47 16 72</a>
+        </p>
       </div>
       <div id="video" className="video-container text-center">
         <p>Retrouvez notre film ici !</p>

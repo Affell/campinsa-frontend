@@ -2,6 +2,7 @@ import { Col, Container, Row, Image } from "react-bootstrap";
 import "./Footer.css";
 import tikTokLogo from "../../assets/images/socials/logoTikTok.png";
 import instaLogo from "../../assets/images/socials/logoInsta.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -60,7 +61,9 @@ function Footer() {
         <Col>
           <h6 className="title-text">About</h6>
           <div className="legals">
-            <p>Mentions legales</p>
+            <Link className="nav-link" to="/legal">
+              <p>Mentions legales</p>
+            </Link>
           </div>
         </Col>
       </Row>

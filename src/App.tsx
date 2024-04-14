@@ -14,6 +14,7 @@ import Shotgun from "./views/shotgun/Shotgun";
 import { loadSeaAnemonePreset } from "@tsparticles/preset-sea-anemone";
 import { loadSlim } from "@tsparticles/slim";
 import Music from "./views/music/Music";
+import Legal from "./views/legal/Legal";
 
 export default function App() {
   return (
@@ -57,6 +58,7 @@ function Inner() {
           <Error title="404" subtitle="La page demandée n'est pas disponible" />
         }
       />
+      <Route path="/legal" element={<Legal />} />
     </Routes>
   );
 }

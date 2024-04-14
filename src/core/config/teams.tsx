@@ -379,7 +379,7 @@ export const teams: Teams = {
         image: clara,
         name: "Clara Gory",
         role: "Membre",
-        citation: "La FISA",
+        citation: "Toujours à l'affut sur les potins. Balancez lui vos meilleurs secrets...",
       },
       {
         image: clemence,

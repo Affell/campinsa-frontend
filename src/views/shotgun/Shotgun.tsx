@@ -39,6 +39,7 @@ const Timer = ({ date, id }: { date: Date; id: number }) => {
         <a
           href={Config.Urls.API + "/shotgun/link/" + id}
           className="shotgun-button"
+          target="_blank"
         >
           <button type="button" className="btn btn-primary btn-sm">
             Shotgun
@@ -190,9 +191,8 @@ export default function Shotgun() {
             <Row
               xs={1}
               md={3}
-              className={`g-4 ${
-                dailyShotguns.length === 1 ? "justify-content-md-center" : ""
-              }`}
+              className={`g-4 ${dailyShotguns.length === 1 ? "justify-content-md-center" : ""
+                }`}
             >
               {dailyShotguns.map((event, index) => (
                 <Col key={index} className="event">

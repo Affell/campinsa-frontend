@@ -25,6 +25,8 @@ import camera from "../../assets/images/anims/camera.png";
 import film from "../../assets/images/anims/film.png";
 import hollywood from "../../assets/images/anims/hollywood.png";
 import asse from "../../assets/images/anims/ASSE.png";
+import drum from "../../assets/images/anims/drum.png";
+
 import saymyname from "../../assets/audio/saymyname.aac";
 import musicAsse from "../../assets/audio/musiqueAsse.aac";
 
@@ -225,7 +227,7 @@ export const teams: Teams = {
         image: georges,
         name: "Georges Halisso",
         role: "VP Interne",
-        citation: "Boom Mohammed",
+        citation: "On l'appelle aussi «Lpb des syriens», normal y'en a plus beaucoup...",
         animation: {
           background: {
             images: [bomb, dynamite, grenade, mine, asse],
@@ -502,6 +504,13 @@ export const teams: Teams = {
         role: "Membre",
         citation:
           "Prendre des douches plus de 1 fois par semaine n'est pas bon pour la peau et pour notre planète",
+        animation: {
+          background: {
+            images: [
+              drum
+            ]
+          }
+        }
       },
     ],
   },

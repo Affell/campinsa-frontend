@@ -154,6 +154,8 @@ export default function Home({ particlesInit }: HomeProps) {
           <Carousel items={items} />
         </div>
       </div>
+      {/* TODO
+      Padding sur le footer */}
       <Footer />
     </>
   );

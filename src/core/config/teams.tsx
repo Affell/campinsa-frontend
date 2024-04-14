@@ -18,6 +18,8 @@ import rich from "../../assets/images/anims/rich.png";
 import johny from "../../assets/images/anims/johny.png";
 import julien from "../../assets/images/anims/julien.png";
 import tLetter from "../../assets/images/anims/t.png";
+import om from "../../assets/images/anims/om.png";
+import ricard from "../../assets/images/anims/Ricard.png";
 import gwenn from "../../assets/images/anims/gwenn.png";
 import hermine from "../../assets/images/anims/hermine.png";
 import triskel from "../../assets/images/anims/triskel.png";
@@ -33,6 +35,7 @@ import cesoir from "../../assets/audio/ce_soir_en_ville.aac";
 import missile from "../../assets/audio/missile predator.aac";
 import lamaxence from "../../assets/audio/la_maxence.aac";
 import chapeau from "../../assets/audio/ChapeuPaille.aac";
+import juljack from "../../assets/audio/jul_jackmiel.aac";
 
 import adrien from "../../assets/images/teams/bds/adrien.png";
 import antoine from "../../assets/images/teams/bds/antoine.png";
@@ -381,6 +384,12 @@ export const teams: Teams = {
         name: "Fabien Saint-Pe",
         role: "Vice-Prez",
         citation: "Viens on se bat (ici c'est Paris)",
+        animation: {
+          background: {
+            images: [om,ricard],
+          },
+          music: juljack
+        },
       },
       {
         image: remi,

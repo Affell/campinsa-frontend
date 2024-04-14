@@ -1,5 +1,3 @@
-import teamBDS from "../../assets/images/teams/teamBDS.png";
-
 import bomb from "../../assets/images/bomb/bomb.png";
 import dynamite from "../../assets/images/bomb/dynamite.png";
 import grenade from "../../assets/images/bomb/grenade.png";
@@ -65,6 +63,7 @@ import emma from "../../assets/images/teams/com/emma.png";
 import manon from "../../assets/images/teams/com/manon.png";
 import matthieu from "../../assets/images/teams/com/matthieu.png";
 import robin from "../../assets/images/teams/com/robin.png";
+import axelM from "../../assets/images/teams/com/axelM.png";
 
 import arthur from "../../assets/images/teams/partenariat/arthur.png";
 import leoE from "../../assets/images/teams/partenariat/leoE.png";
@@ -437,7 +436,7 @@ export const teams: Teams = {
         citation: "Est + team cum que team com",
       },
       {
-        image: teamBDS,
+        image: axelM,
         name: "Axel Messaoudi",
         role: "Vice-Prez",
         citation:

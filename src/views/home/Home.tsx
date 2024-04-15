@@ -70,7 +70,7 @@ export default function Home({ particlesInit }: HomeProps) {
     />,
     <CarouselItem
       imagePath={intersportRaimes}
-      primaryText="Intersport - Raimes"
+      primaryText="Intersport - Raismes"
       secondaryText="Equipementier Sportif"
       width={250}
       height={250}

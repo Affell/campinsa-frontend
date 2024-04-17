@@ -153,10 +153,10 @@ export default function Home({ particlesInit }: HomeProps) {
         </motion.div>
       </div>
       <div id="video" className="video-container text-center">
-        <p>Retrouvez notre film ici !</p>
+        <p>Retrouvez notre Zen avec Mr Gutierrez</p>
         <hr className="w-50 mx-auto mb-1 border-dark-subtle"></hr>
         <div className="video-player">
-          <VideoPlayer videoId="8T5MP2g-10s" />
+          <VideoPlayer videoId="54Pwa5M7spo" />
         </div>
         <hr className="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle"></hr>
       </div>

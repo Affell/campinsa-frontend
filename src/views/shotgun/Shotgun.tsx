@@ -58,6 +58,7 @@ const Timer = ({ date, id }: { date: Date; id: number }) => {
 //     unlockTime: new Date("2024-04-10T18:19:00+02:00"),
 //     imageBytes: "",
 //     name: "Aprem Sportive",
+//     location:
 //   },
 //   {
 //     id: 2,
@@ -191,8 +192,9 @@ export default function Shotgun() {
             <Row
               xs={1}
               md={3}
-              className={`g-4 ${dailyShotguns.length === 1 ? "justify-content-md-center" : ""
-                }`}
+              className={`g-4 ${
+                dailyShotguns.length === 1 ? "justify-content-md-center" : ""
+              }`}
             >
               {dailyShotguns.map((event, index) => (
                 <Col key={index} className="event">

@@ -5,7 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
 import NavBarToogler from "./NavBarToggler";
 import { useCycle } from "framer-motion";
-import { Image } from "react-bootstrap";
+import { Badge, Image } from "react-bootstrap";
 import logo from "../../assets/images/logo.svg";
 
 export default function NavBar() {
@@ -14,8 +14,12 @@ export default function NavBar() {
   const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
     if (e.detail == 5) {
       e.preventDefault();
-      alert("OUAIS GROS")
+      alert("OUAIS GROS");
     }
+  };
+
+  const getDispo = () => {
+    return false;
   };
 
   return (
@@ -58,6 +62,18 @@ export default function NavBar() {
               <Link className="nav-link" to="/music">
                 Musique
               </Link>
+              <p className="nav-link">
+                Golfette:
+                {getDispo() ? (
+                  <Badge className="golfette" bg="success">
+                    Disponible
+                  </Badge>
+                ) : (
+                  <Badge className="golfette" bg="danger">
+                    Indisponible
+                  </Badge>
+                )}
+              </p>
             </Nav>
           </Navbar.Collapse>
         </Container>

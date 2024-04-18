@@ -61,11 +61,11 @@ export default function Legal() {
           Le responsable publication est une personne physique ou une personne
           morale.
           <br />
-          <strong>Webmaster</strong> : Lenroue Axel – axel.lenroue@gmail.com
+          <strong>Webmaster</strong> : Lenroué Axel – axel.lenroue@gmail.com
           <br />
-          <strong>Hébergeur</strong> : ovh – 2 rue Kellermann 59100 Roubaix 1007
+          <strong>Hébergeur</strong> : OVH – 2 rue Kellermann 59100 Roubaix 1007
           <br />
-          <strong>Délégué à la protection des données</strong> : Lenroue Axel –
+          <strong>Délégué à la protection des données</strong> : Lenroué Axel –
           axel.lenroue@gmail.com
           <br />
         </p>

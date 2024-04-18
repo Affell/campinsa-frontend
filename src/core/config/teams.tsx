@@ -1,5 +1,3 @@
-import teamBDS from "../../assets/images/teams/teamBDS.png";
-
 import bomb from "../../assets/images/bomb/bomb.png";
 import dynamite from "../../assets/images/bomb/dynamite.png";
 import grenade from "../../assets/images/bomb/grenade.png";
@@ -10,25 +8,34 @@ import soldier from "../../assets/images/army/soldier.png";
 import walterwhite from "../../assets/images/anims/walterwhite.png";
 import lapin1 from "../../assets/images/anims/lapin1.png";
 import lapin2 from "../../assets/images/anims/lapin2.png";
+import teamcum from "../../assets/images/anims/TeamCum.png";
 import lievre1 from "../../assets/images/anims/lievre1.png";
 import lievre2 from "../../assets/images/anims/lievre2.png";
 import money from "../../assets/images/anims/money.png";
 import piggyBank from "../../assets/images/anims/piggy-bank.png";
 import dollarEye from "../../assets/images/anims/dollar-eye.png";
 import rich from "../../assets/images/anims/rich.png";
+import johny from "../../assets/images/anims/johny.png";
 import julien from "../../assets/images/anims/julien.png";
 import tLetter from "../../assets/images/anims/t.png";
+import om from "../../assets/images/anims/om.png";
+import ricard from "../../assets/images/anims/Ricard.png";
 import gwenn from "../../assets/images/anims/gwenn.png";
 import hermine from "../../assets/images/anims/hermine.png";
 import triskel from "../../assets/images/anims/triskel.png";
+import OL from "../../assets/images/anims/ol.png";
 import camera from "../../assets/images/anims/camera.png";
 import film from "../../assets/images/anims/film.png";
 import hollywood from "../../assets/images/anims/hollywood.png";
-import asse from "../../assets/images/anims/ASSE.png";
 import drum from "../../assets/images/anims/drum.png";
+import chicha from "../../assets/images/anims/chicha.png";
 
 import saymyname from "../../assets/audio/saymyname.aac";
-import musicAsse from "../../assets/audio/musiqueAsse.aac";
+import cesoir from "../../assets/audio/ce_soir_en_ville.aac";
+import missile from "../../assets/audio/missile predator.aac";
+import lamaxence from "../../assets/audio/la_maxence.aac";
+import chapeau from "../../assets/audio/ChapeuPaille.aac";
+import juljack from "../../assets/audio/jul_jackmiel.aac";
 
 import adrien from "../../assets/images/teams/bds/adrien.png";
 import antoine from "../../assets/images/teams/bds/antoine.png";
@@ -65,6 +72,7 @@ import emma from "../../assets/images/teams/com/emma.png";
 import manon from "../../assets/images/teams/com/manon.png";
 import matthieu from "../../assets/images/teams/com/matthieu.png";
 import robin from "../../assets/images/teams/com/robin.png";
+import axelM from "../../assets/images/teams/com/axelM.png";
 
 import arthur from "../../assets/images/teams/partenariat/arthur.png";
 import leoE from "../../assets/images/teams/partenariat/leoE.png";
@@ -230,9 +238,9 @@ export const teams: Teams = {
         citation: "On l'appelle aussi «Lpb des syriens», normal y'en a plus beaucoup...",
         animation: {
           background: {
-            images: [bomb, dynamite, grenade, mine, asse],
+            images: [bomb, dynamite, grenade, mine],
           },
-          music: musicAsse,
+          music: missile,
         },
       },
       {
@@ -240,6 +248,13 @@ export const teams: Teams = {
         name: "Hugo Roger",
         role: "VP Externe",
         citation: "Un jour je vous expliquerai pourquoi le Mont est breton",
+        animation: {
+          background: {
+            images: [triskel,gwenn,hermine],
+          },
+          
+        },
+      
       },
       {
         image: augustin,
@@ -369,18 +384,27 @@ export const teams: Teams = {
         name: "Fabien Saint-Pe",
         role: "Vice-Prez",
         citation: "Viens on se bat (ici c'est Paris)",
+        animation: {
+          background: {
+            images: [om,ricard],
+          },
+          music: juljack
+        },
       },
       {
         image: remi,
         name: "Rémi Berthelet",
         role: "Membre",
         citation: "69 La Trik dans le sang, 69 Patrick dans le cœur",
+        animation: {
+          music: cesoir 
+        },
       },
       {
         image: clara,
         name: "Clara Gory",
         role: "Membre",
-        citation: "La FISA",
+        citation: "Toujours à l'affut sur les potins. Balancez lui vos meilleurs secrets...",
       },
       {
         image: clemence,
@@ -416,6 +440,12 @@ export const teams: Teams = {
         name: "Victor Piaget",
         role: "Membre",
         citation: "team naps okay okay",
+        animation: {
+          background: {
+            images: [chicha],
+          },
+          music : lamaxence
+        },
       },
       {
         image: charbel,
@@ -435,17 +465,23 @@ export const teams: Teams = {
         name: "Manon Delforge",
         role: "Présidente",
         citation: "Est + team cum que team com",
+        animation: {
+          background: {
+            images: [teamcum],
+          },
+        },
       },
       {
-        image: teamBDS,
+        image: axelM,
         name: "Axel Messaoudi",
         role: "Vice-Prez",
         citation:
-          "A recemment detroné la joconde en tant que meilleur meuble du Lucullus",
+          "A récemment detroné la joconde en tant que meilleur meuble du Lucullus",
         animation: {
           background: {
-            images: [camera, film, hollywood],
+            images: [camera, film, hollywood,OL],
           },
+          music : chapeau
         },
       },
       {
@@ -459,6 +495,11 @@ export const teams: Teams = {
         name: "Robin Carpentier",
         role: "Membre",
         citation: "Je t’avais dit de ne pas faire le con",
+        animation: {
+          background: {
+            images: [teamcum],
+          },
+        },
       },
       {
         image: emma,
@@ -478,6 +519,12 @@ export const teams: Teams = {
         name: "Maël Ricouard",
         role: "Président",
         citation: "Tout cul tendu mérite son dû",
+        animation: {
+          background: {
+            images: [johny],
+          },
+          
+        },
       },
       {
         image: antoineL,

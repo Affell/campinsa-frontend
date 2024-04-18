@@ -15,6 +15,7 @@ import { loadSeaAnemonePreset } from "@tsparticles/preset-sea-anemone";
 import { loadSlim } from "@tsparticles/slim";
 import Music from "./views/music/Music";
 import Legal from "./views/legal/Legal";
+import Bob from "./views/bob/Bob";
 
 export default function App() {
   return (
@@ -59,6 +60,7 @@ function Inner() {
         }
       />
       <Route path="/legal" element={<Legal />} />
+      <Route path="/bob" element={<Bob/>}/>
     </Routes>
   );
 }

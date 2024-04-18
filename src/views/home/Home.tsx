@@ -18,6 +18,7 @@ import beerco from "../../assets/images/partnerships/Beers&Co.png";
 // import sens from "../../assets/images/partnerships/Aux5Sens.png";
 import fleur from "../../assets/images/partnerships/Floralement Votre.jpg";
 import vadyna from "../../assets/images/partnerships/VaDynamite.png";
+import intersportRaimes from "../../assets/images/partnerships/intersportRaimes.jpg"
 
 interface HomeProps {
   particlesInit: boolean;
@@ -51,8 +52,8 @@ export default function Home({ particlesInit }: HomeProps) {
     />,
     <CarouselItem
       imagePath={otera}
-      primaryText="Red Bull"
-      secondaryText="Boisson energisante"
+      primaryText="O'Tera"
+      secondaryText="Alimentaire"
       width={250}
       height={250}
       className="item"
@@ -66,6 +67,15 @@ export default function Home({ particlesInit }: HomeProps) {
       height={250}
       className="item"
       linkTo="https://www.lyf.eu/fr/"
+    />,
+    <CarouselItem
+      imagePath={intersportRaimes}
+      primaryText="Intersport - Raismes"
+      secondaryText="Equipementier Sportif"
+      width={250}
+      height={250}
+      className="item"
+      linkTo="https://www.facebook.com/IntersportRaismes/"
     />,
     <CarouselItem
       imagePath={diverty}
@@ -133,18 +143,20 @@ export default function Home({ particlesInit }: HomeProps) {
             className="secondary"
             onClick={() => scrollBy(0, innerHeight - 80 - scrollY)}
           >
-            En savoir plus
             <div className="arrow-container">
               <div className="arrow-down"></div>
             </div>
           </div>
+          <p className="standard">
+            Standard: <a className="standard-link" href="tel:+33374471672">03 74 47 16 72</a>
+          </p>
         </motion.div>
       </div>
       <div id="video" className="video-container text-center">
-        <p>Retrouvez notre film ici !</p>
+        <p>Retrouvez notre Zen avec Mr Gutierrez</p>
         <hr className="w-50 mx-auto mb-1 border-dark-subtle"></hr>
         <div className="video-player">
-          <VideoPlayer videoId="cjaQCkNlYDg" />
+          <VideoPlayer videoId="54Pwa5M7spo" />
         </div>
         <hr className="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle"></hr>
       </div>
@@ -154,8 +166,6 @@ export default function Home({ particlesInit }: HomeProps) {
           <Carousel items={items} />
         </div>
       </div>
-      {/* TODO
-      Padding sur le footer */}
       <Footer />
     </>
   );

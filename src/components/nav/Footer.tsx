@@ -2,6 +2,7 @@ import { Col, Container, Row, Image } from "react-bootstrap";
 import "./Footer.css";
 import tikTokLogo from "../../assets/images/socials/logoTikTok.png";
 import instaLogo from "../../assets/images/socials/logoInsta.png";
+import ytb from "../../assets/images/socials/logoYoutube.png"
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -29,12 +30,12 @@ function Footer() {
           <h6 className="title-text">Nos réseaux</h6>
           <div className="socials">
             <a
-              href="https://www.tiktok.com/@bdeinsahdf?_t=8kdiqYroQHQ&_r=1"
+              href="https://www.tiktok.com/@campinsa?_t=8lWrdlh3EC9&_r=1"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Image
-                className="social-logo tik-tok-logo"
+                className="social-logo mobile-logo"
                 src={tikTokLogo}
                 alt="TikTok"
                 rounded
@@ -43,14 +44,28 @@ function Footer() {
               />
             </a>
             <a
-              href="https://www.instagram.com/bdeinsahdf?igsh=MXJ4YndjamY1MHljdA=="
+              href="https://www.instagram.com/camp_insa?igsh=YmJzaHIyemwwdnBv"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Image
-                className="social-logo instagram-logo"
+                className="social-logo mobile-logo"
                 src={instaLogo}
                 alt="Instagram"
+                rounded
+                width={40}
+                height={40}
+              />
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCOSZWmEHfe9Cmp0cS2VrNGA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                className="social-logo mobile-logo"
+                src={ytb}
+                alt="Youtube"
                 rounded
                 width={40}
                 height={40}

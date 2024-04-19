@@ -6,6 +6,11 @@
   box-shadow: 0 0 0 0 !important;
 }
 
+.golfette {
+  font-weight: 100;
+  margin-left: 10px;
+}
+
 @media only screen and (max-width: 768px) {
   .navbar {
     font-size: 1.2rem;

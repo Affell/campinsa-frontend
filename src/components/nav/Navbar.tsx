@@ -7,9 +7,12 @@ import NavBarToogler from "./NavBarToggler";
 import { useCycle } from "framer-motion";
 import { Badge, Image } from "react-bootstrap";
 import logo from "../../assets/images/logo.svg";
+import { useEffect, useState } from "react";
+import { getFetch } from "../../core/api/fetch";
 
 export default function NavBar() {
   const [isOpen, toggleOpen] = useCycle(false, true);
+  const [golfette, setGolfette] = useState(false);
 
   const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
     if (e.detail == 5) {
@@ -18,9 +21,11 @@ export default function NavBar() {
     }
   };
 
-  const getDispo = () => {
-    return false;
-  };
+  useEffect(() => {
+    getFetch("https://api.campinsa.fr/taxi/golfette/status", (data) => {
+      setGolfette(data.status ?? false);
+    }, () => { }, () => { });
+  }, []);
 
   return (
     <>
@@ -64,7 +69,7 @@ export default function NavBar() {
               </Link>
               <p className="nav-link">
                 Golfette:
-                {getDispo() ? (
+                {golfette ? (
                   <Badge className="golfette" bg="success">
                     Disponible
                   </Badge>

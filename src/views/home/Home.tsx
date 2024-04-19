@@ -18,7 +18,7 @@ import beerco from "../../assets/images/partnerships/Beers&Co.png";
 // import sens from "../../assets/images/partnerships/Aux5Sens.png";
 import fleur from "../../assets/images/partnerships/Floralement Votre.jpg";
 import vadyna from "../../assets/images/partnerships/VaDynamite.png";
-import intersportRaimes from "../../assets/images/partnerships/intersportRaimes.jpg"
+import intersportRaimes from "../../assets/images/partnerships/intersportRaimes.jpg";
 
 interface HomeProps {
   particlesInit: boolean;
@@ -148,7 +148,10 @@ export default function Home({ particlesInit }: HomeProps) {
             </div>
           </div>
           <p className="standard">
-            Standard: <a className="standard-link" href="tel:+33374471672">03 74 47 16 72</a>
+            Standard:{" "}
+            <a className="standard-link" href="tel:+33666371899">
+              06 66 37 18 99
+            </a>
           </p>
         </motion.div>
       </div>

@@ -2,7 +2,7 @@ import { Col, Container, Row, Image } from "react-bootstrap";
 import "./Footer.css";
 import tikTokLogo from "../../assets/images/socials/logoTikTok.png";
 import instaLogo from "../../assets/images/socials/logoInsta.png";
-import ytb from "../../assets/images/socials/logoYoutube.png"
+import ytb from "../../assets/images/socials/logoYoutube.png";
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -19,8 +19,8 @@ function Footer() {
             <p>59313 Valenciennes cedex 9</p>
             <p>
               Standard:{" "}
-              <a className="standard" href="tel:+33374471672">
-                03 74 47 16 72
+              <a className="standard" href="tel:+33666371899">
+                06 66 37 18 99
               </a>{" "}
             </p>
             <p>caricampeur@gmail.com</p>

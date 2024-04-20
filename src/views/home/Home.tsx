@@ -147,19 +147,19 @@ export default function Home({ particlesInit }: HomeProps) {
               <div className="arrow-down"></div>
             </div>
           </div>
-          <p className="standard">
+          {/* <p className="standard">
             Standard:{" "}
             <a className="standard-link" href="tel:+33666371899">
               06 66 37 18 99
             </a>
-          </p>
+          </p> */}
         </motion.div>
       </div>
       <div id="video" className="video-container text-center">
-        <p>Retrouvez notre émission Dans la gova</p>
+        <p>Retrouvez notre film</p>
         <hr className="w-50 mx-auto mb-1 border-dark-subtle"></hr>
         <div className="video-player">
-          <VideoPlayer videoId="WDdzWzhZgpI" />
+          <VideoPlayer videoId="8T5MP2g-10s" />
         </div>
         <hr className="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle"></hr>
       </div>

@@ -55,9 +55,9 @@ export default function NavBar() {
               <Link className="nav-link" to="/planning">
                 Programme
               </Link>
-              <Link className="nav-link" to="/shotguns">
+              {/* <Link className="nav-link" to="/shotguns">
                 Shotguns
-              </Link>
+              </Link> */}
               <Link className="nav-link" to="/teams">
                 Teams
               </Link>

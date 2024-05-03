@@ -20,9 +20,9 @@ Ce projet a été développé dans le cadre de la semaine de campagne pour notre
 - **Inscriptions aux Événements**: Interface pour s'inscrire aux différents événements organisés.
 
 ## Équipe
-- **Axel Lenroue**: Développement backend et support frontend.
-- **Vieira Ruben**: Développement frontend.
-- **Leo Waechter**: Création des graphismes.
+- **Ruben Vieira**: Développement frontend.
+- **Axel Lenroué**: Développement backend et support frontend.
+- **Léo Waechter**: Création des graphismes.
 - **Axel Messaouidi**: Création des graphismes.
 
 ## License

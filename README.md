@@ -1,30 +1,34 @@
-# React + TypeScript + Vite
+# Camp'INSA - Site Web de Campagne BDE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
+Ce projet a été développé dans le cadre de la semaine de campagne pour notre liste BDE à l'INSA. L'objectif était de créer un site web interactif qui permet aux étudiants de suivre facilement les événements organisés, de s'engager avec le contenu proposé par notre équipe, et de bénéficier d'une expérience utilisateur fluide et enrichissante.
 
-Currently, two official plugins are available:
+## Technologies Utilisées
+- **React.js**: Utilisé pour construire l'interface utilisateur avec un rendu dynamique des pages.
+- **Golang**: Pour le backend, gérant la logique métier et les interactions avec la base de données.
+- **CSS3 et HTML5**: Pour le styling et la structure de base du site.
+- **Google Maps API**: Intégration des cartes pour la localisation en temps réel des taxis.
+- **Vite & TypeScript**: Optimisation du développement avec des avantages en termes de performances et d'outillage.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Fonctionnalités
+- **Consultation du planning**: Permet aux utilisateurs de voir les horaires et les détails des événements.
+- **Contenus Vidéo**: Accès direct aux divers contenus vidéos liés aux activités du BDE.
+- **Présentation des Partenaires**: Affichage des partenaires avec des liens vers leurs sites.
+- **Profil des Membres**: Présentation des membres de la liste avec des détails biographiques.
+- **Localisation des Taxis**: Carte en temps réel pour suivre les taxis disponibles.
+- **Musique**: Page dédiée à la musique de la campagne.
+- **Inscriptions aux Événements**: Interface pour s'inscrire aux différents événements organisés.
 
-## Expanding the ESLint configuration
+## Équipe
+- **Axel Lenroue**: Développement backend et support frontend.
+- **Vieira Ruben**: Développement frontend.
+- **Leo Waechter**: Création des graphismes.
+- **Axel Messaouidi**: Création des graphismes.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## License
 
-- Configure the top-level `parserOptions` property like this:
+Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus d'informations.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Accéder au Site
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Le site est accessible via [campinsa.fr.](https://campinsa.fr)

@@ -16,6 +16,7 @@ import { loadSlim } from "@tsparticles/slim";
 import Music from "./views/music/Music";
 import Legal from "./views/legal/Legal";
 import Bob from "./views/bob/Bob";
+import getCrawlMetaContent from "./core/config/crawl";
 
 export default function App() {
   return (
@@ -42,6 +43,7 @@ function Inner() {
   const location = useLocation();
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
+    document.querySelector('meta[name="robots"]')?.setAttribute("content", getCrawlMetaContent(location.pathname));
   }, [location.pathname]);
 
   return (
